@@ -6,6 +6,7 @@
 }
 body {
     background-color: #f9ede7;
+    overflow-x: hidden;
 }
 .menu-icon {
     position: relative;
@@ -191,11 +192,6 @@ a {
     border-bottom: 2px solid #00e189;
     margin-top: -50px;
 }
-.highlight-div {
-    width: 300px;
-    height: 200px;
-    border-radius: 15px;
-}
 .bg-white {
     background-color: #fff;
 }
@@ -230,7 +226,7 @@ table tbody td {
     align-items: center;
 }
 .footer-socials-each-div:hover {
-    background-color: rgb(12, 76, 224);
+    background-color: #ecd6cb;
     transition: .3s;
 }
 .footer-socials-each-div:hover .media2 {
@@ -247,15 +243,8 @@ footer .footer-links p {
     line-height: 25px !important;
 
 }
-.links {
-    margin-top: 18px !important;
-    margin-bottom: 38px !important;
-    color: rgb(12, 76, 224);
-}
 .copyright {
-    /* background-color: rgb(12, 76, 224); */
     padding: 6px;
-    margin-top: 20px !important;
 }
 .copyright p {
     font-size: 14px !important;
@@ -311,9 +300,39 @@ footer .footer-links p {
 .wp-div-mobile {
     display: none;
 }
-@media screen and (min-width: 320px) {
+.wp-img2 {
+    position: relative;
+}
+.wp-img2 img {
+    position: absolute;
+    bottom: 0;
+}
+.wp-img2 .scaled-wp-img {
+    bottom: -22px !important;
+}
+.assistant {
+    transform: translateY(30px);
+}
+.wp-container {
+    position: relative;
+    z-index: 1;
+}
+.blue-body-div {
+    position: relative;
+    margin-top: -25px;
+    z-index: 1;
+}
+@media screen and (max-width: 550px) {
     .wp-img {
-        width: 170px !important;
+        position: relative;
+        width: 48% !important;
+        height: 120px !important;
+    }
+    .wp-img img, .wp-img1 img {
+        position: absolute;
+        bottom: 0;
+    }
+    .wp-img1 {
         height: 130px !important;
     }
     .wp-div-mobile {
@@ -323,8 +342,19 @@ footer .footer-links p {
     .wp-div-large {
         display: none;
     }
+    .assistant {
+        transform: translate(100px, -120px) !important;
+    }
+    .wp-container {
+        margin-top: -161px;
+    }
 }
 
+@media screen and (max-width: 350px) {
+    .assistant {
+        transform: translate(100px, -100px) !important;
+    }
+}
 
 
 section {
