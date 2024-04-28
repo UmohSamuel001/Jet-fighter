@@ -4,35 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a207e207d8.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="" style="width: 15%; float: left;" id="mySidebar">
-        <!-- <button class="w3-bar-item w3-button w3-large"
-        onclick="w3_close()">Close &times;</button> -->
-        <div class="text-center bg-success d-block" style="height: 100vh;">
-            <div class="d-block">
-                <p>sdvsd</p>
-                <p>dscdsac</p>
-                <p>sdvsd</p>
-                <p>dscdsac</p>
-                <p>sdvsd</p>
-                <p>dscdsac</p>
-                <p>sdvsd</p>
-                <p>dscdsac</p>
-            </div>
-        </div>
+    <div class="bg-success" style="width: 18%; float: left; transition: width .8s; overflow-x: hidden; height: 100vh;" id="mySidebar">
+      <div class="sidenav-wrapper">
+        <!-- Sidenav Nav -->
+        <ul class="sidenav-nav ps-0">
+            <li>
+                <a href="#" class="active-item"><i class="fa-solid fa-house"></i><span>Dashboard</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa-solid fa-bank"></i><span>Withdrawals</span>
+                </a>
+            </li>
+            <li>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i><span>Upload Product</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa-solid fa-graduation-cap"></i><span>Purchased Courses</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa-solid fa-user-plus"></i><span>P2P Registration</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa-solid fa-mobile"></i></i><span>VTU Purchase History</span>
+                </a>
+            </li>
+            <li>
+                <a href="#"><i class="fa-solid fa-users"></i><span>Downlines</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a>
+            </li>
+        </ul>
+      </div>
     </div>
       
-    <div id="main" class="" style="margin-left: 15%;">
+    <div id="main" class="" style="margin-left: 18%; transition: margin-left .8s;">
       
       <div class="w3-teal">
         <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="togglenav()">&#9776;</button>
         <div class="w3-container">
-          <h1>My Page</h1>
-
-          <!-- <img src="img/beeda243e8b9990cc1d0956526b56fc8.jpg" alt="Car" style="width:100%"> -->
-      
+          <h1>My Page</h1>      
       <div class="w3-container">
       <p>In this example, the sidebar is hidden (style="display:none")</p>
       <p>It is shown when you click on the menu icon in the top left corner.</p>
@@ -46,23 +62,17 @@
       
     </div>
       
-      <script>
+    <script>
       function togglenav() {
         if (document.getElementById("main").style.marginLeft === "0%"){
-            document.getElementById("main").style.marginLeft = "15%";
-            document.getElementById("main").style.transition = '.5s';
-            document.getElementById("mySidebar").style.display = "block";
-            document.getElementById("mySidebar").style.transition = '.5s';
+          document.getElementById("main").style.marginLeft = "18%";
+          document.getElementById("mySidebar").style.width = "18%";
         } else {
-            
-
-            document.getElementById("main").style.marginLeft = "0%";
-            document.getElementById("main").style.transition = '.5s';
-            document.getElementById("mySidebar").style.display = "none";
-            document.getElementById("mySidebar").style.transition = '.5s';
+          document.getElementById("main").style.marginLeft = "0%";
+          document.getElementById("mySidebar").style.width = "0%";
         }
-    }
-      </script>
+      }
+    </script>
     <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

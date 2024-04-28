@@ -357,12 +357,7 @@ footer .footer-links p {
 }
 
 
-section {
-    display: flex;
-    gap: 20px;
-}
-.box {
-    width: 150px;
-    height: 80px;
-    margin-bottom: 15px;
+/* Dashboard */
+li {
+    white-space: nowrap;
 }
