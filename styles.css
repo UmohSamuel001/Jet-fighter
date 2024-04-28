@@ -311,7 +311,7 @@ footer .footer-links p {
 .wp-div-mobile {
     display: none;
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 650px) {
     .wp-img {
         width: 170px !important;
         height: 130px !important;
