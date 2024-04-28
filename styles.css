@@ -358,6 +358,9 @@ footer .footer-links p {
 
 
 /* Dashboard */
-li {
+.sidenav-nav li {
     white-space: nowrap;
+}
+.sidenav-wrapper {
+    
 }
