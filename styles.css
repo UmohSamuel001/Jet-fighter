@@ -277,16 +277,16 @@ footer .footer-links p {
     right:20px;
     width: 40px;
     height: 40px;
-    background-color: rebeccapurple;
+    background-color: #1a183e;
     color: #f9ede7;
     padding: 5px;
     border-radius: 50%;
     display: grid;
     place-items: center;
-    display: none;
+    /* display: none; */
 }
 #up-btn2:hover {
-    background-color: rgb(1, 78, 179);
+    background-color: #211f4e;
 }
 .arrow {
     color: #00e189;
