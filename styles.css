@@ -406,18 +406,46 @@ footer .footer-links p {
     padding: 20px 0 20px 0;
 }
 .atm {
-    width: 350px;
+    position: relative;
     height: 200px;
-    background: linear-gradient(45deg, #211f4e, #606fac, #00e189);
-    border-top: 2px solid rgb(238, 238, 238) !important;
+    background-size: cover;
+    background-color: #211f4e51;
+    overflow: hidden;
+}
+.ring1 {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(45deg, rgb(93, 199, 253), rgb(7, 143, 255));
+    transform: rotate(26deg) translate(-40px, -60px);
+}
+.ring2 {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(45deg, rgb(93, 199, 253), rgb(7, 143, 255));
+    transform: rotate(65deg) translateX(80px);
+
 }
 .atm-content {
-    width: 350px;
+    /* width: 350px; */
     height: 200px;
-    backdrop-filter: blur(30px);
     box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.034);
     background: rgba( 255, 255, 255, 0.05 );
     backdrop-filter: blur( 16.5px );
     -webkit-backdrop-filter: blur( 16.5px );
-    border: 1px solid rgba(211, 210, 210, 0.18)
+    border: 1px solid rgba(211, 210, 210, 0.18);
+}
+.bg-one-faint {
+    background-color: #343078;
+}
+.bg-two-faint {
+    background-color: #8095e8;
+}
+.bg-three-faint {
+    background-color: rgb(92, 240, 183);
 }
