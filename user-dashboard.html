@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/a207e207d8.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <div class="bg-success" style="width: 18%; float: left; transition: width .8s; overflow-x: hidden; height: 100vh;" id="mySidebar">
-      <div class="sidenav-wrapper">
-        <!-- Sidenav Nav -->
-        <ul class="sidenav-nav ps-0">
-            <li>
-                <a href="#" class="active-item"><i class="fa-solid fa-house"></i><span>Dashboard</span></a>
+<body class="bg-one">
+
+    <!-- Sidebar -->
+    <div class="bg-one d-flex justify-content-center" id="mySidebar">
+      <div class="sidenav-wrapper p-3">
+        <ul class="sidenav-nav ps-0 h-100">
+            <li class="active-item">
+                <a href="#"><i class="fa-solid fa-house"></i><span>Dashboard</span></a>
             </li>
             <li>
                 <a href="#"><i class="fa-solid fa-bank"></i><span>Withdrawals</span>
@@ -36,40 +37,63 @@
             <li>
                 <a href="#"><i class="fa-solid fa-users"></i><span>Downlines</span></a>
             </li>
-            <li>
+            <li class="logout">
                 <a href="#"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a>
             </li>
         </ul>
       </div>
     </div>
-      
-    <div id="main" class="" style="margin-left: 18%; transition: margin-left .8s;">
-      
-      <div class="w3-teal">
-        <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="togglenav()">&#9776;</button>
-        <div class="w3-container">
-          <h1>My Page</h1>      
-      <div class="w3-container">
-      <p>In this example, the sidebar is hidden (style="display:none")</p>
-      <p>It is shown when you click on the menu icon in the top left corner.</p>
-      <p>When it is opened, it shifts the page content to the right.</p>
-      <p>We use JavaScript to add a 25% left margin to the div element with id="main" when this happens. The value "25%" matches the width of the sidebar.</p>
+    <!-- Sidebar ends -->
+
+
+    <!-- Main content -->
+    <div id="main" class="bg-white">
+
+      <!-- Navbar Start -->
+      <nav class="navbar navbar-expand sticky-top px-4 py-2">
+          <a href="#" class="sidebar-toggler flex-shrink-0" onclick="togglenav()">
+              <i class="fa fa-bars color-one" style="transform: translateY(-3px);"></i>
+          </a>
+          <div class="ms-4">
+            <h4 class="fw-bold">Welcome back, Joe! </h4>
+          </div>
+          <div class="navbar-nav align-items-center ms-auto dashboard-nav">
+              <div class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                      <img class="rounded-circle me-lg-2" src="img/dax.jpeg" alt="" style="width: 40px; height: 40px;">
+                      <span class="d-none d-lg-inline-flex color-one">Joe Black</span>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+                      <a href="#" class="dropdown-item">My Profile</a>
+                      <a href="#" class="dropdown-item">Settings</a>
+                      <a href="#" class="dropdown-item">Log Out</a>
+                  </div>
+              </div>
+          </div>
+      </nav>
+      <!-- Navbar End -->
+
+      <div class="atm ms-5 radius-two">
+        <div class="atm-content radius-two"></div>
       </div>
-        </div>
-      </div>
-      
-      
+            
       
     </div>
       
     <script>
+      var mainDiv = document.getElementById("main");
+      var sideBar = document.getElementById("mySidebar");
+
       function togglenav() {
-        if (document.getElementById("main").style.marginLeft === "0%"){
-          document.getElementById("main").style.marginLeft = "18%";
-          document.getElementById("mySidebar").style.width = "18%";
+        if (mainDiv.style.marginLeft === "0%"){
+          mainDiv.style.marginLeft = "19.2%";
+          mainDiv.style.borderTopLeftRadius = "25px";
+          mainDiv.style.borderBottomLeftRadius = "25px";
+          sideBar.style.width = "19.2%";
         } else {
-          document.getElementById("main").style.marginLeft = "0%";
-          document.getElementById("mySidebar").style.width = "0%";
+          mainDiv.style.marginLeft = "0%";
+          sideBar.style.width = "0%";
+          mainDiv.style.borderRadius = "0";
         }
       }
     </script>

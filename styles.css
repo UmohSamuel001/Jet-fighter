@@ -358,9 +358,60 @@ footer .footer-links p {
 
 
 /* Dashboard */
+.sidenav-nav {
+    position: relative;
+}
 .sidenav-nav li {
     white-space: nowrap;
+    padding: 7px 17px 7px 17px;
+    border-radius: 25px;
+    margin-bottom: 2px;
 }
-.sidenav-wrapper {
-    
+.sidenav-nav li:hover, .active-item {
+    background-color: #ffffff1a;
+}
+.sidenav-nav li a {
+    display: flex;
+    gap: 15px;
+    color: #f9ede7;
+}
+.sidenav-nav li a i {
+    transform: translateY(4px);
+}
+.sidenav-nav .logout {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+#mySidebar {
+    width: 19.2%; 
+    float: left; 
+    transition: width .8s; 
+    overflow-x: hidden; 
+    height: 100vh;
+    position: relative;
+}
+#main {
+    margin-left: 19.2%; 
+    transition: margin-left .8s, border-radius .8s;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    height: 100vh;
+    color: #211f4e;
+}
+.dashboard-nav .dropdown-toggle::after {
+    color: #211f4e;
+}
+.atm {
+    width: 350px;
+    height: 200px;
+    background: linear-gradient(45deg, #211f4e, #606fac, #00e189);
+    border-top: 2px solid rgb(238, 238, 238) !important;
+}
+.atm-content {
+    width: 350px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.2);
 }
