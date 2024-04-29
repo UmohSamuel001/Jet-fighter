@@ -402,16 +402,23 @@ footer .footer-links p {
 .dashboard-nav .dropdown-toggle::after {
     color: #211f4e;
 }
+.progress-div {
+    padding: 20px 0 20px 0;
+}
 .atm {
     width: 350px;
     height: 200px;
-    background: linear-gradient(45deg, #211f4e, #606fac, #00e189);
-    border-top: 2px solid rgb(238, 238, 238) !important;
+    background: url(https://i.ibb.co/M9LB3Kq/Glassmorphism-Background.png);
+    background-size:cover;
+    background-color:#eee;
 }
 .atm-content {
     width: 350px;
     height: 200px;
-    background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(30px);
-    box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.034);
+    background: rgba( 255, 255, 255, 0.05 );
+    backdrop-filter: blur( 16.5px );
+    -webkit-backdrop-filter: blur( 16.5px );
+    border: 1px solid rgba(211, 210, 210, 0.18)
 }
