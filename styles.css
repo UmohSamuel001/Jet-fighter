@@ -408,9 +408,8 @@ footer .footer-links p {
 .atm {
     width: 350px;
     height: 200px;
-    background: url(https://i.ibb.co/M9LB3Kq/Glassmorphism-Background.png);
-    background-size:cover;
-    background-color:#eee;
+    background: linear-gradient(45deg, #211f4e, #606fac, #00e189);
+    border-top: 2px solid rgb(238, 238, 238) !important;
 }
 .atm-content {
     width: 350px;
