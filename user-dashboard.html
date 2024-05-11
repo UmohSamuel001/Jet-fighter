@@ -3,59 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Zenwealth - user dashboard</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/a207e207d8.js" crossorigin="anonymous"></script>
 </head>
-<body class="bg-one">
+<body class="bg-eight">
 
     <!-- Sidebar -->
-    <div class="bg-one d-flex justify-content-center" id="mySidebar">
+    <div class="d-flex justify-content-center bg-eight" id="mySidebar">
       <div class="sidenav-wrapper p-3">
         <ul class="sidenav-nav ps-0 h-100">
             <li class="active-item">
-                <a href="#"><i class="fa-solid fa-house"></i><span>Dashboard</span></a>
+                <a href="#"><ion-icon name="home"></ion-icon><span>Dashboard</span></a>
             </li>
-            <li>
-                <a href="#"><i class="fa-solid fa-bank"></i><span>Withdrawals</span>
+            <li class="unactive-item">
+                <a href="#"><ion-icon name="card-outline"></ion-icon><span>Withdrawals</span>
                 </a>
             </li>
-            <li>
-                <a href="#"><i class="fa-solid fa-cart-shopping"></i><span>Upload Product</span></a>
+            <li class="unactive-item">
+                <a href="#"><ion-icon name="cart-outline"></ion-icon><span>Upload Product</span></a>
             </li>
-            <li>
-                <a href="#"><i class="fa-solid fa-graduation-cap"></i><span>Purchased Courses</span></a>
+            <li class="unactive-item">
+                <a href="#"><ion-icon name="pricetags-outline"></ion-icon><span>Purchased Courses</span></a>
             </li>
-            <li>
-                <a href="#"><i class="fa-solid fa-user-plus"></i><span>P2P Registration</span></a>
+            <li class="unactive-item">
+                <a href="#"><ion-icon name="person-add-outline"></ion-icon><span>P2P Registration</span></a>
             </li>
-            <li>
-                <a href="#"><i class="fa-solid fa-mobile"></i></i><span>VTU Purchase History</span>
+            <li class="unactive-item">
+                <a href="#"><ion-icon name="phone-portrait-outline"></ion-icon><span>VTU Purchase History</span>
                 </a>
             </li>
-            <li>
-                <a href="#"><i class="fa-solid fa-users"></i><span>Downlines</span></a>
+            <li class="unactive-item">
+                <a href="#"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
             </li>
-            <li class="logout">
-                <a href="#"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a>
+            <li class="logout unactive-item">
+                <a href="#"><ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a>
             </li>
         </ul>
       </div>
     </div>
     <!-- Sidebar ends -->
 
+    <div class="d-flex justify-content-center bg-eight sidebar2" id="myMobileSidebar">
+      <div class="sidenav-wrapper p-3">
+        <ul class="mobile-sidenav-nav ps-0 h-100">
+            <li class="active-item">
+                <a href="#"><ion-icon name="home"></ion-icon><span>Dashboard</span></a>
+            </li>
+            <li class="unactive-item">
+                <a href="#"><ion-icon name="card-outline"></ion-icon><span>Withdrawals</span>
+                </a>
+            </li>
+            <li class="unactive-item">
+                <a href="#"><ion-icon name="cart-outline"></ion-icon><span>Upload Product</span></a>
+            </li>
+            <li class="unactive-item">
+                <a href="#"><ion-icon name="pricetags-outline"></ion-icon><span>Purchased Courses</span></a>
+            </li>
+            <li class="unactive-item">
+                <a href="#"><ion-icon name="person-add-outline"></ion-icon><span>P2P Registration</span></a>
+            </li>
+            <li class="unactive-item">
+                <a href="#"><ion-icon name="phone-portrait-outline"></ion-icon><span>VTU Purchase History</span>
+                </a>
+            </li>
+            <li class="unactive-item">
+                <a href="#"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
+            </li>
+            <li class="logout unactive-item">
+                <a href="#"><ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a>
+            </li>
+        </ul>
+      </div>
+    </div>
+
 
     <!-- Main content -->
-    <div id="main" class="bg-white">
+    <div id="main" class="bg-light">
+      <div class="bg-hero shadow" style="position: absolute; top: 0; width: 100%;"></div>
 
       <!-- Navbar Start -->
       <nav class="navbar navbar-expand sticky-top px-4 py-2 pt-3">
           <a href="#" class="sidebar-toggler flex-shrink-0" onclick="togglenav()">
               <i class="fa fa-bars color-one" style="transform: translateY(-3px);"></i>
           </a>
+          <label class="hamburger" onclick="show()">
+            <input type="checkbox">
+            <svg viewBox="0 0 32 32">
+              <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+              <path class="line" d="M7 16 27 16"></path>
+            </svg>
+          </label>
           <div class="ms-4">
-            <h4 class="fw-bold">Welcome back, Joe! </h4>
+            <h4 class="fw-bold greeting">Welcome back, Joe! </h4>
           </div>
           <div class="navbar-nav align-items-center ms-auto dashboard-nav">
               <div class="nav-item dropdown">
@@ -70,42 +111,44 @@
                   </div>
               </div>
           </div>
-      </nav><br>
+      </nav>
       <!-- Navbar End -->
 
+      <div class="ms-4 greeting-mobile">
+        <h4 class="fw-bold text-white">Welcome back, Joe! </h4>
+      </div>
 
-      <div class="container-fluid">
+      <div class="container-fluid pt-2 progress-large">
         <div class="row g-3">
           <div class="col-lg-3">
-            <div class="p-6 bg-four radius-three">
-              <div class="bg-four px-4 radius-three progress-div">
-                <h5>Total Balance</h5>
-                <strong class="fs-5">$11,000</strong>
+            <div class="p-6 bg- radius-three">
+              <div class="bg-five px-4 radius-three progress-div">
+                <h5 class="text-white">Total Balance</h5>
+                <strong class="fs-5 text-white">$11,000</strong>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="p-6 bg- radius-three">
+              <div class="bg-two px-4 radius-three progress-div">
+                <h5 class="text-white">Referrals</h5>
+                <strong class="fs-5 text-white">15</strong>
               </div>
             </div>
           </div>
           <div class="col-lg-3">
             <div class="p-6 bg-four radius-three">
-              <div class="bg-four px-4 radius-three progress-div">
-                <h5>Referals</h5>
-                <strong class="fs-5">10</strong>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-3">
-            <div class="p-6 bg-four radius-three">
-              <div class="bg-four px-4 radius-three progress-div">
-                <h5 class="">Total Withdrawal</h5>
-                <strong class="fs-5">$20,000</strong>
+              <div class="bg-three px-4 radius-three progress-div">
+                <h5 class="text-white">Total Withdrawal</h5>
+                <strong class="fs-5 text-white">$20,000</strong>
               </div>
             </div>
           </div>
           <div class="col-lg-3">
-            <div class="p-6 bg-four radius-three">
-              <div class="bg-four px-4 radius-three progress-div">
-                <h5>Zee Points</h5>
-                <strong class="fs-5">5000ZP</strong>
+            <div class="p-6 bg- radius-three">
+              <div class="bg-six px-4 radius-three progress-div">
+                <h5 class="text-white">Zee Points</h5>
+                <strong class="fs-5 text-white">5000ZP</strong>
               </div>
             </div>
           </div>
@@ -113,48 +156,223 @@
       </div><br>
 
       <div class="container-fluid">
-        <div class="row g-3">
+        <div class="radius-three bg-white px-4 shadow action-mobile" style="padding: 7px 0 7px 0;">
+          <div class="d-flex gap-5 align-items-center justify-content-center" style="transform: translateY(8px);">
+            <div class="text-center">
+              <div class="bg-two icon-div d-flex align-items-center justify-content-center mb-2">
+                <i class="fa-solid fa-money-bill-transfer text-white"></i>
+              </div>
+              <p class="color-two fs-6">Withdraw</p>
+            </div>
+            <div class="text-center">
+              <div class="bg-five icon-div d-flex align-items-center justify-content-center mb-2">
+                <i class="fa-solid fa-building-columns text-white"></i>
+              </div>
+              <p class="color-two">Bank</p>
+            </div>
+            <div class="text-center">
+              <div class="bg-gold icon-div d-flex align-items-center justify-content-center mb-2">
+                <i class="fa-solid fa-sliders fs-4 text-secondary text-white"></i>
+              </div>
+              <p class="color-two">Set Pin</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div class="container-fluid pt-3 progress-mobile">
+        <div class="d-flex gap-2" style="overflow: scroll; ">
+          <div class="col-8">
+            <div class="radius-three">
+              <div class="bg-five px-4 py-4 radius-three progress-div">
+                <h5 class="text-white">Total Balance</h5>
+                <strong class="fs-5 text-white">$11,000</strong>
+              </div>
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="radius-three">
+              <div class="bg-two px-4 py-4 radius-three progress-div">
+                <h5 class="text-white">Referrals</h5>
+                <strong class="fs-5 text-white">15</strong>
+              </div>
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="bg-four radius-three">
+              <div class="bg-three px-4 py-4 radius-three progress-div">
+                <h5 class="text-white">Total Withdrawal</h5>
+                <strong class="fs-5 text-white">$20,000</strong>
+              </div>
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="p-6 bg- radius-three">
+              <div class="bg-six px-4 py-4 radius-three progress-div">
+                <h5 class="text-white">Zee Points</h5>
+                <strong class="fs-5 text-white">5000ZP</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container-fluid">
+        <div class="row g-3" style="position: relative;">
           
-          <div class="col-lg-8">
-            <div class="row g-3">
-              <div class="col-lg-6">
-                <div class="atm radius-two">
-                  <div class="ring1 radius-two"></div>
-                  <div class="ring2 radius-two"></div>
-                  <!-- <div class="ring1"></div> -->
-                  <div class="atm-content radius-two"></div>
+          <div class="col-lg-4">
+            <div class="radius-three bg-white px-4 shadow tasks-div" style="padding: 14px 0 14px 0;">
+              <div class="d-flex gap-4">
+                <div id="progress1" style="height: 82px; width: 82px;"></div>
+                <div>
+                  <div class="d-flex gap-5">
+                    <p class="color-one fw-bold">task 1</p>
+                    <button class="button radius-three px-3 py-2 color-one">claim</button>
+                  </div>
+                  <div class="d-flex gap-5 mt-1">
+                    <p class="color-one fw-bold">task 1</p>
+                    <button class="button radius-three px-3 py-2 color-one">claim</button>
+                  </div>
                 </div>
               </div>
-              <div class="col-lg-6">
-                <div class="radius-three bg-">
-                  <p>sfgssgsvsfs</p>
-                  <p>sdgsfgsfsfsfs</p>
+            </div>
+            <div class="radius-three bg-white px-4 shadow" style="padding: 10px 0 11px 0; margin-top: 13px;">
+              <div class="d-flex gap-2">
+                <div id="progress2" style="height: 82px; width: 82px;"></div>
+                <p class="color-one fw-bold mt-4">Referal Bonus</p>
+                <div class="mt-3">
+                  <button class="button radius-three px-3 py-2 color-one">claim</button>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- <div class=""> -->
-            <div class="col-lg-4 radius-three">
-              <div class="bg-one radius-three">
-                <p>dcjsfkfm,snf,s</p>
-                <p>dcjsfkfm,snf,s</p>
-                <p>dcjsfkfm,snf,s</p>
-                <p>dcjsfkfm,snf,s</p>
-                <p>dcjsfkfm,snf,s</p>
+          <div class="col-lg-4">
+            <div class="radius-three bg-white px-4 shadow action-large" style="padding: 7px 0 7px 0;">
+              <div class="d-flex gap-5 align-items-center justify-content-center" style="transform: translateY(8px);">
+                <div class="text-center">
+                  <div class="bg-two icon-div d-flex align-items-center justify-content-center mb-2">
+                    <i class="fa-solid fa-money-bill-transfer text-white"></i>
+                  </div>
+                  <p class="color-two fs-6">Withdraw</p>
+                </div>
+                <div class="text-center">
+                  <div class="bg-five icon-div d-flex align-items-center justify-content-center mb-2">
+                    <i class="fa-solid fa-building-columns text-white"></i>
+                  </div>
+                  <p class="color-two">Bank</p>
+                </div>
+                <div class="text-center">
+                  <div class="bg-gold icon-div d-flex align-items-center justify-content-center mb-2">
+                    <i class="fa-solid fa-sliders fs-4 text-secondary text-white"></i>
+                  </div>
+                  <p class="color-two">Set Pin</p>
+                </div>
               </div>
             </div>
-          <!-- </div> -->
+            <div class="radius-three bg-white px-4 shadow" style="padding: 3px 0 3px 0; margin-top: 13px;">
+              <div class="d-flex gap-5 align-items-center justify-content-center" style="transform: translateY(8px);">
+                <div class="text-center">
+                  <div class="bg-green icon-div d-flex align-items-center justify-content-center mb-2">
+                    <i class="fa-solid fa-money-bill-transfer text-white"></i>
+                  </div>
+                  <p class="color-two fs-6">Airtime</p>
+                </div>
+                <div class="text-center">
+                  <div class="bg-three icon-div d-flex align-items-center justify-content-center mb-2">
+                    <i class="fa-solid fa-building-columns text-white"></i>
+                  </div>
+                  <p class="color-two">Data</p>
+                </div>
+                <div class="text-center">
+                  <div class="bg-six icon-div d-flex align-items-center justify-content-center mb-2">
+                    <i class="fa-solid fa-sliders fs-4 text-secondary text-white"></i>
+                  </div>
+                  <p class="color-two">Courses</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-4">
+            <div class="bg-white radius-three p-3 shadow progress2">
+              <div class="row g-3">
+                <div class="col-lg-12">
+                  <div class="bg-two-faint px-4 py-2 radius-three">
+                    <div class="py-1">
+                      <h5 class="color-one fs-6">Direct Sales</h5>
+                      <p class="fs-6 color-one">$80,000</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="bg-two-faint px-4 py-2 radius-three ">
+                    <div class="py-1">
+                      <h5 class="color-one fs-6">Indirect Sales</h5>
+                      <p class="fs-6 color-one">$20,000</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="bg-two-faint px-4 py-2 radius-three">
+                    <div class="py-1">
+                      <h5 class="color-one fs-6">Game Balance</h5>
+                      <p class="fs-6 color-one">$20,000</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>  
+          </div>
+          <div class="col-lg-8 link-div">
+            <div class="bg-white shadow radius-three px-4 py-1">
+              <h6 class="mt-3">Referral Link</h6>
+              <div class="link" style="display: flex; gap: 6px;">
+                <p id="referral-link" class="mb-4 color-two">https://zenwealth.net/user/register/?reference=@joemedia</p>
+                <div class="text-end">
+                  <button class="button radius-three px-3 py-2 color-one">copy</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       
-            
+      <footer class="bg-white shadow" id="footer">
+        <div class="d-flex align-items-center justify-content-around" style="transform: translateY(10px);">
+          <div class="text-center">
+            <!-- <ion-icon name="home-outline" style="font-size: 26px !important;"></ion-icon> -->
+            <ion-icon name="home" style="font-size: 30px !important;"></ion-icon>
+            <p class="color-one">Dashboard</p>
+          </div>
+          <div class="text-center">
+            <ion-icon name="call-outline" style="font-size: 26px !important;"></ion-icon>
+            <!-- <ion-icon name="call" style="font-size: 30px !important;"></ion-icon> -->
+            <p class="color-one">Airtime</p>
+          </div>
+          <div class="text-center">
+            <ion-icon name="flash-outline" style="font-size: 26px !important;"></ion-icon>
+            <!-- <ion-icon name="flash" style="font-size: 30px !important;"></ion-icon> -->
+            <p class="color-one">Data</p>
+          </div>
+        </div>
+      </footer>
     </div>
-      
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.1.0/progressbar.min.js"></script>
     <script>
       var mainDiv = document.getElementById("main");
       var sideBar = document.getElementById("mySidebar");
+      var footer = document.getElementById("footer");
+      var mobileSideBar = document.getElementById("myMobileSidebar");
 
       function togglenav() {
         if (mainDiv.style.marginLeft === "0%"){
@@ -168,6 +386,71 @@
           mainDiv.style.borderRadius = "0";
         }
       }
+
+      function show() {
+        mobileSideBar.style.display = 'none';
+        footer.style.display = 'none';
+      }
+
+      // Create the first progress bar (50%)
+        var progressBar1 = new ProgressBar.Circle('#progress1', {
+        strokeWidth: 12,
+        color: 'rgb(247, 182, 19)',
+        trailColor: '#f3f3f3',
+        trailWidth: 8,
+        duration: 1000, // animation duration in milliseconds
+        easing: 'easeInOut',
+        text: {
+          style: {
+            color: '#211f4e',
+            fontSize: '20px',
+            position: 'absolute',
+            left: '50%',
+            top: '50%',
+            padding: 0,
+            margin: 0,
+            transform: {
+              prefix: true,
+              value: 'translate(-50%, -50%)'
+            }
+          }
+        },
+        step: function(state, circle) {
+          circle.setText(Math.round(circle.value() * 100) + '%');
+        }
+      });
+    
+      // Animate the progress to 50%
+      progressBar1.animate(1);
+
+      // Create the second progress bar (100%)
+  var progressBar2 = new ProgressBar.Circle('#progress2', {
+    strokeWidth: 12,
+    color: 'red',
+    trailColor: 'rgb(247, 182, 19)',
+    trailWidth: 12,
+    duration: 1000,
+    easing: 'easeInOut',
+    text: {
+      value: '16k',
+      style: {
+        color: '#211f4e',
+        fontSize: '20px',
+        position: 'absolute',
+        left: '50%',
+        top: '50%',
+        padding: 0,
+        margin: 0,
+        transform: {
+          prefix: true,
+          value: 'translate(-50%, -50%)'
+        }
+      }
+    },
+  });
+
+  // Animate the progress to 100%
+  // progressBar2.animate(1.0);
     </script>
     <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
 </body>

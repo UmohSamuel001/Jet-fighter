@@ -6,7 +6,7 @@
 }
 body {
     background-color: #f9ede7;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 .menu-icon {
     position: relative;
@@ -24,7 +24,7 @@ body {
     position: relative;
     height: 3px;
     width: 100%;
-    background: #211f4e;
+    background: #211e5b;
     border-radius: 10px;
     opacity: 1;
     left: 0;
@@ -67,7 +67,7 @@ a {
     font-size: 17px;
 }
 .color-one {
-    color: #211f4e;
+    color: #211e5b;
 }
 .color-two {
     color: #606fac;
@@ -79,7 +79,7 @@ a {
     color: #f9ede7;
 }
 .bg-one {
-    background-color: #211f4e;
+    background-color: #211e5b;
 }
 .bg-two {
     background-color: #606fac;
@@ -177,6 +177,9 @@ a {
 .radius-three {
     border-radius: 10px;
 }
+.radius-four {
+    border-radius: 7px;
+}
 .we-do-div {
     display: flex;
     align-items: center;
@@ -199,7 +202,7 @@ a {
     background-color: #606fac;
 }
 .accordion-button {
-    color: #211f4e !important;
+    color: #211e5b !important;
 }
 .accordion-item {
     background-color: #f9ede7 !important;
@@ -209,7 +212,7 @@ a {
     /* border-bottom: 1px solid white !important; */
 }
 table tbody td {
-    color: #211f4e;
+    color: #211e5b;
 }
 .footer-socials {
     display: flex;
@@ -286,7 +289,7 @@ footer .footer-links p {
     /* display: none; */
 }
 #up-btn2:hover {
-    background-color: #211f4e;
+    background-color: #211e5b;
 }
 .arrow {
     color: #00e189;
@@ -322,6 +325,35 @@ footer .footer-links p {
     margin-top: -25px;
     z-index: 1;
 }
+.bg-hero {
+    display: none;
+}
+.progress-mobile {
+    display: none;
+}
+.action-mobile {
+    display: none;
+}
+.greeting-mobile {
+    position: relative; 
+    z-index: 10;
+    display: none;
+}
+.link-div {
+    position: absolute; 
+    bottom: 0px;
+}
+footer {
+    position: fixed; 
+    bottom: 0; 
+    width: 100%;
+    display: none;
+}
+#mySidebar2 {
+    position: relative;
+    display: none !important;
+    z-index: 100;
+}
 @media screen and (max-width: 550px) {
     .wp-img {
         position: relative;
@@ -337,7 +369,6 @@ footer .footer-links p {
     }
     .wp-div-mobile {
         display: block;
-        /* margin-top: 70px; */
     }
     .wp-div-large {
         display: none;
@@ -348,6 +379,80 @@ footer .footer-links p {
     .wp-container {
         margin-top: -161px;
     }
+    #mySidebar {
+        width: 0% !important;
+    }
+    #main {
+        height: 100% !important;
+        margin-left: 0% !important;
+        border-top-left-radius: 0px !important;
+        overflow: scroll;
+    }
+    .link-div {
+        position: relative !important;
+        bottom: auto !important;
+        margin: 25px 0 100px 0 !important;
+    }
+    .link {
+        display: block;
+    }
+    .bg-hero {
+        display: block;
+        background: #211e5b;
+        height: 200px;
+        border-radius: 0 0 25px 25px;
+    }
+    .greeting, .fa-bars, .dropdown-toggle {
+        color: white !important;
+    }
+    .greeting {
+        display: none;
+    }
+    .progress-large {
+        display: none;
+    }
+    .progress-mobile {
+        display: block;
+        overflow: scroll;
+        margin-bottom: 30px;
+    }
+    .action-mobile {
+        display: block;
+        position: relative;
+        z-index: 10;
+        margin-top: -10px;
+    }
+    .action-large {
+        display: none;
+    }
+    .greeting-mobile {
+        display: block;
+    }
+    .progress2 {
+        margin-top: 10px;
+    }
+    .tasks-div {
+        margin-bottom: 25px !important;
+    }
+    .card-div {
+        background-color: transparent !important;
+        box-shadow: none !important;
+        margin-top: -30px;
+    }
+    .submit-withdrawals-form {
+        margin-bottom: 100px;
+    }
+    .update-bank-div {
+        padding: 0 .8rem 0 .8rem !important;
+        margin: 120px 0 100px 0 !important;
+    }
+    /* .sidebar-toggler {
+        display: none;
+    } */
+    footer {
+        display: block;
+    }
+    
 }
 
 @media screen and (max-width: 350px) {
@@ -358,68 +463,117 @@ footer .footer-links p {
 
 
 /* Dashboard */
-.sidenav-nav {
+.sidenav-nav, .mobile-sidenav-nav {
     position: relative;
 }
-.sidenav-nav li {
+.sidenav-nav li, .mobile-sidenav-nav li {
     white-space: nowrap;
-    padding: 7px 17px 7px 17px;
+    padding: 10px 17px 10px 17px;
     border-radius: 25px;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
 }
-.sidenav-nav li:hover, .active-item {
-    background-color: #ffffff1a;
+.sidenav-nav .unactive-item:hover, .mobile-sidenav-nav .unactive-item:hover {
+    background: #ffffff19;
 }
-.sidenav-nav li a {
+.sidenav-nav li a, .mobile-sidenav-nav li a {
     display: flex;
     gap: 15px;
     color: #f9ede7;
 }
-.sidenav-nav li a i {
-    transform: translateY(4px);
+.sidenav-nav li a ion-icon, .mobile-sidenav-nav li a ion-icon {
+    transform: translateY(6px);
+    font-size: 16px;
 }
-.sidenav-nav .logout {
+.sidenav-nav .logout, .mobile-sidenav-nav .logout {
     position: absolute;
     bottom: 10px;
     width: 100%;
 }
+.active-item {
+    position: relative;
+    background-color: rgba(159, 253, 17, 0.973);
+}
+.active-item a {
+    color: #211e5b !important;
+}
+.active-item::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    border-radius: 25px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.142), rgba(255, 255, 255, 0.233), rgba(255, 255, 255, 0.297));
+    box-sizing: border-box;
+}
 #mySidebar {
-    width: 19.2%; 
+    width: 19.2%;
     float: left; 
     transition: width .8s; 
     overflow-x: hidden; 
     height: 100vh;
     position: relative;
 }
+#myMobileSidebar {
+    width: 50%;
+    overflow-x: hidden;
+    height: 100vh;
+    position: relative;
+    /* display: block; */
+}
 #main {
+    position: relative;
     margin-left: 19.2%; 
     transition: margin-left .8s, border-radius .8s;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     height: 100vh;
-    color: #211f4e;
+    color: #211e5b;
+    overflow-y: scroll;
 }
 .dashboard-nav .dropdown-toggle::after {
-    color: #211f4e;
+    color: #211e5b;
 }
 .progress-div {
-    padding: 20px 0 20px 0;
+    padding: 20px 0;
+    box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.116);
+    position: relative;
+    overflow: hidden; /* Added */
+}
+.progress-div::after {
+    content: "";
+    position: absolute;
+    height: 200px;
+    width: 250px;
+    top: 40px;
+    right: -80px;
+    border-radius: 50%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.142), rgba(255, 255, 255, 0.233), rgba(255, 255, 255, 0.297));
+    transform: translate(0px, -50px);
+    box-sizing: border-box;
 }
 .atm {
     position: relative;
     height: 200px;
     background-size: cover;
-    background-color: #211f4e51;
+    /* background-color: #eeeeee46; */
+    background-image: linear-gradient(45deg, #631936, #bb1923, #9f2364);
     overflow: hidden;
+    border-radius: 20px;
 }
 .ring1 {
     position: absolute;
-    width: 180px;
-    height: 180px;
+    width: 100%;
+    height: 200px;
     top: 0;
     left: 0;
-    background-image: linear-gradient(45deg, rgb(93, 199, 253), rgb(7, 143, 255));
-    transform: rotate(26deg) translate(-40px, -60px);
+    /* border-radius: 50%; */
+    /* background-image: linear-gradient(45deg, rgb(0, 130, 195), rgb(7, 143, 255)); */
+    background-color: #eeeeee2b;
+    backdrop-filter: blur( 1px );
+    -webkit-backdrop-filter: blur( 1px );
+    /* transform: rotate(26deg) translate(-80px, -60px); */
 }
 .ring2 {
     position: absolute;
@@ -427,25 +581,125 @@ footer .footer-links p {
     height: 180px;
     bottom: 0;
     right: 0;
-    background-image: linear-gradient(45deg, rgb(93, 199, 253), rgb(7, 143, 255));
+    border-radius: 50%;
+    /* background-image: linear-gradient(45deg, rgb(93, 199, 253), rgb(7, 143, 255)); */
+    background-color: #f9ede7;
     transform: rotate(65deg) translateX(80px);
-
+}
+/* The two rings on the card background */
+.ring {
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    background: transparent;
+    border: 40px solid rgba(255, 255, 255, 0.1);
+    transform: translate(150px, -50px);
+    box-sizing: border-box;
+}
+.ring::after {
+    content: "";
+    position: absolute;
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
+    background: transparent;
+    border: 30px solid rgba(255, 255, 255, 0.1);
+    bottom: -80px;
+    right: -100px;
+    box-sizing: border-box;
+}
+.chip img {
+    top: 120px;
+    left: 40px;
+    width: 50px;
+    height: auto;
+    opacity: 0.8;
 }
 .atm-content {
     /* width: 350px; */
     height: 200px;
-    box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.034);
-    background: rgba( 255, 255, 255, 0.05 );
+    /* box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.034); */
+    /* background: rgba( 255, 255, 255, 0.05 ); */
     backdrop-filter: blur( 16.5px );
     -webkit-backdrop-filter: blur( 16.5px );
     border: 1px solid rgba(211, 210, 210, 0.18);
 }
 .bg-one-faint {
-    background-color: #343078;
+    background-color: #343078a9;  
 }
 .bg-two-faint {
-    background-color: #8095e8;
+    background-color: #8095e834;
+    border: 1px solid #606fac;
 }
 .bg-three-faint {
     background-color: rgb(92, 240, 183);
+}
+.bg-green {
+    background-color: greenyellow;
+}
+.bg-five {
+    background-color: #9f2364;
+}
+.bg-six {
+    background-color: #bb1923;
+}
+.bg-seven {
+    background-color: #631936;
+}
+.bg-eight {
+    background-color: #211e5b;
+}
+.bg-gold {
+    background-color: rgb(247, 182, 19);
+}
+.button {
+    background-color: #8095e821;
+    border: none;
+}
+.shadow {
+    /* box-shadow: 1px 1px 60px 8px rgba(153, 247, 206, 0.1) !important; */
+    box-shadow: 0px 0px 0px 70px rgb(0, 0, 0, 0.01) !important;
+}
+.icon-div {
+    width: 60px;
+    height: 50px;
+    border-radius: 10px;
+}
+.hamburger {
+    cursor: pointer;
+}
+  
+.hamburger input {
+    display: none;
+}
+
+.hamburger svg {
+    /* The size of the SVG defines the overall size */
+    height: 2.3em;
+    /* Define the transition for transforming the SVG */
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+    fill: none;
+    stroke: white;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    /* Define the transition for transforming the Stroke */
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+              stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+    transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
 }

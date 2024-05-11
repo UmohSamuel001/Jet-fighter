@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenwealth - update bank details</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a207e207d8.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-eight">
+
+    <!-- Sidebar -->
+    <div class="d-flex justify-content-center bg-eight" id="mySidebar">
+      <div class="sidenav-wrapper p-3">
+        <ul class="sidenav-nav ps-0 h-100">
+            <li class="active-item">
+                <a href="#"><ion-icon name="home"></ion-icon><span>Dashboard</span></a>
+            </li>
+            <li class="unactive-item">
+                <a href="#"><ion-icon name="card-outline"></ion-icon><span>Withdrawals</span>
+                </a>
+            </li>
+            <li class="unactive-item">
+                <a href="#"><ion-icon name="cart-outline"></ion-icon><span>Upload Product</span></a>
+            </li>
+            <li class="unactive-item">
+                <a href="#"><ion-icon name="pricetags-outline"></ion-icon><span>Purchased Courses</span></a>
+            </li>
+            <li class="unactive-item">
+                <a href="#"><ion-icon name="person-add-outline"></ion-icon><span>P2P Registration</span></a>
+            </li>
+            <li class="unactive-item">
+                <a href="#"><ion-icon name="phone-portrait-outline"></ion-icon><span>VTU Purchase History</span>
+                </a>
+            </li>
+            <li class="unactive-item">
+                <a href="#"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
+            </li>
+            <li class="logout unactive-item">
+                <a href="#"><ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a>
+            </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Sidebar ends -->
+
+
+    <!-- Main content -->
+    <div id="main" class="bg-light" style="overflow-y: scroll; height: 100vh;">
+      <div class="bg-hero shadow" style="position: absolute; top: 0; width: 100%;"></div>
+
+      <!-- Navbar Start -->
+      <nav class="navbar navbar-expand sticky-top px-4 py-2 pt-3">
+          <a href="#" class="sidebar-toggler flex-shrink-0" onclick="togglenav()">
+              <i class="fa fa-bars color-one" style="transform: translateY(-3px);"></i>
+          </a>
+          <label class="hamburger">
+            <input type="checkbox">
+            <svg viewBox="0 0 32 32">
+              <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+              <path class="line" d="M7 16 27 16"></path>
+            </svg>
+          </label>
+          <div class="ms-4">
+            <h4 class="fw-bold greeting">Welcome back, Joe! </h4>
+          </div>
+          <div class="navbar-nav align-items-center ms-auto dashboard-nav">
+              <div class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                      <img class="rounded-circle me-lg-2" src="img/dax.jpeg" alt="" style="width: 40px; height: 40px;">
+                      <span class="d-none d-lg-inline-flex color-one">Joe Black</span>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+                      <a href="#" class="dropdown-item">My Profile</a>
+                      <a href="#" class="dropdown-item">Settings</a>
+                      <a href="#" class="dropdown-item">Log Out</a>
+                  </div>
+              </div>
+          </div>
+      </nav>
+      <!-- Navbar End -->
+
+      <div class="ms-4 greeting-mobile">
+        <h4 class="fw-bold text-white">Welcome back, Joe! </h4>
+      </div>
+
+
+      <div class="container-fluid update-bank-div" style="padding: 0 2rem 0 2rem; margin-top: 10px;">
+        <div class="bg-white shadow radius-three p-3">
+            <form action="#" method="post">
+              <div class="row g-3">
+    
+                <div class="col-md-12">
+                  <div class="form-floating mb-2">
+                    <!-- <label for="firstname">Bank</label> -->
+                    <select class="form-select" id="bank" placeholder="bank" type="text" value="" name="bank" required="">
+                      <option value="">Select Bank</option>
+                      <option value="1">MoMO MTN</option>
+                      <option value="2">VodaFone Ghana</option>
+                      <option value="090267">Kuda MFB</option>
+                      <option value="033">UBA</option>
+                      <option value="044">Access Bank</option>
+                      <option value="100013">Access Mobile</option>
+                      <option value="050">Ecobank</option>
+                      <option value="305">Paycom (Opay)</option>
+                      <option value="100033">Palmpay</option>
+                      <option value="221">Stanbic IBTC</option>
+                      <option value="327">Paga</option>
+                      <option value="076">Polaris Bank</option>
+                      <option value="120001">9 Payment Service</option>
+                      <option value="100022">Gomoney</option>
+                      <option value="058">GTB</option>
+                      <option value="035">Wema Bank</option>
+                      <option value="057">Zenith Bank</option>
+                      <option value="232">Sterling Bank</option>
+                      <option value="011">First bank</option>
+                      <option value="070">Fidelity bank</option>  
+                      <option value="214">FCMB</option>  
+                      <option value="120003">MOMO PSB</option>  
+                      <option value="090110">VFD Micro Finance Bank</option> 
+                      <option value="032">Union Bank PLC</option>
+                      <option value="215">Unity Bank PLC</option>
+                      <option value="215">Unity Bank PLC</option>
+                      <option value="100">Suntrust Bank</option>
+                      <option value="068">Standard Chaterted bank PLC</option>
+                      <option value="301">Jaiz Bank</option>
+                      <option value="082">Keystone Bank</option>
+                    </select>
+                  </div>
+                </div>
+    
+                
+                <div class="col-md-12 mb-2">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" name="username" placeholder="bank" autocomplete="off" readonly>
+                    <label>Saved Bank</label>
+                  </div>
+                </div>
+    
+                <div class="col-md-12 mb-2">
+                  <div class="form-floating">
+                    <input class="form-control" id="account_name" type="text" placeholder="account name" name="account_name">
+                    <label>Account Name</label>
+                  </div>
+                </div>
+                
+                <div class="col-md-12 mb-2">
+                  <div class="form-floating">
+                    <input class="form-control" id="account_number" type="text" placeholder="account number" name="account_number">
+                    <label>Account Number</label>
+                  </div>
+                </div>
+    
+                <div class="col-md-12">
+                    <button class="bg-three w-100 radius-four text-white fw-bold py-2" style="border: none;" type="submit">Update Now</button>
+                </div>
+              </div>
+            </form>
+        </div>
+      </div>
+
+
+      
+      <footer class="bg-white shadow">
+        <div class="d-flex align-items-center justify-content-around" style="transform: translateY(10px);">
+          <div class="text-center">
+            <!-- <ion-icon name="home-outline" style="font-size: 26px !important;"></ion-icon> -->
+            <ion-icon name="home" style="font-size: 30px !important;"></ion-icon>
+            <p class="color-one">Dashboard</p>
+          </div>
+          <div class="text-center">
+            <ion-icon name="call-outline" style="font-size: 26px !important;"></ion-icon>
+            <!-- <ion-icon name="call" style="font-size: 30px !important;"></ion-icon> -->
+            <p class="color-one">Airtime</p>
+          </div>
+          <div class="text-center">
+            <ion-icon name="flash-outline" style="font-size: 26px !important;"></ion-icon>
+            <!-- <ion-icon name="flash" style="font-size: 30px !important;"></ion-icon> -->
+            <p class="color-one">Data</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.1.0/progressbar.min.js"></script>
+    <script>
+      var mainDiv = document.getElementById("main");
+      var sideBar = document.getElementById("mySidebar");
+
+      function togglenav() {
+        if (mainDiv.style.marginLeft === "0%"){
+          mainDiv.style.marginLeft = "19.2%";
+          mainDiv.style.borderTopLeftRadius = "25px";
+          mainDiv.style.borderBottomLeftRadius = "25px";
+          sideBar.style.width = "19.2%";
+        } else {
+          mainDiv.style.marginLeft = "0%";
+          sideBar.style.width = "0%";
+          mainDiv.style.borderRadius = "0";
+        }
+      }
+    </script>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
