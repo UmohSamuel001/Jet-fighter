@@ -15,27 +15,27 @@
       <div class="sidenav-wrapper p-3">
         <ul class="sidenav-nav ps-0 h-100">
             <li class="active-item">
-                <a href="#"><ion-icon name="home"></ion-icon><span>Dashboard</span></a>
+                <a href="user-dashboard.html"><ion-icon name="home"></ion-icon><span>Dashboard</span></a>
             </li>
             <li class="unactive-item">
-                <a href="#"><ion-icon name="card-outline"></ion-icon><span>Withdrawals</span>
+                <a href="withdrawals-history.html"><ion-icon name="card-outline"></ion-icon><span>Withdrawals</span>
                 </a>
             </li>
             <li class="unactive-item">
-                <a href="#"><ion-icon name="cart-outline"></ion-icon><span>Upload Product</span></a>
+                <a href="upload-product.html"><ion-icon name="cart-outline"></ion-icon><span>Upload Product</span></a>
             </li>
             <li class="unactive-item">
                 <a href="#"><ion-icon name="pricetags-outline"></ion-icon><span>Purchased Courses</span></a>
             </li>
             <li class="unactive-item">
-                <a href="#"><ion-icon name="person-add-outline"></ion-icon><span>P2P Registration</span></a>
+                <a href="p2p-registration.html"><ion-icon name="person-add-outline"></ion-icon><span>P2P Registration</span></a>
             </li>
             <li class="unactive-item">
-                <a href="#"><ion-icon name="phone-portrait-outline"></ion-icon><span>VTU Purchase History</span>
+                <a href="VTU-history.html"><ion-icon name="phone-portrait-outline"></ion-icon><span>VTU Purchase History</span>
                 </a>
             </li>
             <li class="unactive-item">
-                <a href="#"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
+                <a href="downlines.html"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
             </li>
             <li class="logout unactive-item">
                 <a href="#"><ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a>
@@ -44,6 +44,40 @@
       </div>
     </div>
     <!-- Sidebar ends -->
+
+
+    <div class="bg-eight d-flex justify-content-center" id="myMobileSidebar">
+      <div class="sidenav-wrapper p-3">
+        <ul class="mobile-sidenav-nav ps-0 h-100">
+            <li class="active-item">
+                <a href="user-dashboard.html"><ion-icon name="home"></ion-icon><span>Dashboard</span></a>
+            </li>
+            <li class="unactive-item">
+                <a href="withdrawals-history.html"><ion-icon name="card-outline"></ion-icon><span>Withdrawals</span>
+                </a>
+            </li>
+            <li class="unactive-item">
+                <a href="upload-product.html"><ion-icon name="cart-outline"></ion-icon><span>Upload Product</span></a>
+            </li>
+            <li class="unactive-item">
+                <a href="#"><ion-icon name="pricetags-outline"></ion-icon><span>Purchased Courses</span></a>
+            </li>
+            <li class="unactive-item">
+                <a href="p2p-registration.html"><ion-icon name="person-add-outline"></ion-icon><span>P2P Registration</span></a>
+            </li>
+            <li class="unactive-item">
+                <a href="VTU-history.html"><ion-icon name="phone-portrait-outline"></ion-icon><span>VTU Purchase History</span>
+                </a>
+            </li>
+            <li class="unactive-item">
+                <a href="downlines.html"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
+            </li>
+            <li class="logout unactive-item">
+                <a href="#"><ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a>
+            </li>
+        </ul>
+      </div>
+    </div>
 
 
     <!-- Main content -->
@@ -55,7 +89,7 @@
           <a href="#" class="sidebar-toggler flex-shrink-0" onclick="togglenav()">
               <i class="fa fa-bars color-one" style="transform: translateY(-3px);"></i>
           </a>
-          <label class="hamburger">
+          <label class="hamburger" id="hamburger">
             <input type="checkbox">
             <svg viewBox="0 0 32 32">
               <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
@@ -72,8 +106,8 @@
                       <span class="d-none d-lg-inline-flex color-one">Joe Black</span>
                   </a>
                   <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-                      <a href="#" class="dropdown-item">My Profile</a>
-                      <a href="#" class="dropdown-item">Settings</a>
+                    <a href="update-profile.html" class="dropdown-item">My Profile</a>
+                    <a href="#" class="dropdown-item">Settings</a>
                       <a href="#" class="dropdown-item">Log Out</a>
                   </div>
               </div>
@@ -86,8 +120,8 @@
       </div>
 
 
-      <div class="container-fluid update-bank-div" style="padding: 0 2rem 0 2rem; margin-top: 10px;">
-        <div class="bg-white shadow radius-three p-3">
+      <div class="container-fluid d-flex align-items-center justify-content-center">
+        <div class="bg-white fixed-width radius-three p-4 mt-4">
             <form action="#" method="post">
                 <div class="row g-3">
                     <div class="col-md-6">
@@ -149,7 +183,7 @@
 
 
       
-      <footer class="bg-white shadow">
+      <footer class="bg-white shadow dashboard-footer">
         <div class="d-flex align-items-center justify-content-around" style="transform: translateY(10px);">
           <div class="text-center">
             <!-- <ion-icon name="home-outline" style="font-size: 26px !important;"></ion-icon> -->
@@ -177,6 +211,10 @@
     <script>
       var mainDiv = document.getElementById("main");
       var sideBar = document.getElementById("mySidebar");
+      var menuIcon = document.getElementById("hamburger");
+      var mobileSideBar = document.getElementById("myMobileSidebar");
+      const checkbox = document.querySelector('.hamburger input');
+
 
       function togglenav() {
         if (mainDiv.style.marginLeft === "0%"){
@@ -190,6 +228,17 @@
           mainDiv.style.borderRadius = "0";
         }
       }
+
+      checkbox.addEventListener('change', function() {
+        if (this.checked) {
+          mobileSideBar.style.width = '60%';
+          menuIcon.style.marginLeft = '60%';
+        } else {
+          mobileSideBar.style.width = '0%';
+          menuIcon.style.marginLeft = '0%';
+        }
+      });
+
     </script>
     <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
 </body>
