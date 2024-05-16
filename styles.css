@@ -63,9 +63,15 @@ a {
 .welcome-div {
     /* margin-top: -20px; */
 }
-/* .hero-section {
-    background-color: transparent;
-    backdrop-filter: blur(25px) !important;
+.hero-section {
+    /* background-image: url(img/4c318336d928a50d4e968cb18a650bec.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+/* .hero-section-blur {
+    height: inherit;
+    backdrop-filter: blur(5px) !important;
 } */
 .hero-section p {
     font-size: 17px;
@@ -503,8 +509,11 @@ footer .footer-links p {
     position: relative;
 }
 .sidenav-nav li, .mobile-sidenav-nav li {
+    display: block;
+    /* align-items: center;
+    justify-content: center; */
     white-space: nowrap;
-    padding: 10px 17px 10px 17px;
+    padding: 10px 5px 10px 5px;
     border-radius: 25px;
     margin-bottom: 5px;
 }
@@ -513,6 +522,7 @@ footer .footer-links p {
 }
 .sidenav-nav li a, .mobile-sidenav-nav li a {
     display: flex;
+    transform: translateX(10px);
     gap: 15px;
     color: #f9ede7;
 }
@@ -711,7 +721,7 @@ footer .footer-links p {
 
 .hamburger svg {
     /* The size of the SVG defines the overall size */
-    height: 2.3em;
+    height: 1.8em;
     /* Define the transition for transforming the SVG */
     transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
