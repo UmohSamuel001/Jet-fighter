@@ -7,7 +7,7 @@
 body {
     /* background-color: #f9ede7; */
     /* background: linear-gradient(to right, #211e5b3f, #f9ede7, #606fac48); */
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 .menu-icon {
     position: relative;
@@ -74,10 +74,9 @@ a {
     box-shadow: 10px 20px 30px -10px rgba(61, 76, 117, 0.674);
     backdrop-filter: blur(15px) !important;
 }
-/* .hero-section-blur {
-    height: inherit;
-    backdrop-filter: blur(5px) !important;
-} */
+.hero-section {
+    overflow-x: hidden !important;
+}
 .hero-section p {
     font-size: 17px;
 }
