@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenwealth - Signup</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a207e207d8.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-eight">
+
+    <!-- Sidebar -->
+    <div class="d-flex justify-content-center bg-eight" id="mySidebar">
+      <div class="sidenav-wrapper p-3 d-flex align-items-center justify-content-center">
+        <div>
+            <h1 class="title fw-bolder">Zen<span>wealth</span></h1>
+            <p class="text-center color-three" style="margin-top: -10px;">...the zenith of wealth</p>
+        </div>
+      </div>
+    </div>
+    <!-- Sidebar ends -->
+
+
+    <div class="bg-eight d-flex justify-content-center" id="myMobileSidebar">
+      <div class="sidenav-wrapper p-3">
+        
+      </div>
+    </div>
+
+
+    <!-- Main content -->
+    <div id="main" class="bg-light d-flex align-items-center justify-content-center" style="overflow-y: scroll; height: 100vh;">
+
+      <div class="bg-hero shadow" style="position: absolute; top: 0; width: 100%;"></div>
+
+      <div class="container-fluid d-flex align-items-center justify-content-center">
+        <div>
+            <div class="bg-white radius-three p-5 signup-div" style="width: 500px; height: 440px; overflow-y: scroll;">
+
+                <h3 class="fw-bold text-center mt-4">Signup</h3>
+                <p class="color-one text-center mt-3">sign up to create an account...</p><br>
+    
+                <form action="#" method="post">
+                    <div class="row g-3">
+    
+                      <div class="col-md-12 mb-2">
+                        <div class="form-floating">
+                          <input type="text" class="form-control" name="username" placeholder="first name" autocomplete="off">
+                          <label>First name</label>
+                        </div>
+                      </div>
+                      <div class="col-md-12 mb-2">
+                        <div class="form-floating">
+                          <input type="text" class="form-control" name="username" placeholder="second name" autocomplete="off">
+                          <label>Last name</label>
+                        </div>
+                      </div>
+                      <div class="col-md-12 mb-2">
+                        <div class="form-floating">
+                          <input type="text" class="form-control" name="username" placeholder="username" autocomplete="off">
+                          <label>Username</label>
+                        </div>
+                      </div>
+                      <div class="col-md-12 mb-2">
+                        <div class="form-floating">
+                          <input type="email" class="form-control" name="email" placeholder="email" autocomplete="off">
+                          <label>Email</label>
+                        </div>
+                      </div>
+                      <div class="col-md-12 mb-2">
+                        <div class="form-floating">
+                          <input type="text" class="form-control" name="username" placeholder="username" autocomplete="off">
+                          <label>Username</label>
+                        </div>
+                      </div>
+                      <div class="col-md-12 mb-2">
+                        <div class="form-floating">
+                          <input type="tel" class="form-control" name="phone" placeholder="phone number" autocomplete="off">
+                          <label>Phone number</label>
+                        </div>
+                      </div>
+                      <div class="col-md-12 mb-2">
+                        <div class="form-floating">
+                          <input type="text" class="form-control" name="coupon" placeholder="coupon code" autocomplete="off">
+                          <label>Coupon code</label>
+                        </div>
+                      </div>
+                      <div class="col-md-12 mb-2">
+                        <div class="form-floating">
+                          <input type="text" class="form-control" name="password" placeholder="password" autocomplete="off">
+                          <label>Password</label>
+                        </div>
+                      </div>
+                      <div class="form-check mb-3">
+                        <div class="ms-2">
+                            <input class="form-check-input " id="checkedCheckbox" type="checkbox" value="">
+                            <label class="form-check-label text-muted fw-normal" for="checkedCheckbox">
+                                I agree with the terms &amp; policy.
+                            </label>
+                        </div>
+                      </div>            
+                      <div class="col-md-12">
+                        <button class="bg-three w-100 radius-four text-white fw-bold py-2" style="border: none;" type="submit">login</button>
+                      </div>              
+                    </div>
+                </form>
+            </div>
+            <p class="color-one text-center mt-3">Already have an account? <a href="login.html">login</a></p>
+            <p class="color-one text-center" style="margin-top: -10px;">Dont Have Coupon Code? <a href="buy-coupon-code.html">buy Coupon</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.1.0/progressbar.min.js"></script>
+    <script>
+      var mainDiv = document.getElementById("main");
+      var sideBar = document.getElementById("mySidebar");
+      var menuIcon = document.getElementById("hamburger");
+      var mobileSideBar = document.getElementById("myMobileSidebar");
+      const checkbox = document.querySelector('.hamburger input');
+
+      function togglenav() {
+        if (mainDiv.style.marginLeft === "0%"){
+          mainDiv.style.marginLeft = "19.2%";
+          mainDiv.style.borderTopLeftRadius = "25px";
+          mainDiv.style.borderBottomLeftRadius = "25px";
+          sideBar.style.width = "19.2%";
+        } else {
+          mainDiv.style.marginLeft = "0%";
+          sideBar.style.width = "0%";
+          mainDiv.style.borderRadius = "0";
+        }
+      }
+
+      checkbox.addEventListener('change', function() {
+        if (this.checked) {
+          mobileSideBar.style.width = '60%';
+          menuIcon.style.marginLeft = '60%';
+        } else {
+          mobileSideBar.style.width = '0%';
+          menuIcon.style.marginLeft = '0%';
+        }
+      });
+
+    </script>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
