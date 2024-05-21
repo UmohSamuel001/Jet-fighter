@@ -431,7 +431,7 @@ footer .footer-links p {
         width: 0% !important;
     }
     #main {
-        height: 100% !important;
+        height: 100vh !important;
         margin-left: 0% !important;
         border-top-left-radius: 0px !important;
         overflow: scroll;
@@ -446,9 +446,14 @@ footer .footer-links p {
     }
     .bg-hero {
         display: block;
-        background: #211e5b;
+        background: #1e1a69;
         height: 200px;
         border-radius: 0 0 25px 25px;
+    }
+    .content {
+        position: relative;
+        margin-top: -10px;
+        z-index: 5;
     }
     .greeting, .fa-bars, .dropdown-toggle {
         color: white !important;
@@ -461,14 +466,17 @@ footer .footer-links p {
     }
     .progress-mobile {
         display: block;
-        overflow: scroll;
-        margin-bottom: 30px;
+        overflow-x: scroll;
+    }
+    .progress-div {
+        margin-top: 10px;
+        margin-bottom: 30px;    
     }
     .action-mobile {
         display: block;
         position: relative;
         z-index: 2;
-        margin-top: -10px;
+        margin-top: -33px;
     }
     .action-large {
         display: none;
@@ -597,7 +605,7 @@ footer .footer-links p {
     padding: 20px 0;
     box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.116);
     position: relative;
-    overflow: hidden; /* Added */
+    overflow: hidden;
 }
 .progress-div::after {
     content: "";
