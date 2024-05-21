@@ -385,6 +385,12 @@ footer .footer-links p {
     z-index: 10;
     /* display: none; */
 }
+.flex-gap {
+    gap: 16px;
+}
+.flex-gap2 {
+    gap: 8px;
+}
 @media screen and (max-width: 550px) {
     .motto {
         font-size: 10px;
@@ -450,6 +456,12 @@ footer .footer-links p {
         height: 200px;
         border-radius: 0 0 25px 25px;
     }
+    .flex-gap {
+        gap: 65px;
+    }
+    .flex-gap2 {
+        gap: 25px;
+    }   
     .content {
         position: relative;
         margin-top: -10px;
@@ -559,7 +571,7 @@ footer .footer-links p {
 }
 .sidenav-nav .logout, .mobile-sidenav-nav .logout {
     position: absolute;
-    bottom: 10px;
+    bottom: 40px;
     width: 100%;
 }
 .active-item {
@@ -715,9 +727,9 @@ footer .footer-links p {
 .bg-eight {
     background-color: #211e5b;
 }
-/* .bg-gold {
-    background-color: rgba(224, 161, 1, 0.795);
-} */
+.bg-gold {
+    background-color: rgb(247, 182, 19);
+}
 .bg-yellow {
     background-color: rgba(252, 248, 10, 0.879);
 }
