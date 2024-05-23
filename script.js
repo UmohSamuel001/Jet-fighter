@@ -1,4 +1,5 @@
 let upBtn = document.getElementById("up-btn2");
+let navbar = document.getElementById("navbar");
 
 // When the user scrolls down 3000px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
@@ -10,7 +11,4 @@ function scrollFunction() {
     upBtn.style.display = "none";
   }
 }
-
-
-
 

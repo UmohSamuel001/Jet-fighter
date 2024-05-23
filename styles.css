@@ -346,6 +346,9 @@ footer .footer-links p {
     z-index: 1;
     background-color: #fff;
 }
+.dropdown-item {
+    color: #00e189 !important;
+}
 .bg-hero {
     display: none;
 }
@@ -369,6 +372,23 @@ footer .footer-links p {
     bottom: 0; 
     width: 100%;
     display: none;
+    z-index: 6;
+}
+.number {
+    position: absolute; 
+    bottom: 50px; 
+    letter-spacing: 2px; 
+    word-spacing: 5px;
+    font-size: 27px;
+}
+.vendor {
+    width: 350px !important; 
+    border: 1px solid rgba(128, 128, 128, 0.217); 
+    margin-top: 80px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-wrap: wrap; */
 }
 #test {
     width: 100%;
@@ -378,12 +398,14 @@ footer .footer-links p {
 #myMobileSidebar {
     width: 0%;
     transition: width .2s !important;
-    overflow-x: hidden;
+    overflow: hidden;
     height: 100%;
     position: fixed;
     float: left;
     z-index: 10;
-    /* display: none; */
+}
+#myMobileSidebar::-webkit-scrollbar {
+    width: 0px !important;
 }
 .flex-gap {
     gap: 16px;
@@ -391,6 +413,25 @@ footer .footer-links p {
 .flex-gap2 {
     gap: 8px;
 }
+.standard-tab .nav-item {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+  .standard-tab .btn {
+    padding: 6px 8px;
+    width: 100%;
+    border: 0 !important;
+  }
+  .standard-tab .btn.active {
+    background-color: #00e189;
+    color: #ffffff;
+  }
+  .logins {
+    position: relative;
+    padding: 25px;
+    z-index: 5;
+  }
 @media screen and (max-width: 550px) {
     .motto {
         font-size: 10px;
@@ -440,6 +481,7 @@ footer .footer-links p {
         height: 100vh !important;
         margin-left: 0% !important;
         border-top-left-radius: 0px !important;
+        border-bottom-left-radius: 0px !important;
         overflow: scroll;
     }
     .link-div {
@@ -448,7 +490,8 @@ footer .footer-links p {
         margin: 25px 0 100px 0 !important;
     }
     .link {
-        display: block;
+        display: block !important;
+        padding-bottom: 10px;
     }
     .bg-hero {
         display: block;
@@ -465,7 +508,7 @@ footer .footer-links p {
     .content {
         position: relative;
         margin-top: -10px;
-        z-index: 5;
+        z-index: 3;
     }
     .greeting, .fa-bars, .dropdown-toggle {
         color: white !important;
@@ -479,6 +522,9 @@ footer .footer-links p {
     .progress-mobile {
         display: block;
         overflow-x: scroll;
+    }
+    .progress-mobile::-webkit-scrollbar {
+        width: 0px !important;
     }
     .progress-div {
         margin-top: 10px;
@@ -529,11 +575,27 @@ footer .footer-links p {
     .login-link {
         display: none;
     }
+    .logins {
+        padding: 25px;
+    }
     .hamburger {
         display: block !important;
     }
+    .signup-div {
+        width: auto !important;
+        height: auto !important;
+        margin-top: 600px !important;        
+        padding: 25px;
+    }
 }
-
+@media screen and (max-width: 390px) {
+    .flex-gap {
+        gap: 42px;
+    }
+    .flex-gap2 {
+        gap: 15px;
+    }
+}
 @media screen and (max-width: 350px) {
     .assistant {
         transform: translate(40px, -20px) !important;
@@ -541,6 +603,40 @@ footer .footer-links p {
     }
 
 }
+@media screen and (min-width: 361px) {
+    .logins {
+        margin-top: -120px !important;
+    }
+}
+@media screen and (min-width: 375px) and (max-width: 413px) {
+    .logins {
+        margin-top: 50px !important;
+    }
+}
+@media screen and (min-width: 414px) {
+    .logins {
+        margin-top: -50px !important;
+    }
+}
+@media screen and (min-width: 393px) and (max-width: 1000px) {
+    .signup-div {
+        margin-top: 550px !important;
+    }
+}
+@media screen and (min-width: 360px) and (max-width: 374px) {
+    .signup-div {
+        margin-top: 550px !important;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 359px) {
+    .signup-div {
+        margin-top: 800px !important;
+    }
+    .logins {
+        margin-top: 210px !important;
+    }
+}
+
 
 
 /* Dashboard */
@@ -571,8 +667,8 @@ footer .footer-links p {
 }
 .sidenav-nav .logout, .mobile-sidenav-nav .logout {
     position: absolute;
-    bottom: 40px;
-    width: 100%;
+    bottom: 70px;
+    padding-right: 100px;
 }
 .active-item {
     position: relative;
@@ -596,9 +692,13 @@ footer .footer-links p {
     width: 19.2%;
     float: left; 
     transition: width .8s; 
-    overflow-x: hidden; 
+    overflow-x: hidden;
+    overflow-y: hidden;
     height: 100vh;
     position: relative;
+}
+#mySidebar::-webkit-scrollbar {
+    width: 0px !important;
 }
 #main {
     position: relative;
@@ -710,7 +810,7 @@ footer .footer-links p {
     border: 1px solid #606fac;
 }
 .bg-three-faint {
-    background-color: #00e18b98;
+    background-color: #00e18b17;
 }
 .bg-green {
     background-color: greenyellow;
@@ -748,6 +848,9 @@ footer .footer-links p {
     height: 50px;
     border-radius: 10px;
 }
+.dashboard-footer ion-icon {
+    color: #1e1a69;
+}
 .hamburger {
     cursor: pointer;
     transition: margin-left .2s !important;
@@ -767,7 +870,7 @@ footer .footer-links p {
 
 .line {
     fill: none;
-    stroke: white;
+    stroke: white !important;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 3;
@@ -790,6 +893,14 @@ footer .footer-links p {
 }
 .fixed-width {
     width: 800px;
+}
+.signup-div {
+    position: relative;
+    width: 500px;
+    height: 440px;
+    overflow-y: scroll;
+    z-index: 5;
+    padding: 25px;
 }
 .signup-div::-webkit-scrollbar {
     width: 3px;

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zenwealth - set pin</title>
+    <title>Zenwealth - user dashboard</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/a207e207d8.js" crossorigin="anonymous"></script>
@@ -14,11 +14,11 @@
     <div class="d-flex justify-content-center bg-one" id="mySidebar">
       <div class="sidenav-wrapper p-3">
         <span class="text-center">
-          <h3 class="fw-bolder text-white mt-3">Zenwealth</h3>
-          <p class="color-three motto text-center mb-4">...the zenith of wealth</p>
+          <h3 class="fw-bolder text-white mt-1">Zenwealth</h3>
+          <p class="color-three motto text-center mb-5">...the zenith of wealth</p>
         </span>
         <ul class="sidenav-nav ps-0 h-100">
-            <li class="unactive-item">
+            <li class="active-item">
                 <a href="user-dashboard.html"><ion-icon name="home"></ion-icon><span>Dashboard</span></a>
             </li>
             <li class="unactive-item">
@@ -51,12 +51,12 @@
 
 
     <div class="bg-one d-flex justify-content-center" id="myMobileSidebar">
-      <div class="sidenav-wrapper p-3">
+      <div class="sidenav-wrapper p-4">
         <span class="text-center">
           <h3 class="fw-bolder text-white mt-3">Zenwealth</h3>
           <p class="color-three motto text-center mb-4">...the zenith of wealth</p>
         </span>
-        <ul class="mobile-sidenav-nav ps-0 h-100">
+        <ul class="mobile-sidenav-nav px-5 h-100">
             <li class="unactive-item">
                 <a href="user-dashboard.html"><ion-icon name="home"></ion-icon><span>Dashboard</span></a>
             </li>
@@ -87,15 +87,14 @@
       </div>
     </div>
 
-
     <!-- Main content -->
-    <div id="main" class="bg-light" style="overflow-y: scroll; height: 100vh;">
+    <div id="main" class="bg-light">
       <div class="bg-hero shadow" style="position: absolute; top: 0; width: 100%;"></div>
 
       <!-- Navbar Start -->
-      <nav class="navbar navbar-expand sticky-top px-4 py-2 pt-3">
+      <nav class="navbar navbar-expand sticky-top px-4 py-2 pt-3" id="navbar">
           <a href="#" class="sidebar-toggler flex-shrink-0" onclick="togglenav()">
-              <i class="fa fa-bars color-one" style="transform: translateY(-3px);"></i>
+            <i class="fa fa-bars color-one" style="transform: translateY(-3px);"></i>
           </a>
           <label class="hamburger" id="hamburger">
             <input type="checkbox">
@@ -127,49 +126,169 @@
         <h4 class="fw-bold text-white">Hello, Joe-Hansen! </h4>
       </div>
 
+      <div class="container-fluid pt-2 progress-large">
+        <div class="row g-3">
+          <div class="col-lg-6">
+            <div class="p-6 radius-three">
+              <div class="bg-two px-4 radius-three progress-div">
+                <h5 class="text-white">Total Sold</h5>
+                <strong class="fs-5 text-white">$11,000</strong>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-6 radius-three">
+              <div class="bg-six px-4 radius-three progress-div">
+                <h5 class="text-white">Total Withdrawal</h5>
+                <strong class="fs-5 text-white">$20,000</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><br><br>
 
-      <div class="container-fluid d-flex align-items-center justify-content-center content">
-        <div class="bg-white fixed-width radius-three p-4 mt-4">
-            <form action="#" method="post">
-                <div class="row g-3">
-
-                  <div class="col-md-12 mb-2">
-                    <div class="form-floating">
-                      <input type="text" class="form-control" name="username" placeholder="bank" autocomplete="off" readonly>
-                      <label>First Name</label>
-                    </div>
+      <div class="container">
+        <div class="bg-white radius-three p-3 progress-mobile" style="position: relative; z-index: 2; margin-top: -33px;">
+            <div class="row g-3">
+              <div class="col-lg-12">
+                <div class="bg-two-faint px-4 py-2 radius-three">
+                  <div class="py-1">
+                    <h5 class="color-one fs-6">Active Codes</h5>
+                    <p class="fs-6 color-one">264</p>
                   </div>
-      
-                  <div class="col-md-12 mb-2">
-                    <div class="form-floating">
-                      <input class="form-control" id="account_name" type="text" placeholder="account name" name="account_name" readonly>
-                      <label>Last Name</label>
-                    </div>
-                  </div>
-                  
-                  <div class="col-md-12 mb-2">
-                    <div class="form-floating">
-                      <input class="form-control" id="account_number" type="text" placeholder="account number" name="account_number" readonly>
-                      <label>Account Number</label>
-                    </div>
-                  </div>
-
-                  <div class="col-md-12 mb-2">
-                    <div class="form-floating">
-                      <input class="form-control" id="account_number" type="text" placeholder="pin" name="pin">
-                      <label>Withdrawal Pin</label>
-                    </div>
-                  </div>
-
-                  <div class="col-md-12">
-                    <button class="bg-three w-100 radius-four text-white fw-bold py-2" style="border: none;" type="submit">Update Now</button>
-                  </div>
-                  
                 </div>
-              </form>
+              </div>
+              <div class="col-lg-12">
+                <div class="bg-two-faint px-4 py-2 radius-three ">
+                  <div class="py-1">
+                    <h5 class="color-one fs-6">Used Codes</h5>
+                    <p class="fs-6 color-one">250</p>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
 
+      
+      <div class="container-fluid pt-3 progress-mobile">
+        <div class="d-flex gap-2" style="overflow-x: scroll;">
+          <div class="col-8">
+            <div class="radius-three">
+              <div class="bg-two px-4 py-4 radius-three progress-div">
+                <h5 class="text-white">Referrals</h5>
+                <strong class="fs-5 text-white">15</strong>
+              </div>
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="bg- radius-three">
+              <div class="bg-six px-4 py-4 radius-three progress-div">
+                <h5 class="text-white">Zee Points</h5>
+                <strong class="fs-5 text-white">5000ZP</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container-fluid mb-5">
+        <!-- <div class="col-lg-8"> -->
+            <div class="row g-3 mb-5" style="position: relative;">
+              <div class="col-lg-8">
+                <div class="bg-white radius-three p-3">
+                <div class="standard-tab">
+                  <ul class="nav rounded-lg mb-2 p-2 shadow-sm radius-three" id="affanTabs1" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="btn active" id="bootstrap-tab" data-bs-toggle="tab" data-bs-target="#bootstrap" type="button" role="tab" aria-controls="bootstrap" aria-selected="true">Active Codes</button>
+                    </li>
+                    <li class="nav-item tab-pill" role="presentation">
+                      <button class="btn" id="dark-tab" data-bs-toggle="tab" data-bs-target="#dark" type="button" role="tab" aria-controls="dark" aria-selected="false" tabindex="-1">Used Codes</button>
+                    </li>
+                  </ul>
+                  <div class="tab-content rounded-lg p-3 shadow-sm radius-three" id="affanTabs1Content">
+                    <div class="tab-pane fade show active" id="bootstrap" role="tabpanel" aria-labelledby="bootstrap-tab">
+                        <div class="d-flex justify-content-between">
+                            <div class="">
+                              <label>
+                                <select class="form-select">
+                                  <option value="10" selected>10</option>
+                                  <option value="20">20</option>
+                                  <option value="30">30</option>
+                                  <option value="40">40</option>
+                                  <option value="50">50</option>
+                                </select>
+                              </label>
+                            </div>
+                            <div class="">
+                              <input type="search" class="form-control" placeholder="search username" id="search">
+                            </div>
+                          </div>
+                        <div class="dataTable-container mt-3">
+                          <table class="w-100 dataTable-table table" id="dataTable">
+                            <thead style="color: #211e5b;">
+                              <tr><th data-sortable="" style="width: 12.2727%;">SN</th><th data-sortable="" style="width: 67.5%;">Code</th><th data-sortable="" style="width: 20.2841%;">Value</th></tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>esfhg784r47r623847r234y2</td>
+                                <td>4,500</td>
+                              </tr>
+                              <tr>
+                                <td>1</td>
+                                <td>esfhg784r47r623847r234y2</td>
+                                <td>4,500</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="dataTable-bottom d-flex justify-content-between">
+                          <div class="dataTable-info" id="dataTableInfo">1 to 10 entries</div>
+                          <div class="dataTable-pagination">
+                            <ul class="pagination">
+                              <!-- Pagination links are generated dynamically -->
+                            </ul>
+                          </div>
+                        </div>
+                    </div>
+
+                  </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="bg-white radius-three p-3 progress2 progress-large">
+              <div class="row g-3">
+                <div class="col-lg-12">
+                  <div class="bg-two-faint px-4 py-2 radius-three">
+                    <div class="py-1">
+                      <h5 class="color-one fs-6">Active Codes</h5>
+                      <p class="fs-6 color-one">264</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="bg-two-faint px-4 py-2 radius-three ">
+                    <div class="py-1">
+                      <h5 class="color-one fs-6">Used Codes</h5>
+                      <p class="fs-6 color-one">250</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>  
+          </div>
+        </div>
+          
+          
+
+          
+        </div>
+      </div>
 
       
       <footer class="bg-white shadow dashboard-footer">
@@ -223,11 +342,11 @@
           mainDiv.style.borderRadius = "0";
         }
       }
-
+      
       checkbox.addEventListener('change', function() {
         if (this.checked) {
-          mobileSideBar.style.width = '60%';
-          menuIcon.style.marginLeft = '60%';
+          mobileSideBar.style.width = '61%';
+          menuIcon.style.marginLeft = '61%';
         } else {
           mobileSideBar.style.width = '0%';
           menuIcon.style.marginLeft = '0%';
