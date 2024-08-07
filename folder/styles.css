@@ -424,16 +424,13 @@ footer .footer-links p {
     border: 0 !important;
   }
   .standard-tab .btn.active {
-    background-color: rgb(243, 243, 243);
+    background-color: #00e189;
     color: #ffffff;
   }
   .logins {
     position: relative;
     padding: 25px;
     z-index: 5;
-  }
-  .sm {
-    display: none;
   }
 @media screen and (max-width: 550px) {
     .motto {
@@ -532,9 +529,6 @@ footer .footer-links p {
     .progress-mobile::-webkit-scrollbar {
         width: 0px !important;
     }
-    .first {
-        margin-left: 12px;
-    }
     .progress-div {
         margin-top: 10px;
         margin-bottom: 30px;    
@@ -595,12 +589,6 @@ footer .footer-links p {
         height: auto !important;
         margin-top: 600px !important;        
         padding: 25px;
-    }
-    .sm {
-        display: block;
-    }
-    .lg {
-        display: none;
     }
 }
 @media screen and (max-width: 390px) {
@@ -730,17 +718,17 @@ footer .footer-links p {
 }
 .progress-div {
     padding: 20px 0;
-    /* box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.116); */
+    box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.116);
     position: relative;
     overflow: hidden;
 }
 .progress-div::after {
     content: "";
     position: absolute;
-    height: 280px;
-    width: 320px;
+    height: 200px;
+    width: 250px;
     top: 40px;
-    right: -150px;
+    right: -80px;
     border-radius: 50%;
     background: linear-gradient(to right, rgba(255, 255, 255, 0.142), rgba(255, 255, 255, 0.233), rgba(255, 255, 255, 0.297));
     transform: translate(0px, -50px);
