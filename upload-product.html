@@ -50,42 +50,48 @@
     <!-- Sidebar ends -->
 
 
-    <div class="bg-one d-flex justify-content-center" id="myMobileSidebar">
-      <div class="sidenav-wrapper p-3">
-        <span class="text-center">
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header bg-one d-flex">
+        <span class="text-center ms-5">
           <h3 class="fw-bolder text-white mt-3">Zenwealth</h3>
           <p class="color-three motto text-center mb-4">...the zenith of wealth</p>
         </span>
-        <ul class="mobile-sidenav-nav ps-0 h-100">
-            <li class="unactive-item">
-                <a href="user-dashboard.html"><ion-icon name="home"></ion-icon><span>Dashboard</span></a>
-            </li>
-            <li class="unactive-item">
-                <a href="withdrawals-history.html"><ion-icon name="card-outline"></ion-icon><span>Withdrawals</span>
-                </a>
-            </li>
-            <li class="active-item">
-                <a href="upload-product.html"><ion-icon name="cart-outline"></ion-icon><span>Upload Product</span></a>
-            </li>
-            <li class="unactive-item">
-                <a href="#"><ion-icon name="pricetags-outline"></ion-icon><span>Purchased Courses</span></a>
-            </li>
-            <li class="unactive-item">
-                <a href="p2p-registration.html"><ion-icon name="person-add-outline"></ion-icon><span>P2P Registration</span></a>
-            </li>
-            <li class="unactive-item">
-                <a href="VTU-history.html"><ion-icon name="phone-portrait-outline"></ion-icon><span>VTU Purchase History</span>
-                </a>
-            </li>
-            <li class="unactive-item">
-                <a href="downlines.html"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
-            </li>
-            <li class="logout unactive-item">
-                <a href="#"><ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a>
-            </li>
-        </ul>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body bg-one d-flex justify-content-center">
+        <div class="sidenav-wrapper p-4">
+          <ul class="mobile-sidenav-nav px-5 h-100">
+              <li class="unactive-item">
+                  <a href="user-dashboard.html"><ion-icon name="home"></ion-icon><span>Dashboard</span></a>
+              </li>
+              <li class="unactive-item">
+                  <a href="withdrawals-history.html"><ion-icon name="card-outline"></ion-icon><span>Withdrawals</span>
+                  </a>
+              </li>
+              <li class="unactive-item">
+                  <a href="upload-product.html"><ion-icon name="cart-outline"></ion-icon><span>Upload Product</span></a>
+              </li>
+              <li class="unactive-item">
+                  <a href="#"><ion-icon name="pricetags-outline"></ion-icon><span>Purchased Courses</span></a>
+              </li>
+              <li class="unactive-item">
+                  <a href="p2p-registration.html"><ion-icon name="person-add-outline"></ion-icon><span>P2P Registration</span></a>
+              </li>
+              <li class="unactive-item">
+                  <a href="VTU-history.html"><ion-icon name="phone-portrait-outline"></ion-icon><span>VTU Purchase History</span>
+                  </a>
+              </li>
+              <li class="unactive-item">
+                  <a href="downlines.html"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
+              </li>
+              <li class="logout unactive-item">
+                  <a href="#"><ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a>
+              </li>
+          </ul>
+        </div>
       </div>
     </div>
+
 
 
     <!-- Main content -->
@@ -97,13 +103,14 @@
           <a href="#" class="sidebar-toggler flex-shrink-0" onclick="togglenav()">
               <i class="fa fa-bars color-one" style="transform: translateY(-3px);"></i>
           </a>
-          <label class="hamburger" id="hamburger">
-            <input type="checkbox">
-            <svg viewBox="0 0 32 32">
-              <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
-              <path class="line" d="M7 16 27 16"></path>
-            </svg>
-          </label>
+          <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <label class="hamburger" id="hamburger">
+              <svg viewBox="0 0 32 32">
+                <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                <path class="line" d="M7 16 27 16"></path>
+              </svg>
+            </label>
+          </button>
           <div class="ms-4">
             <h4 class="fw-bold greeting">Hello, Joe-Hansen! </h4>
           </div>
@@ -181,7 +188,7 @@
         <div class="d-flex align-items-center justify-content-around" style="transform: translateY(10px);">
           <a href="user-dashboard.html">
             <div class="text-center">
-              <ion-icon name="home-outline" style="font-size: 25px !important; margin-bottom: -5px;"></ion-icon>
+              <ion-icon name="home" style="font-size: 25px !important; margin-bottom: -5px;"></ion-icon>
               <p class="color-one">Dashboard</p>
             </div>
           </a>
@@ -191,11 +198,12 @@
               <p class="color-one">Profile</p>
             </div>
           </a>
-          <div class="text-center">
-            <ion-icon name="call-outline" style="font-size: 25px !important;"></ion-icon>
-            <!-- <ion-icon name="call" style="font-size: 30px !important;"></ion-icon> -->
-            <p class="color-one">Airtime</p>
-          </div>
+          <a href="downlines.html">
+            <div class="text-center">
+              <ion-icon name="people-outline" style="font-size: 27px !important; margin-bottom: -5px;"></ion-icon>
+              <p class="color-one">Downlines</p>
+            </div>
+          </a>
           <div class="text-center">
             <ion-icon name="flash-outline" style="font-size: 25px !important;"></ion-icon>
             <!-- <ion-icon name="flash" style="font-size: 30px !important;"></ion-icon> -->
