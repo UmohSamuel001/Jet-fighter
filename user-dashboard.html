@@ -50,7 +50,7 @@
     <!-- Sidebar ends -->
 
 
-    <div class="bg-one d-flex justify-content-center" id="myMobileSidebar">
+    <!-- <div class="bg-one d-flex justify-content-center">
       <div class="sidenav-wrapper p-4">
         <span class="text-center">
           <h3 class="fw-bolder text-white mt-3">Zenwealth</h3>
@@ -85,6 +85,50 @@
             </li>
         </ul>
       </div>
+    </div> -->
+    
+    
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body bg-one">
+        <div class="sidenav-wrapper p-4">
+          <span class="text-center">
+            <h3 class="fw-bolder text-white mt-3">Zenwealth</h3>
+            <p class="color-three motto text-center mb-4">...the zenith of wealth</p>
+          </span>
+          <ul class="mobile-sidenav-nav px-5 h-100">
+              <li class="unactive-item">
+                  <a href="user-dashboard.html"><ion-icon name="home"></ion-icon><span>Dashboard</span></a>
+              </li>
+              <li class="unactive-item">
+                  <a href="withdrawals-history.html"><ion-icon name="card-outline"></ion-icon><span>Withdrawals</span>
+                  </a>
+              </li>
+              <li class="unactive-item">
+                  <a href="upload-product.html"><ion-icon name="cart-outline"></ion-icon><span>Upload Product</span></a>
+              </li>
+              <li class="unactive-item">
+                  <a href="#"><ion-icon name="pricetags-outline"></ion-icon><span>Purchased Courses</span></a>
+              </li>
+              <li class="unactive-item">
+                  <a href="p2p-registration.html"><ion-icon name="person-add-outline"></ion-icon><span>P2P Registration</span></a>
+              </li>
+              <li class="unactive-item">
+                  <a href="VTU-history.html"><ion-icon name="phone-portrait-outline"></ion-icon><span>VTU Purchase History</span>
+                  </a>
+              </li>
+              <li class="unactive-item">
+                  <a href="downlines.html"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
+              </li>
+              <li class="logout unactive-item">
+                  <a href="#"><ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a>
+              </li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <!-- Main content -->
@@ -92,23 +136,25 @@
       <div class="bg-hero shadow" style="position: absolute; top: 0; width: 100%;"></div>
 
       <!-- Navbar Start -->
-      <nav class="navbar navbar-expand sticky-top px-4 py-2 pt-3" id="navbar">
+      <nav class="navbar navbar-expand px-4 py-2 pt-3" id="navbar">
           <a href="#" class="sidebar-toggler flex-shrink-0" onclick="togglenav()">
             <i class="fa fa-bars color-one" style="transform: translateY(-3px);"></i>
           </a>
-          <label class="hamburger" id="hamburger">
-            <input type="checkbox">
-            <svg viewBox="0 0 32 32">
-              <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
-              <path class="line" d="M7 16 27 16"></path>
-            </svg>
-          </label>
+          <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <label class="hamburger" id="hamburger">
+              <svg viewBox="0 0 32 32">
+                <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                <path class="line" d="M7 16 27 16"></path>
+              </svg>
+            </label>
+          </button>
+          
           <div class="ms-4">
             <h4 class="fw-bold greeting">Hello, Joe-Hansen! </h4>
           </div>
           <div class="navbar-nav align-items-center ms-auto dashboard-nav">
               <div class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                  <a href="#" class="nav-link" data-bs-toggle="dropdown">
                       <img class="rounded-circle me-lg-2" src="img/dax.jpeg" alt="" style="width: 40px; height: 40px;">
                       <span class="d-none d-lg-inline-flex color-one">Joe-Hansen Emeka</span>
                   </a>
@@ -204,42 +250,52 @@
 
       <div class="containe pt-3 progress-mobile">
         <div class="d-flex gap-4" style="overflow-x: scroll;">
-          <div class="col-9 first">
+          <div class="col-10 first">
             <div class="radius-three">
-              <div class="bg-five px-4 py-3 radius-three shadow progress-div">
+              <div class="bg-three px-4 pt-3 pb-0 radius-three shadow progress-div">
                 <h5 class="text-white mb-4">Total Balance</h5><br>
                 <p class="fs-1 text-white"><strong>$11,000</strong></p>
+                <span class="d-flex justify-content-between">
+                  <p class="text-white text-end">Affiliate</p>
+                  <p class="text-white text-end">convert to dollar</p>
+                </span>
               </div>
             </div>
           </div>
-          <div class="col-9">
+          <div class="col-10">
             <div class="radius-three">
-              <div class="bg-two px-4 py-3 radius-three shadow progress-div">
+              <div class="bg-six px-4 pt-3 pb-0 radius-three shadow progress-div">
                 <h5 class="text-white mb-4">Sales</h5><br>
                 <p class="fs-1 text-white"><strong>15</strong></p>
+                <p class="text-white text-end">Affiliate</p>
               </div>
             </div>
           </div>
-          <div class="col-9">
+          <div class="col-10">
             <div class="radius-three">
-              <div class="bg-three px-4 py-3 radius-three shadow progress-div">
+              <div class="bg-two px-4 pt-3 pb-0 radius-three shadow progress-div">
                 <h5 class="text-white mb-4">Total Withdrawal</h5><br>
                 <p class="fs-1 text-white"><strong>$20,000</strong></p>
+                <span class="d-flex justify-content-between">
+                  <p class="text-white text-end">Affiliate</p>
+                  <p class="text-white text-end">convert to dollar</p>
+                </span>
               </div>
             </div>
           </div>
-          <div class="col-9">
+          <div class="col-10">
             <div class="radius-three">
-              <div class="bg-six px-4 py-3 radius-three shadow progress-div">
+              <div class="bg-six px-4 pt-3 pb-0 radius-three shadow progress-div">
                 <h5 class="text-white mb-4">Zee Points</h5><br>
                 <p class="fs-1 text-white"><strong>5000ZP</strong></p>
+                <p class="text-white text-end">Non-affiliate</p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-
+      
       <div class="container-fluid">
         <div class="row g-3" style="position: relative;">
           
@@ -432,15 +488,15 @@
         }
       }
       
-      checkbox.addEventListener('change', function() {
-        if (this.checked) {
-          mobileSideBar.style.width = '61%';
-          menuIcon.style.marginLeft = '61%';
-        } else {
-          mobileSideBar.style.width = '0%';
-          menuIcon.style.marginLeft = '0%';
-        }
-      });
+      // checkbox.addEventListener('change', function() {
+      //   if (this.checked) {
+      //     mobileSideBar.style.width = '61%';
+      //     menuIcon.style.marginLeft = '61%';
+      //   } else {
+      //     mobileSideBar.style.width = '0%';
+      //     menuIcon.style.marginLeft = '0%';
+      //   }
+      // });
 
       // Create the first progress bar (50%)
         var progressBar1 = new ProgressBar.Circle('#progress1', {
