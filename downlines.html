@@ -19,7 +19,7 @@
         </span>
         <ul class="sidenav-nav ps-0 h-100">
             <li class="unactive-item">
-                <a href="user-dashboard.html"><ion-icon name="home"></ion-icon><span>Dashboard</span></a>
+                <a href="user-dashboard.html"><ion-icon name="home-outline"></ion-icon><span>Dashboard</span></a>
             </li>
             <li class="unactive-item">
                 <a href="withdrawals-history.html"><ion-icon name="card-outline"></ion-icon><span>Withdrawals</span>
@@ -39,7 +39,10 @@
                 </a>
             </li>
             <li class="active-item">
-                <a href="downlines.html"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
+                <a href="downlines.html"><ion-icon name="people"></ion-icon><span>Downlines</span></a>
+            </li>
+            <li class="unactive-item">
+              <a href="vendor-dashboard.html"><ion-icon name="people-outline"></ion-icon><span>Vendor Dashboard</span></a>
             </li>
             <li class="logout unactive-item">
                 <a href="#"><ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a>
@@ -62,7 +65,7 @@
         <div class="sidenav-wrapper p-4">
           <ul class="mobile-sidenav-nav px-5 h-100">
               <li class="unactive-item">
-                  <a href="user-dashboard.html"><ion-icon name="home"></ion-icon><span>Dashboard</span></a>
+                  <a href="user-dashboard.html"><ion-icon name="home-outline"></ion-icon><span>Dashboard</span></a>
               </li>
               <li class="unactive-item">
                   <a href="withdrawals-history.html"><ion-icon name="card-outline"></ion-icon><span>Withdrawals</span>
@@ -81,8 +84,11 @@
                   <a href="VTU-history.html"><ion-icon name="phone-portrait-outline"></ion-icon><span>VTU Purchase History</span>
                   </a>
               </li>
+              <li class="active-item">
+                  <a href="downlines.html"><ion-icon name="people"></ion-icon><span>Downlines</span></a>
+              </li>
               <li class="unactive-item">
-                  <a href="downlines.html"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
+                <a href="vendor-dashboard.html"><ion-icon name="people-outline"></ion-icon><span>Vendor Dashboard</span></a>
               </li>
               <li class="logout unactive-item">
                   <a href="#"><ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a>
@@ -98,17 +104,18 @@
       <div class="bg-hero shadow" style="position: absolute; top: 0; width: 100%;"></div>
 
       <!-- Navbar Start -->
-      <nav class="navbar navbar-expand sticky-top px-4 py-2 pt-3">
+      <nav class="navbar navbar-expand px-2 py-2 pt-3">
           <a href="#" class="sidebar-toggler flex-shrink-0" onclick="togglenav()">
               <i class="fa fa-bars color-one" style="transform: translateY(-3px);"></i>
           </a>
-          <label class="hamburger" id="hamburger">
-            <input type="checkbox">
-            <svg viewBox="0 0 32 32">
-              <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
-              <path class="line" d="M7 16 27 16"></path>
-            </svg>
-          </label>
+          <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <label class="hamburger" id="hamburger">
+              <svg viewBox="0 0 32 32">
+                <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                <path class="line" d="M7 16 27 16"></path>
+              </svg>
+            </label>
+          </button>
           <div class="ms-4">
             <h4 class="fw-bold greeting">Hello, Joe-Hansen! </h4>
           </div>
@@ -239,17 +246,6 @@
           mainDiv.style.borderRadius = "0";
         }
       }
-
-      checkbox.addEventListener('change', function() {
-        if (this.checked) {
-          mobileSideBar.style.width = '60%';
-          menuIcon.style.marginLeft = '60%';
-        } else {
-          mobileSideBar.style.width = '0%';
-          menuIcon.style.marginLeft = '0%';
-        }
-      });
-
 
     // Function to filter table rows based on search input
     function filterTable() {

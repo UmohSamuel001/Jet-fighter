@@ -60,9 +60,6 @@ a {
 .nav-item a {
     color: #606fac;
 }
-.welcome-div {
-    /* margin-top: -20px; */
-}
 .rates {
     background-image: url(img/bg3.jfif);
     background-position: center;
@@ -421,10 +418,10 @@ footer .footer-links p {
   .standard-tab .btn {
     padding: 6px 8px;
     width: 100%;
-    border: 0 !important;
+    border-radius: 10px;
   }
   .standard-tab .btn.active {
-    background-color: rgb(243, 243, 243);
+    background-color: #606fac;
     color: #ffffff;
   }
   .logins {
@@ -543,7 +540,7 @@ footer .footer-links p {
         display: block;
         position: relative;
         z-index: 2;
-        margin-top: -33px;
+        margin-top: -60px;
     }
     .action-large {
         display: none;
@@ -583,6 +580,14 @@ footer .footer-links p {
     }
     .offcanvas {
         width: 70% !important;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .offcanvas-header {
+        border-top-right-radius: 10px;
+    }
+    .offcanvas-body {
+        border-bottom-right-radius: 10px;
     }
     .btn-close {
         background-color: transparent; /* Ensure the background is transparent */
@@ -699,10 +704,12 @@ footer .footer-links p {
 }
 .active-item {
     position: relative;
-    background-color: rgba(159, 253, 17, 0.973);
+    background-color: #f9ede7;
 }
 .active-item a {
     color: #211e5b !important;
+    position: relative;
+    z-index: 2;
 }
 .active-item::after {
     content: "";
@@ -763,7 +770,7 @@ footer .footer-links p {
     height: 200px;
     background-size: cover;
     /* background-color: #eeeeee46; */
-    background-image: linear-gradient(45deg, #631936, #bb1923, #9f2364);
+    background-image: linear-gradient(45deg, #211e5b, #00e189, #606fac);
     overflow: hidden;
     border-radius: 20px;
 }
