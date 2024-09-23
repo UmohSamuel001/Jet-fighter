@@ -680,6 +680,7 @@ footer .footer-links p {
         background-repeat: no-repeat;
         background-size: cover;
         opacity: .2;
+        pointer-events: none;
     }
     .link-div {
         position: relative !important;
