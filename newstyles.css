@@ -648,7 +648,7 @@ footer .footer-links p {
         margin-left: 0% !important;
         border-top-left-radius: 0px !important;
         border-bottom-left-radius: 0px !important;
-        overflow: scroll;
+        overflow-y: scroll !important;
         background-image: url(img/aesthetics8.jpg);
         background-position: center;
         background-repeat: no-repeat;
@@ -665,9 +665,10 @@ footer .footer-links p {
         z-index: -1;
         inset: 0;
         background-image: url(img/aesthetics16.avif);
-        background-position: center;
+        background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
+        overflow-y: scroll !important;
         /* background: linear-gradient(to bottom, #0e0d2996, #0e0c41c7, #0c0a2193); */
         opacity: .5;
     }
