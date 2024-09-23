@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zenwealth - user dashboard</title>
-    <link rel="stylesheet" href="newstyles.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/a207e207d8.js" crossorigin="anonymous"></script>
 </head>
@@ -54,16 +54,15 @@
 
     
     
-    <!-- <div class="offcanvas-bg color-one"> -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-      <div class="offcanvas-cover "></div>
-      <div class="offcanvas-header d-flex bg-">
-        <div class="w-100 text-center" style=" z-index: 5;">
-          <img src="img/ZEN logo.png" class="img-fluid" style="width: 90%; height: 80px;">
-        </div>
+      <div class="offcanvas-header bg-one d-flex">
+        <span class="text-center ms-5">
+          <h3 class="fw-bolder text-white mt-3">Zenwealth</h3>
+          <p class="color-three motto text-center mb-4">...the zenith of wealth</p>
+        </span>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <div class="offcanvas-body d-flex justify-content-center">
+      <div class="offcanvas-body bg-one d-flex justify-content-center">
         <div class="sidenav-wrapper p-4">
           <ul class="mobile-sidenav-nav px-5 h-100">
               <li class="active-item">
@@ -99,11 +98,10 @@
         </div>
       </div>
     </div>
-    <!-- </div> -->
 
     <!-- Main content -->
-    <div id="main" class="color-">
-      <div class="trydiv2"></div>
+    <div id="main" class="bg-light">
+      <div class="bg-hero shadow" style="position: absolute; top: 0; width: 100%;"></div>
 
       <!-- Navbar Start -->
       <nav class="navbar navbar-expand px-2 py-2 pt-3" id="navbar">
@@ -120,12 +118,12 @@
           </button>
           
           <div class="ms-4">
-            <h4 class="fw-bold greeting">Hello, Joe-Hansen</h4>
+            <h4 class="fw-bold greeting">Hello, Joe-Hansen! </h4>
           </div>
           <div class="navbar-nav align-items-center ms-auto dashboard-nav">
               <div class="nav-item dropdown">
                   <a href="#" class="nav-link" data-bs-toggle="dropdown">
-                      <img class="rounded-circle border me-lg-2" src="img/dax.jpeg" alt="" style="width: 47px; height: 45px;">
+                      <img class="rounded-circle me-lg-2" src="img/dax.jpeg" alt="" style="width: 40px; height: 40px;">
                       <span class="d-none d-lg-inline-flex color-one">Joe-Hansen Emeka</span>
                   </a>
                   <div class="dropdown-menu dropdown-menu-end bg-white border-0 rounded-0 rounded-bottom m-0">
@@ -139,7 +137,7 @@
       <!-- Navbar End -->
 
       <div class="ms-4 greeting-mobile">
-        <h4 class="fw-bold text-white">Hello, Joe-Hansen</h4>
+        <h4 class="fw-bold text-white">Hello, Joe-Hansen! </h4>
       </div>
 
       <div class="container-fluid pt-2 progress-large">
@@ -181,88 +179,88 @@
 
 
       <div class="pt-3 progress-mobile action-mobile">
-        <div class="d-flex" style="overflow-x: scroll;">
-          <div class="slide first">
-            <div class="">
-              <div class="px-4 pt-3 pb-0 radius-three progress-div">
+        <div class="d-flex gap-4" style="overflow-x: scroll;">
+          <div class="col-10 first">
+            <div class="radius-three">
+              <div class="bg-three px-4 pt-3 pb-0 radius-three shadow progress-div">
                 <h5 class="text-white mb-3">Total Balance</h5><br>
                 <p class="fs-1 text-white"><strong>$11,000</strong></p>
-                <span class="d-flex justify-content-between mt-4">
+                <span class="d-flex justify-content-between">
                   <p class="text-white text-end">Affiliate</p>
                   <p class="text-white text-end">convert to dollar</p>
                 </span>
               </div>
             </div>
           </div>
-          <div class="slide">
+          <div class="col-10">
             <div class="radius-three">
-              <div class="bg-three px-4 pt-3 pb-0 radius-three progress-div">
+              <div class="bg-three px-4 pt-3 pb-0 radius-three shadow progress-div">
                 <h5 class="text-white mb-3">Sales</h5><br>
                 <p class="fs-1 text-white"><strong>15</strong></p>
-                <span class="d-flex justify-content-between mt-4">
+                <span class="d-flex justify-content-between">
                   <p class="text-white text-end">Affiliate</p>
                   <p class="text-white text-end">view downlines</p>
                 </span>
               </div>
             </div>
           </div>
-          <div class="slide">
+          <div class="col-10">
             <div class="radius-three">
-              <div class="bg-three px-4 pt-3 pb-0 radius-three progress-div">
+              <div class="bg-three px-4 pt-3 pb-0 radius-three shadow progress-div">
                 <h5 class="text-white mb-3">Total Withdrawal</h5><br>
                 <p class="fs-1 text-white"><strong>$20,000</strong></p>
-                <span class="d-flex justify-content-between mt-4">
+                <span class="d-flex justify-content-between">
                   <p class="text-white text-end">Affiliate</p>
                   <p class="text-white text-end">convert to dollar</p>
                 </span>
               </div>
             </div>
           </div>
-          <div class="slide">
+          <div class="col-10">
             <div class="radius-three me-3">
-              <div class="bg-three px-4 pt-3 pb-0 radius-three progress-div">
+              <div class="bg-three px-4 pt-3 pb-0 radius-three shadow progress-div">
                 <h5 class="text-white mb-3">Zee Points</h5><br>
                 <p class="fs-1 text-white"><strong>5000ZP</strong></p>
-                <p class="text-white text-end mt-4">Non-affiliate</p>
+                <p class="text-white text-end">Non-affiliate</p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="container-fluid sm mb-2 mt-4">
-        <div class="">
-          <div class="d-flex gap-4 align-items-center justify-content-center">
+      <div class="container-fluid sm mb-4">
+        <div class="radius-three bg-white px-4" style="padding: 7px 0 7px 0;">
+          <div class="d-flex gap-4 align-items-center justify-content-center" style="transform: translateY(8px);">
             <div class="text-center">
               <a href="submit-withdrawal.html">
-                <div class="icon-div d-flex align-items-center justify-content-center mb-2">
-                  <ion-icon name="cash-outline" class="fs-3 text-white"></ion-icon>
+                <div class="bg-light icon-div d-flex align-items-center justify-content-center mb-2">
+                  <ion-icon name="cash-outline" class="fs-4 color-one"></ion-icon>
                 </div>
-                <p class="text-white fs-6">Withdraw</p>
+                <p class="color-two fs-6">Withdraw</p>
               </a>
             </div>
             <div class="text-center">
               <a href="update-bank-details.html">
-                <div class="icon-div d-flex align-items-center justify-content-center mb-2">
-                  <i class="fa-solid fa-building-columns text-white fs-4"></i>
+                <div class="bg-light icon-div d-flex align-items-center justify-content-center mb-2">
+                  <i class="fa-solid fa-building-columns text- color-one"></i>
                 </div>
-                <p class="text-white">Bank</p>
+                <p class="color-two">Bank</p>
               </a>
             </div>
             <div class="text-center">
               <a href="set-pin.html">
-                <div class="icon-div d-flex align-items-center justify-content-center mb-2">
-                  <i class="fa-solid fa-sliders fs-4 text-white"></i>
+                <div class="bg-light icon-div d-flex align-items-center justify-content-center mb-2">
+                  <i class="fa-solid fa-sliders fs-4 text-secondary text- color-one"></i>
                 </div>
-                <p class="text-white">Set Pin</p>
+                <p class="color-two">Set Pin</p>
               </a>
             </div>
             <div class="text-center">
               <a href="">
-                <div class="icon-div d-flex align-items-center justify-content-center mb-2">
-                  <ion-icon name="pricetags-outline" class="fs-4 text-white"></ion-icon>
+                <div class="bg-light icon-div d-flex align-items-center justify-content-center mb-2">
+                  <ion-icon name="pricetags-outline" class="fs-4 text- color-one"></ion-icon>
                 </div>
-                <p class="text-white">Courses</p>
+                <p class="color-two">Courses</p>
               </a>
             </div>
           </div>
@@ -274,34 +272,30 @@
         <div class="row g-3" style="position: relative;">
           
           <div class="col-lg-4">
-            <div class="radius-three bg-overlay px-4 tasks-div" style="padding: 14px 0 14px 0;">
-              <h6 class="mt-2 mb-3 text-white">Daily Tasks</h6>
-              <div class="pb-3">
-                <div class="progress-container">
-                  <div class="progress-bar" id="progress-bar"></div>
-                  <div class="progress-text" id="progress-text">0%</div>
-                </div>             
-                <!-- <div class="text-end mt-4"> -->
-                  <button class="btn btn-zen px-4 py-2 w-100 text-white mt-4">claim task 2</button>
-                <!-- </div> -->
-                <!-- <div>
+            <div class="radius-three bg-white px-4 tasks-div" style="padding: 14px 0 14px 0;">
+              <div class="d-flex flex-gap">
+                <div id="progress1" style="height: 82px; width: 82px;"></div>
+                <div>
                   <div class="d-flex gap-5">
                     <p class="color-one fw-bold">task 1</p>
-                    <button class="btn btn-zen px-4 py-2 text-white">claim</button>
+                    <button class="button radius-three px-3 py-2 color-one">claim</button>
                   </div>
                   <div class="d-flex gap-5 mt-1">
                     <p class="color-one fw-bold">task 2</p>
-                    <button class="btn btn-zen px-4 py-2 text-white">claim</button>
+                    <button class="button radius-three px-3 py-2 color-one">claim</button>
                   </div>
-                </div> -->
+                </div>
               </div>
             </div>
-            <!-- <div class="radius-three bg-white px-4" style="padding: 10px 0 11px 0; margin-top: 13px;">
+            <div class="radius-three bg-white px-4" style="padding: 10px 0 11px 0; margin-top: 13px;">
               <div class="d-flex flex-gap2 gap-5">
                 <div id="progress2" style="height: 82px; width: 82px;"></div>
                 <p class="color-one fw-bold mt-4">Total Sales</p>
+                <!-- <div class="mt-3">
+                  <button class="button radius-three px-3 py-2 color-one">claim</button>
+                </div> -->
               </div>
-            </div> -->
+            </div>
           </div>
           
           <div class="col-lg-4">
@@ -356,12 +350,12 @@
               </div>
             </div>
 
-            <div class="bg-white radius-three px-4 py-1 pb-3 sm progress2">
+            <div class="bg-white radius-three px-4 py-1 mt-2 sm">
               <h6 class="mt-3">Referral Link</h6>
-              <div class="link">
+              <div class="link" style="display: flex; justify-content: space-between; gap: 6px;">
                 <p id="referral-link" class="mb-4 color-two">https://zenwealth.net/user/register/?reference=@joemedia</p>
                 <div class="text-end">
-                  <button class="btn btn-zen w-100 px-4 py-2 text-white">copy</button>
+                  <button class="button radius-three px-3 py-2 color-one">copy</button>
                 </div>
               </div>
             </div>
@@ -372,30 +366,31 @@
             <div class="bg-white radius-three p-3 progress2">
               <div class="row g-3">
                 <div class="col-lg-12">
-                  <div class="bg-two-faint state py-2 radius-two">
-                    <p class="text-center color-two light-paste">Total Sales</p>
-                    <p class="text-center blue-paste radius-two">25</p>
+                  <div class="bg-two-faint px-4 py-2 radius-three">
+                    <div class="py-1">
+                      <h5 class="color-one fs-6">Direct Sales</h5>
+                      <p class="fs-6 color-one">$80,000</p>
+                    </div>
                   </div>
                 </div>
                 <div class="col-lg-12">
-                  <div class="bg-two-faint state py-2 radius-two">
-                    <p class="text-center color-two light-paste">Direct Sales</p>
-                    <p class="text-center blue-paste radius-two">$80,000</p>
+                  <div class="bg-two-faint px-4 py-2 radius-three ">
+                    <div class="py-1">
+                      <h5 class="color-one fs-6">Indirect Sales</h5>
+                      <p class="fs-6 color-one">$20,000</p>
+                    </div>
                   </div>
                 </div>
                 <div class="col-lg-12">
-                  <div class="bg-two-faint state py-2 radius-two">
-                      <p class="text-center color-two light-paste">Indirect Sales</p>
-                      <p class="blue-paste radius-three">$20,000</p>
-                  </div>
-                </div>
-                <div class="col-lg-12">
-                  <div class="bg-two-faint state py-2 radius-two">
-                    <p class="text-center color-two light-paste">Game Balance</p>
-                    <p class="blue-paste radius-two">$23,000</p>
+                  <div class="bg-two-faint px-4 py-2 radius-three">
+                    <div class="py-1">
+                      <h5 class="color-one fs-6">Game Balance</h5>
+                      <p class="fs-6 color-one">$20,000</p>
+                    </div>
                   </div>
                 </div>
               </div>
+              
             </div>  
           </div>
           <div class="col-lg-8 link-div">
@@ -413,25 +408,30 @@
       </div>
 
       
-      <footer class="shadow dashboard-footer bg-">
-        <div class="d-flex align-items-center justify-content-around py-2">
+      <footer class="bg-white dashboard-footer">
+        <div class="d-flex align-items-center justify-content-around">
           <a href="user-dashboard.html">
             <div class="text-center">
-              <ion-icon name="home" style="font-size: 25px !important;"></ion-icon>
+              <ion-icon name="home" style="font-size: 25px !important; margin-bottom: -5px;"></ion-icon>
+              <!-- <p class="color-one">Dashboard</p> -->
             </div>
           </a>
           <a href="update-profile.html">
             <div class="text-center">
-              <ion-icon name="person-outline" style="font-size: 25px !important;"></ion-icon>
+              <ion-icon name="person-outline" style="font-size: 25px !important; margin-bottom: -5px;"></ion-icon>
+              <!-- <p class="color-one">Profile</p> -->
             </div>
           </a>
           <a href="downlines.html">
             <div class="text-center">
-              <ion-icon name="people-outline" style="font-size: 27px !important;"></ion-icon>
+              <ion-icon name="people-outline" style="font-size: 27px !important; margin-bottom: -5px;"></ion-icon>
+              <!-- <p class="color-one">Downlines</p> -->
             </div>
           </a>
           <div class="text-center">
-            <ion-icon name="cart-outline" style="font-size: 25px !important;"></ion-icon>          
+            <ion-icon name="flash-outline" style="font-size: 25px !important;"></ion-icon>
+            <!-- <ion-icon name="flash" style="font-size: 30px !important;"></ion-icon> -->
+            <!-- <p class="color-one">Data</p> -->
           </div>
         </div>
       </footer>
@@ -471,20 +471,65 @@
       //   }
       // });
 
-      function setProgress(value) {
-        // Ensure the progress value is between 0 and 100
-        const progress = Math.min(100, Math.max(0, value));
+      // Create the first progress bar (50%)
+        var progressBar1 = new ProgressBar.Circle('#progress1', {
+        strokeWidth: 12,
+        color: '#606fac',
+        trailColor: '#f3f3f3',
+        trailWidth: 8,
+        duration: 1000, // animation duration in milliseconds
+        easing: 'easeInOut',
+        text: {
+          style: {
+            color: '#211f4e',
+            fontSize: '20px',
+            position: 'absolute',
+            left: '50%',
+            top: '50%',
+            padding: 0,
+            margin: 0,
+            transform: {
+              prefix: true,
+              value: 'translate(-50%, -50%)'
+            }
+          }
+        },
+        step: function(state, circle) {
+          circle.setText(Math.round(circle.value() * 100) + '%');
+        }
+      });
+    
+      // Animate the progress to 50%
+      progressBar1.animate(1);
 
-        const progressBar = document.getElementById('progress-bar');
-        const progressText = document.getElementById('progress-text');
-
-        // Update progress bar width and text based on the value
-        progressBar.style.width = progress + "%";
-        progressText.textContent = progress + "%";
+      // Create the second progress bar (100%)
+  var progressBar2 = new ProgressBar.Circle('#progress2', {
+    strokeWidth: 12,
+    color: 'red',
+    trailColor: '#606fac',
+    trailWidth: 12,
+    duration: 1000,
+    easing: 'easeInOut',
+    text: {
+      value: '16',
+      style: {
+        color: '#211f4e',
+        fontSize: '20px',
+        position: 'absolute',
+        left: '50%',
+        top: '50%',
+        padding: 0,
+        margin: 0,
+        transform: {
+          prefix: true,
+          value: 'translate(-50%, -50%)'
+        }
       }
+    },
+  });
 
-      // Example of setting progress manually
-      setProgress(50); // Change this value to set the progress bar percentage
+  // Animate the progress to 100%
+  // progressBar2.animate(1.0);
     </script>
     <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
 </body>
