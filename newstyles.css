@@ -671,7 +671,7 @@ footer .footer-links p {
         /* background: linear-gradient(to bottom, #0e0d2996, #0e0c41c7, #0c0a2193); */
         opacity: .5;
     }
-    .trydiv2 {
+    /* .trydiv2 {
         width: 100%;
         height: 100%;
         position: fixed;
@@ -681,7 +681,7 @@ footer .footer-links p {
         background-size: cover;
         opacity: .2;
         pointer-events: none;
-    }
+    } */
     .link-div {
         position: relative !important;
         bottom: auto !important;
