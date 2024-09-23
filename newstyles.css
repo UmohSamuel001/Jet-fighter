@@ -392,7 +392,7 @@ footer .footer-links p {
     background-color: #00e189 !important;
     font-weight: 600 !important;
     border-radius: 20px !important;
-    box-shadow: 0px 2px 15px 6px #00e18b8f !important;
+    box-shadow: 0px 2px 15px 4px #00e18b82 !important;
 }
 .bg-overlay {
     background-color: rgba(0, 0, 27, 0.68);
