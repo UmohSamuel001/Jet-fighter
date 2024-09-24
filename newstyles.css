@@ -550,11 +550,6 @@ footer .footer-links p {
     border-radius: 20px !important;
     box-shadow: 0px 2px 15px 6px #00e18b8f !important;
   }
-  .logins {
-    position: relative;
-    padding: 25px;
-    z-index: 5;
-  }
   .sm {
     display: none;
   }
@@ -799,9 +794,6 @@ footer .footer-links p {
     .login-link {
         display: none;
     }
-    .logins {
-        padding: 25px;
-    }
     .hamburger {
         display: block !important;
     }
@@ -827,22 +819,6 @@ footer .footer-links p {
     }
 
 }
-@media screen and (min-width: 361px) {
-    .logins {
-        margin-top: -120px !important;
-    }
-}
-@media screen and (min-width: 375px) and (max-width: 413px) {
-    .logins {
-        margin-top: 50px !important;
-    }
-}
-@media screen and (min-width: 414px) {
-    .logins {
-        margin-top: -50px !important;
-    }
-}
-
 
 
 /* Dashboard */
