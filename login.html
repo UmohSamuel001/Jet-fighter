@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zenwealth - login</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="newstyles.css">
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/a207e207d8.js" crossorigin="anonymous"></script>
 </head>
@@ -12,7 +12,7 @@
 
     <!-- Sidebar -->
     <div class="d-flex justify-content-center bg-one" id="mySidebar">
-      <div class="sidenav-wrapper p-3 d-flex align-items-center justify-content-center">
+      <div class="sidenav-wrapper p-3">
         <div>
             <h1 class="title fw-bolder text-white">Zenwealth</h1>
             <p class="text-center color-three" style="margin-top: -10px;">...the zenith of wealth</p>
@@ -23,21 +23,20 @@
 
 
     <!-- Main content -->
-    <div id="main" class="bg-light d-flex align-items-center justify-content-center" style="overflow-y: scroll; height: 100vh;">
+    <div id="main" class="bg-" style="overflow-y: scroll; height: 100vh;">
 
-      <div class="bg-hero shadow" style="position: absolute; top: 0; width: 100%;">
+      <!-- <div class="trydiv2" style="position: absolute; top: 0; width: 100%;">
         <span class="text-center">
           <h1 class="fw-bolder text-white mt-5">Zenwealth</h1>
           <p class="color-three motto text-center">...the zenith of wealth</p>
         </span>
-      </div>
+      </div> -->
 
-      <div class="container-fluid d-flex align-items-center justify-content-center">
-        <div>
-          <div class="bg-white radius-three logins">
+      <div class="container-fluid">
+        <h1 class="color-three mt-5 fw-bold sign display-5" style="margin-bottom: 30px;">Sign In</h1>
+          <div class="bg-white radius-three text-center p-4 py-4">
 
-            <h3 class="fw-bold text-center mt-4">Login</h3>
-            <p class="color-one text-center mt-3">login to continue...</p><br>
+            <img src="img/Zenwealth Logo Alone-02.png" class="img-fluid" width="40px"><br><br>
 
             <form action="#" method="post">
                 <div class="row g-3">
@@ -58,15 +57,16 @@
                   
                   <div class="col-md-12">
                     <a href="user-dashboard.html">
-                      <div class="bg-three w-100 radius-four text-white fw-bold py-2 text-center" style="border: none;">login</div>
+                      <div class="btn btn-zen px-4 py-2 w-100 text-white" style="border: none;">login</div>
                     </a>
                   </div>
                   
                 </div>
             </form>
           </div>
-          <p class="color-one text-center mt-3">Don't have an account? <a href="signup.html">signup</a></p>
-        </div>
+          <span class="account w-100 text-center">
+            <p class="color-two">Don't have an account? <a href="signup.html" class="color-three">signup</a></p>
+          </span>
       </div>
 
     </div>

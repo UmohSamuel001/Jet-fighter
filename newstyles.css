@@ -481,11 +481,15 @@ footer .footer-links p {
     right: 2px;
   }
   .form-control, .form-select {
-    background-color: rgba(255, 255, 255, 0.105) !important;
+    /* background-color: rgba(255, 255, 255, 0.105) !important; */
     background-color: #8095e834 !important;
     color: white !important;
     outline: none !important;
     border: none !important;
+    border-radius: 20px !important;
+  }
+  .bg-white form .form-control {
+    color: #00e189 !important;
   }
   .color {
     background-color: rgba(255, 255, 255, 0.105) !important;
@@ -801,12 +805,6 @@ footer .footer-links p {
     .hamburger {
         display: block !important;
     }
-    .signup-div {
-        width: auto !important;
-        height: auto !important;
-        margin-top: 600px !important;        
-        padding: 25px;
-    }
     .sm {
         display: block;
     }
@@ -842,24 +840,6 @@ footer .footer-links p {
 @media screen and (min-width: 414px) {
     .logins {
         margin-top: -50px !important;
-    }
-}
-@media screen and (min-width: 393px) and (max-width: 1000px) {
-    .signup-div {
-        margin-top: 550px !important;
-    }
-}
-@media screen and (min-width: 360px) and (max-width: 374px) {
-    .signup-div {
-        margin-top: 550px !important;
-    }
-}
-@media screen and (min-width: 320px) and (max-width: 359px) {
-    .signup-div {
-        margin-top: 800px !important;
-    }
-    .logins {
-        margin-top: 210px !important;
     }
 }
 
@@ -1197,12 +1177,10 @@ footer .footer-links p {
     width: 800px;
 }
 .signup-div {
-    position: relative;
-    width: 500px;
-    height: 440px;
+    /* position: relative; */
     overflow-y: scroll;
-    z-index: 5;
-    padding: 25px;
+    height: 70vh;
+    /* z-index: 5; */
 }
 .signup-div::-webkit-scrollbar {
     width: 3px;
@@ -1221,4 +1199,24 @@ footer .footer-links p {
 .nav-post {
     display: none;
 }
-
+.account {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translate(-50%);
+}
+.sign::before {
+    content: '';
+    position: absolute;
+    background-image: url(img/rgb2.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    inset: 0;
+    top: 40px;
+    opacity: .5;
+    width: 50px;
+    height: 50px;
+    backdrop-filter: blur(25px);
+}
