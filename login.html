@@ -23,7 +23,7 @@
 
 
     <!-- Main content -->
-    <div id="main" class="bg-" style="overflow-y: scroll; height: 100vh;">
+    <div id="main" class="d-grid" style="overflow-y: scroll; height: 100vh; place-items: center;">
 
       <!-- <div class="trydiv2" style="position: absolute; top: 0; width: 100%;">
         <span class="text-center">
@@ -33,7 +33,7 @@
       </div> -->
 
       <div class="container-fluid">
-        <h1 class="color-three mt-5 fw-bold sign display-5" style="margin-bottom: 30px;">Sign In</h1>
+        <h1 class="color-three mt-5 fw-bold position-relative sign2 display-5" style="margin-bottom: 30px;">Sign In</h1>
           <div class="bg-white radius-three text-center p-4 py-4">
 
             <img src="img/Zenwealth Logo Alone-02.png" class="img-fluid" width="40px"><br><br>
@@ -41,21 +41,17 @@
             <form action="#" method="post">
                 <div class="row g-3">
 
-                  <div class="col-md-12 mb-2">
-                    <div class="form-floating">
-                      <input type="text" class="form-control" name="username" placeholder="username" autocomplete="off">
-                      <label>Username</label>
-                    </div>
+                  <div class="input-group flex-nowrap">
+                    <span class="input-group-text px-3"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" class="form-control py-3" placeholder="Username">
                   </div>
-      
-                  <div class="col-md-12 mb-2">
-                    <div class="form-floating">
-                      <input class="form-control" name="password" type="password" placeholder="password">
-                      <label>Password</label>
-                    </div>
+
+                  <div class="input-group flex-nowrap">
+                    <span class="input-group-text px-3"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" class="form-control py-3" placeholder="Password">
                   </div>
                   
-                  <div class="col-md-12">
+                  <div class="col-md-12 mt-4">
                     <a href="user-dashboard.html">
                       <div class="btn btn-zen px-4 py-2 w-100 text-white" style="border: none;">login</div>
                     </a>

@@ -486,10 +486,23 @@ footer .footer-links p {
     color: white !important;
     outline: none !important;
     border: none !important;
-    border-radius: 20px !important;
+    border-radius: 20px ;
   }
   .bg-white form .form-control {
     color: #00e189 !important;
+    border-top-right-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+  }
+  .bg-white form ion-icon {
+    color: #211e5b !important;
+  }
+  .input-group-text {
+    background-color: #8095e834 !important;
+    font-size: 16px !important;
+    border: none !important;
+    outline: none !important;
+    border-top-left-radius: 20px !important;
+    border-bottom-left-radius: 20px !important;
   }
   .color {
     background-color: rgba(255, 255, 255, 0.105) !important;
@@ -1181,7 +1194,7 @@ footer .footer-links p {
     bottom: 30px;
     transform: translate(-50%);
 }
-.sign::before {
+.sign::before, .sign2::before {
     content: '';
     position: absolute;
     background-image: url(img/rgb2.png);
@@ -1195,4 +1208,7 @@ footer .footer-links p {
     width: 50px;
     height: 50px;
     backdrop-filter: blur(25px);
+}
+.sign2::before {
+    top: 0px !important;
 }
