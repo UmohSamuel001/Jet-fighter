@@ -660,10 +660,11 @@ footer .footer-links p {
         margin-left: 0% !important;
         border-top-left-radius: 0px !important;
         border-bottom-left-radius: 0px !important;
-        background-image: url(img/aesthetics8.jpg);
+        background-image: url(img/aesthetics8.avif);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        background-attachment: fixed;
         position: fixed;
         top: 0;
         right: 0;
@@ -674,12 +675,12 @@ footer .footer-links p {
         position: fixed;
         z-index: -1;
         inset: 0;
-        background-image: url(img/aesthetics16.avif);
+        background-image: url(img/aesthetics22.jpeg);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
         /* background: linear-gradient(to bottom, #0e0d2996, #0e0c41c7, #0c0a2193); */
-        opacity: .5;
+        opacity: .3;
         pointer-events: none;
     }
     /* .trydiv2 {
@@ -931,7 +932,7 @@ footer .footer-links p {
 .progress-div {
     background: rgba(255, 255, 255, 0.1); /* Transparent white */
     border-radius: 20px; /* Smooth corners */
-    padding: 20px; /* Space inside the card */
+    padding: 20px;
     backdrop-filter: blur(10px); /* Blur effect */
     -webkit-backdrop-filter: blur(10px); /* Safari Support */
     border: 1px solid rgba(255, 255, 255, 0.3); /* Border for the frosted effect */
