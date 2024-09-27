@@ -370,7 +370,7 @@ footer .footer-links p {
     z-index: 6;
     /* background-image: url(img/aesthetics16.avif); */
     /* opacity: .9; */
-    background: linear-gradient(to top, #070621, #070621fc, #070621b9, #07062100);
+    background: linear-gradient(to top, #0a0931, #0a0931fc, #0a0931b9, #0a093100);
           /* backdrop-filter: blur(10px); */
     -webkit-backdrop-filter: blur(10px); /* Safari Support */
     background-position: center;
