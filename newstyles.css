@@ -365,29 +365,69 @@ footer .footer-links p {
     position: fixed; 
     bottom: 0; 
     width: 100%;
-    display: none;
-    padding-top: 20px;
+    height: 60px;
+    /* padding-top: 20px; */
     z-index: 6;
-    /* background-image: url(img/aesthetics16.avif); */
-    /* opacity: .9; */
-    background: linear-gradient(to top, #0c0b43, #0c0b43fc, #0c0b43b9, #0c0b4300);
-          /* backdrop-filter: blur(10px); */
-    -webkit-backdrop-filter: blur(10px); /* Safari Support */
+    background-image: url(img/aesthetics8.avif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    text-align: center;
+    background-attachment: fixed;
     position: fixed;
+    bottom: 0;
+    right: 0;
     isolation: isolate;
 }
-  /* .dashboard-footer::after {
+  .dashboard-footer::after {
     content: '';
     position: absolute;
     z-index: -1;
     inset: 0;
-    height: 100%;
-    backdrop-filter: blur(10px);
+    /* background-color: red; */
+    background-image: url(img/aesthetics22.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .3;
+}
+.dashboard-footer .row, .col-3 div {
+    position: relative;
+    height: 100% !important;
+}
+.dashboard-footer .active {
+    border-top: 2px solid white;
+    /* width: 50px; */
+}
+
+/* #main, .trydiv {
+    height: 100vh !important;
+    margin-left: 0% !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    background-image: url(img/aesthetics8.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: fixed;
+    top: 0;
+    right: 0;
+    isolation: isolate;
+}
+  #main::before, .trydiv::after {
+    content: '';
+    position: fixed;
+    z-index: -1;
+    inset: 0;
+    background-image: url(img/aesthetics22.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .3;
+    pointer-events: none;
 } */
+
+
 .btn-zen {
     background-color: #00e189 !important;
     font-weight: 600 !important;
@@ -1221,4 +1261,186 @@ footer .footer-links p {
 }
 .sign2::before {
     top: 0px !important;
+}
+.keyboard {
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.keys-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    /* margin: 10px auto; */
+}
+
+.key, #backspace {
+    width: 33%;
+    height: 70px;
+    border: 1px solid white;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    display: grid;
+    place-items: center;
+}
+.key:active, #backspace:active {
+    background-color: white !important;
+    color: #211e5b;
+}
+.key:nth-child(10) {
+    pointer-events: none;
+}
+
+.key:nth-child(3),
+.key:nth-child(6),
+.key:nth-child(9) {
+    border-right: none !important;
+    border-left: none !important;
+}
+.key:nth-child(4),
+.key:nth-child(5),
+.key:nth-child(6) {
+    border-bottom: none !important;
+}
+.key:nth-child(1),
+.key:nth-child(4),
+.key:nth-child(7),
+.key:nth-child(10) {
+    border-left: none !important;
+    border-right: none !important;
+}
+.key:nth-child(1),
+.key:nth-child(2),
+.key:nth-child(3),
+.key:nth-child(10),
+.key:nth-child(11),
+.key:nth-child(12) {
+    border-top: none !important;
+    border-bottom: none !important;
+}
+#backspace {
+    background-color: #ff6666;
+    color: white;
+    font-size: 35px;
+    border: none !important;
+}
+.number-boxes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 20px;
+    margin: auto;
+}
+.box {
+    width: 21%;
+    height: 60px;
+    border: 1px solid #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: #fff;
+    border-radius: 5px;
+}
+@media screen and (max-width: 325px) {
+    .keyboard {
+        height: 40% !important;
+    }
+    .keys-wrapper {
+        position: relative;
+        height: 100% !important;
+    }
+    .key, #backspace {
+        width: 33%;
+        height: 50px;
+        font-size: 20px;
+    }
+    .box {
+        height: 50px;
+    }
+}
+.container {
+    position: relative;
+}
+
+.float-text {
+    position: absolute;
+    font-size: 50px;
+    /* font-weight: bold; */
+    color: #ffcc00;
+    animation: float 2s ease-out forwards;
+}
+
+@keyframes float {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px); /* Moves up */
+    }
+}
+.zen-coin, .lfg {
+    width: 55px;
+    height: 55px;
+}
+.zen-coin {
+    width: 60px;
+    height: 60px;
+}
+#coin {
+    transition: transform 0.2s ease-in-out;
+}
+#coin:active {
+    transform: scale(1.1);
+}
+#total {
+    text-shadow: 2px 4px 2px #606fac;
+}
+.progress-div .zen-coin {
+    width: 30px;
+    height: 30px;
+}
+.mining {
+    border-radius: 8px;
+    padding: 0;
+    position: relative;
+}
+.addon {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-70%,-50%);
+}
+.battery-body {
+    width: 30px;
+    height: 40px;
+    border: 1px solid #fff;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    position: relative;
+}
+#battery {
+    position: absolute;
+    /* top: 2px; */
+    bottom: 3px;
+    width: 85%;
+    height: 85%;
+    background-color: #09ff09;
+}
+.battery-lid {
+    width: 8px;
+    height: 2px;
+    margin: auto;
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
