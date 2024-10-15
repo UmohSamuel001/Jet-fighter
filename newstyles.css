@@ -361,73 +361,29 @@ footer .footer-links p {
     position: absolute; 
     bottom: 0px;
 }
-.dashboard-footer {
-    position: fixed; 
-    bottom: 0; 
-    width: 100%;
-    height: 60px;
-    /* padding-top: 20px; */
-    z-index: 6;
-    background-image: url(img/aesthetics8.avif);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+.carousel-indicators {
+    margin-bottom: -35px !important;
+  }
+  .dashboard-footer {
     position: fixed;
     bottom: 0;
-    right: 0;
-    isolation: isolate;
+    width: 100%;
+    height: 60px;
+    padding: 0 20px 0 20px;
+    backdrop-filter: blur(10px);
+    background-color: #00001b9c;
+    z-index: 6;
+    display: none;
 }
-  .dashboard-footer::after {
-    content: '';
+.dashboard-footer ion-icon {
     position: absolute;
-    z-index: -1;
-    inset: 0;
-    /* background-color: red; */
-    background-image: url(img/aesthetics22.jpeg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: .3;
-}
-.dashboard-footer .row, .col-3 div {
-    position: relative;
-    height: 100% !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 .dashboard-footer .active {
     border-top: 2px solid white;
-    /* width: 50px; */
 }
-
-/* #main, .trydiv {
-    height: 100vh !important;
-    margin-left: 0% !important;
-    border-top-left-radius: 0px !important;
-    border-bottom-left-radius: 0px !important;
-    background-image: url(img/aesthetics8.avif);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    position: fixed;
-    top: 0;
-    right: 0;
-    isolation: isolate;
-}
-  #main::before, .trydiv::after {
-    content: '';
-    position: fixed;
-    z-index: -1;
-    inset: 0;
-    background-image: url(img/aesthetics22.jpeg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: .3;
-    pointer-events: none;
-} */
-
-
 .btn-zen {
     background-color: #00e189 !important;
     font-weight: 600 !important;
@@ -435,7 +391,7 @@ footer .footer-links p {
     box-shadow: 0px 2px 15px 4px #00e18b82 !important;
 }
 .bg-overlay {
-    background-color: rgba(0, 0, 27, 0.68);
+    background-color: #00001bad;
 }
 .progress-container {
     position: relative;
@@ -615,10 +571,21 @@ footer .footer-links p {
   .sm {
     display: none;
   }
+  #referral-link {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 65%;
+    transform: translateY(4px);
+  }
+  .content {
+    padding: 0 20px 0 20px !important;
+  }
+
   @media screen and (max-width: 380px) {
-    .progress-div {
+    /* .progress-div {
         width: 320px !important;
-    }
+    } */
   }
 @media screen and (max-width: 550px) {
     .motto {
@@ -680,6 +647,8 @@ footer .footer-links p {
         top: 0;
         right: 0;
         isolation: isolate;
+        border-top-right-radius: 15px !important;
+        border-bottom-right-radius: 15px !important;
     }
     #offcanvasExample::before {
         content: '';
@@ -692,57 +661,38 @@ footer .footer-links p {
         background-position: center center; /* Centers the background image */
         /* background-color: linear-gradient(to bottom, #0e0d29bb, #0b0a37, #0b0a37, #211e5b); */
         opacity: .8;
+        border-top-right-radius: 15px !important;
+        border-bottom-right-radius: 15px !important;
     }
     .offcanvas-cover {
         width: 100%;
         height: 100%;
         position: absolute;
-        /* background-image: url(img/aesthetics21.avif);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover; */
         background: linear-gradient(to bottom, #211e5b53, #0b0a37, #0b0a37, #ffffff23);
         opacity: .9;
+        border-top-right-radius: 15px !important;
+        border-bottom-right-radius: 15px !important;
     }
-    #main, .trydiv {
-        height: 100vh !important;
-        margin-left: 0% !important;
-        border-top-left-radius: 0px !important;
-        border-bottom-left-radius: 0px !important;
-        background-image: url(img/aesthetics8.avif);
+
+    #main {
+        width: 100% !important;
+    }
+    .page-wrapper {
+        background-image: url(img/aesthetics8.avif) !important;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        background-attachment: fixed;
-        position: fixed;
-        top: 0;
-        right: 0;
-        isolation: isolate;
+        background-attachment: fixed !important;
     }
-      #main::before, .trydiv::after {
-        content: '';
-        position: fixed;
-        z-index: -1;
-        inset: 0;
-        background-image: url(img/aesthetics22.jpeg);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        /* background: linear-gradient(to bottom, #0e0d2996, #0e0c41c7, #0c0a2193); */
-        opacity: .3;
-        pointer-events: none;
+    .page-wrapper::before {
+        opacity: .1;
     }
-    /* .trydiv2 {
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        background-image: url(img/aesthetics21.avif);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        opacity: .2;
-        pointer-events: none;
-    } */
+    .content-wrapper {
+        position: relative;
+        z-index: 1;
+        min-height: 100%;
+        /* padding-bottom: 60px; */
+    }
     .link-div {
         position: relative !important;
         bottom: auto !important;
@@ -768,6 +718,8 @@ footer .footer-links p {
         position: relative;
         margin-top: -10px;
         z-index: 3;
+        padding: 0 12px 0 12px !important;
+        height: auto !important;
     }
     .greeting, .fa-bars, .dropdown-toggle {
         color: white !important;
@@ -790,7 +742,7 @@ footer .footer-links p {
     }
     .progress-div {
         margin-top: 10px;
-        margin-bottom: 30px;    
+        margin-bottom: 30px;
     }
     .action-mobile {
         display: block;
@@ -798,26 +750,23 @@ footer .footer-links p {
         z-index: 2;
         margin-top: -60px;
     }
-    .action-large {
-        display: none;
-    }
     .greeting-mobile {
         display: block;
     }
     .progress2 {
         margin-top: 10px;
     }
-    /* .tasks-div {
-        margin-bottom: 25px !important;
-    } */
     .card-div {
         background-color: transparent !important;
         box-shadow: none !important;
         margin-top: -40px;
     }
     .bottom-space {
-        padding-bottom: 30px;
+        padding-bottom: 150px;
     }
+     .keyboard {
+        display: flex !important;
+     }
     .update-bank-div {
         padding: 0 .8rem 0 .8rem !important;
         margin: 120px 0 100px 0 !important;
@@ -826,7 +775,7 @@ footer .footer-links p {
         display: none;
     }
     .dashboard-footer {
-        display: block;
+        display: flex;
     }
     #test {
         display: block;
@@ -861,10 +810,23 @@ footer .footer-links p {
         display: block !important;
     }
     .sm {
-        display: block;
+        display: block !important;
     }
     .lg {
-        display: none;
+        display: none !important;
+    }
+    .vendor-name {
+        display: flex !important;
+    }
+    .backdrop {
+        height: 83%; 
+        width: 100%;
+    }
+    .carousel-indicators {
+        margin-bottom: -5px !important;
+    }
+    .mtop {
+        margin-top: 15px;
     }
 }
 @media screen and (max-width: 390px) {
@@ -883,15 +845,12 @@ footer .footer-links p {
 
 }
 
-
 /* Dashboard */
 .sidenav-nav, .mobile-sidenav-nav {
     position: relative;
 }
 .sidenav-nav li, .mobile-sidenav-nav li {
     display: block;
-    /* align-items: center;
-    justify-content: center; */
     white-space: nowrap;
     padding: 10px 5px 10px 5px;
     border-radius: 25px;
@@ -904,77 +863,123 @@ footer .footer-links p {
     display: flex;
     transform: translateX(10px);
     gap: 15px;
-    color: #f9ede7;
+    color: #211e5b;
+}
+.mobile-sidenav-nav li a {
+    color: #fff;
 }
 .sidenav-nav li a ion-icon, .mobile-sidenav-nav li a ion-icon {
     transform: translateY(6px);
     font-size: 16px;
 }
 .sidenav-nav .logout, .mobile-sidenav-nav .logout {
-    position: absolute;
-    bottom: 5px;
-    padding-right: 100px;
+    position: absolute !important;
+    bottom: 100px !important;
 }
-.active-item {
+#mySidebar .active-item {
     position: relative;
-    background: rgba(255, 255, 255, 0.1); /* Transparent white */
-    border-radius: 20px; /* Smooth corners */
-    backdrop-filter: blur(10px); /* Blur effect */
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-image: url(img/aesthetics8.avif) !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    isolation: isolate;
+}
+#mySidebar .active-item::after {
+    content: '';
+    position: absolute;
+    border-radius: 20px;
+    z-index: -1;
+    inset: 0;
+    background-image: url(img/aesthetics22.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .5;
+    pointer-events: none;
+}
+.offcanvas .active-item {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); /* Safari Support */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Border for the frosted effect */
+    border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 .active-item a {
-    color: #fff !important;
+    color: #f9ede7 !important;
     position: relative;
     z-index: 2;
 }
-/* .active-item::after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    right: 0;
-    border-radius: 25px;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.142), rgba(255, 255, 255, 0.233), rgba(255, 255, 255, 0.297));
-    box-sizing: border-box;
-} */
+
 #mySidebar {
-    width: 19.2%;
+    width: 20%;
     float: left; 
     transition: width .8s; 
     overflow-x: hidden;
     overflow-y: hidden;
-    height: 100vh;
-    position: relative;
+    height: 100%;
+    position: fixed;
 }
 #mySidebar::-webkit-scrollbar {
     width: 0px !important;
 }
-#main {
-    position: relative;
-    margin-left: 19.2%; 
-    transition: margin-left .8s, border-radius .8s;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-    height: 100vh;
-    color: #211e5b;
-    overflow-y: scroll;
+.sidenav-wrapper {
+    height: 100%;
+    width: 100%;
+    margin-left: -25px;
 }
-.dashboard-nav .dropdown-toggle::after {
-    color: #211e5b;
+#mySidebar .sidenav-wrapper {
+    height: 94%;
+    width: 100%;
+    margin-left: 6%;
 }
-/* .progress-div {
-    padding: 20px 0;
-    position: relative;
-    overflow: hidden;
-    backdrop-filter: blur(15px);
-    opacity: .7;
-    background-color: rgba(255, 255, 255, 0.164);
+/* #mySidebar.sidenav-nav li a {
+    color: #211e5b !important;
 } */
+#main {
+    width: 80%;
+    height: 100%;
+    float: right;
+}
+.page-wrapper {
+    height: 100vh !important;
+    background-image: url(img/aesthetics8\ -\ Copy.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed !important;
+    /* background-color: #211e5b; */
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+    isolation: isolate;
+}
+.page-wrapper::before {
+    content: '';
+    position: fixed;
+    z-index: -1;
+    inset: 0;
+    background-image: url(img/aesthetics22.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed !important;
+    opacity: .3;
+    pointer-events: none;
+}
  .slide {
+    position: relative;
+    width: 100% !important;
+ }
+ .carousel-inner {
     position: relative;
     width: 100%;
  }
@@ -982,24 +987,29 @@ footer .footer-links p {
     background: rgba(255, 255, 255, 0.1); /* Transparent white */
     border-radius: 20px; /* Smooth corners */
     padding: 20px;
-    backdrop-filter: blur(10px); /* Blur effect */
-    -webkit-backdrop-filter: blur(10px); /* Safari Support */
     border: 1px solid rgba(255, 255, 255, 0.3); /* Border for the frosted effect */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: white; /* Text color */
-    width: 350px;
-    margin: 8px;
+    color: white;
     text-align: center;
   }
+  .backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%; 
+    width: 100%;
+    backdrop-filter: blur(10px);
+    z-index: -1; /* Ensures it stays behind the carousel */
+}
+
   .atm {
-    background: rgba(255, 255, 255, 0.1); /* Transparent white */
-    border-radius: 20px; /* Smooth corners */
-    backdrop-filter: blur(10px); /* Blur effect */
-    -webkit-backdrop-filter: blur(10px); /* Safari Support */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Border for the frosted effect */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: white; /* Text color */
-    margin: 8px;
+    color: white;
     height: 200px;
     text-align: center;
     isolation: isolate;
@@ -1032,66 +1042,13 @@ footer .footer-links p {
     opacity: .5;
     border-radius: 20px;
   }
-
-/* .progress-div::after {
-    content: "";
-    position: absolute;
-    height: 280px;
-    width: 320px;
-    top: 40px;
-    right: -150px;
-    border-radius: 50%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.142), rgba(255, 255, 255, 0.233), rgba(255, 255, 255, 0.297));
-    transform: translate(0px, -50px);
-    box-sizing: border-box;
-} */
-
-.ring1 {
-    position: absolute;
-    width: 100%;
-    height: 200px;
-    top: 0;
-    left: 0;
-    /* border-radius: 50%; */
-    /* background-image: linear-gradient(45deg, rgb(0, 130, 195), rgb(7, 143, 255)); */
-    background-color: #eeeeee2b;
-    backdrop-filter: blur( 1px );
-    -webkit-backdrop-filter: blur( 1px );
-    /* transform: rotate(26deg) translate(-80px, -60px); */
-}
-.ring2 {
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    bottom: 0;
-    right: 0;
-    border-radius: 50%;
-    /* background-image: linear-gradient(45deg, rgb(93, 199, 253), rgb(7, 143, 255)); */
-    background-color: #f9ede7;
-    transform: rotate(65deg) translateX(80px);
-}
-/* The two rings on the card background */
-.ring {
-    height: 350px;
-    width: 350px;
-    border-radius: 50%;
-    background: transparent;
-    border: 40px solid rgba(255, 255, 255, 0.1);
-    transform: translate(150px, -50px);
-    box-sizing: border-box;
-}
-.ring::after {
-    content: "";
-    position: absolute;
-    height: 450px;
-    width: 450px;
-    border-radius: 50%;
-    background: transparent;
-    border: 30px solid rgba(255, 255, 255, 0.1);
-    bottom: -80px;
-    right: -100px;
-    box-sizing: border-box;
-}
+  .btn-trans {
+    background-color: rgba(255, 255, 255, 0.096) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 25px !important;
+  }
 .chip img {
     position: absolute;
     top: 70px;
@@ -1164,13 +1121,12 @@ footer .footer-links p {
 .icon-div {
     width: 60px;
     height: 60px;
-    background-color: rgba(255, 255, 255, 0.185);
+    background-color: #ffffff2f;
     opacity: .9;
     border-radius: 50%;
 }
 .dashboard-footer ion-icon {
     color: #fff;
-    margin-bottom: 10px;
 }
 .hamburger {
     cursor: pointer;
@@ -1263,9 +1219,10 @@ footer .footer-links p {
     top: 0px !important;
 }
 .keyboard {
-    position: absolute;
-    bottom: 0px;
-    display: flex;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    display: none;
     align-items: center;
     justify-content: center;
     border-top-left-radius: 20px;
@@ -1274,13 +1231,12 @@ footer .footer-links p {
 .keys-wrapper {
     display: flex;
     flex-wrap: wrap;
-    /* margin: 10px auto; */
 }
 
 .key, #backspace {
     width: 33%;
     height: 70px;
-    border: 1px solid white;
+    border: 1px solid #606fac;
     text-align: center;
     font-size: 30px;
     cursor: pointer;
@@ -1289,8 +1245,11 @@ footer .footer-links p {
     place-items: center;
 }
 .key:active, #backspace:active {
-    background-color: white !important;
+    background-color: #00e189 !important;
     color: #211e5b;
+}
+#backspace:active {
+    background-color: #dc3545  !important;
 }
 .key:nth-child(10) {
     pointer-events: none;
@@ -1387,9 +1346,13 @@ footer .footer-links p {
         transform: translateY(-100px); /* Moves up */
     }
 }
-.zen-coin, .lfg {
+.zen-coin {
     width: 55px;
     height: 55px;
+}
+.lfg {
+    width: 45px;
+    height: 45px;
 }
 .zen-coin {
     width: 60px;
@@ -1443,4 +1406,15 @@ footer .footer-links p {
     background-color: #fff;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+}
+.yt-icon {
+    width: 500px;
+    height: 500px;
+    z-index: -1;
+}
+.yt-div {
+    filter: blur(10px);
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }

@@ -9,15 +9,59 @@
     <script src="https://kit.fontawesome.com/a207e207d8.js" crossorigin="anonymous"></script>
 </head>
 <body class="bg-one">
+    
+    <!-- <div class="offcanvas-bg color-one"> -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-cover "></div>
+      <div class="offcanvas-header d-flex bg-">
+        <div class="w-100 text-center" style=" z-index: 5;">
+          <img src="img/ZEN logo.png" class="img-fluid" style="width: 90%; height: 80px;">
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body d-flex align-items-center justify-content-center">
+        <div class="sidenav-wrapper">
+          <ul class="mobile-sidenav-nav h-100">
+              <li class="active-item">
+                  <a href="user-dashboard.html"><ion-icon name="home"></ion-icon><span>Dashboard</span></a>
+              </li>
+              <li class="unactive-item">
+                  <a href="withdrawals-history.html"><ion-icon name="card-outline"></ion-icon><span>Withdrawals</span>
+                  </a>
+              </li>
+              <li class="unactive-item">
+                  <a href="upload-product.html"><ion-icon name="cart-outline"></ion-icon><span>Upload Product</span></a>
+              </li>
+              <li class="unactive-item">
+                  <a href="#"><ion-icon name="pricetags-outline"></ion-icon><span>Purchased Courses</span></a>
+              </li>
+              <li class="unactive-item">
+                <a href="youtube-earning.html"><ion-icon name="phone-portrait-outline"></ion-icon><span>Youtube Earning</span>
+                </a>
+              </li>
+              <li class="unactive-item">
+                  <a href="downlines.html"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
+              </li>
+              <li class="unactive-item">
+                <a href="vendor-dashboard.html"><ion-icon name="people-outline"></ion-icon><span>Vendor Dashboard</span></a>
+              </li>
+              <li class="logout unactive-item">
+                  <a href="#"><ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
 
-    <!-- Sidebar -->
-    <div class="d-flex justify-content-center bg-one" id="mySidebar">
-      <div class="sidenav-wrapper p-3">
-        <span class="text-center">
-          <h3 class="fw-bolder text-white mt-1">Zenwealth</h3>
-          <p class="color-three motto text-center mb-5">...the zenith of wealth</p>
-        </span>
-        <ul class="sidenav-nav ps-0 h-100">
+    <div class="page-wrapper">
+      <!-- Sidebar -->
+    <div class="d-flex align-items-center justify-content-center" id="mySidebar">
+      <div class="sidenav-wrapper p-3 bg-white radius-three">
+        <div class="w-100 text-center mt-2" style=" z-index: 5;">
+          <img src="img/Zenwealth Logo Alone-02.png" class="img-fluid" style="width: 50px; height: 50px;">
+        </div>
+        <ul class="sidenav-nav ps-0 h-100" style="margin-top: 40px;">
             <li class="active-item">
                 <a href="user-dashboard.html"><ion-icon name="home"></ion-icon><span>Dashboard</span></a>
             </li>
@@ -42,65 +86,16 @@
               <a href="vendor-dashboard.html"><ion-icon name="people-outline"></ion-icon><span>Vendor Dashboard</span></a>
             </li>
             <li class="logout unactive-item">
-                <a href="#"><ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a>
+              <a href="#"><ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a>
             </li>
         </ul>
       </div>
     </div>
     <!-- Sidebar ends -->
 
-    
-    
-    <!-- <div class="offcanvas-bg color-one"> -->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-      <div class="offcanvas-cover "></div>
-      <div class="offcanvas-header d-flex bg-">
-        <div class="w-100 text-center" style=" z-index: 5;">
-          <img src="img/ZEN logo.png" class="img-fluid" style="width: 90%; height: 80px;">
-        </div>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body d-flex justify-content-center">
-        <div class="sidenav-wrapper p-4">
-          <ul class="mobile-sidenav-nav px-5 h-100">
-              <li class="active-item">
-                  <a href="user-dashboard.html"><ion-icon name="home"></ion-icon><span>Dashboard</span></a>
-              </li>
-              <li class="unactive-item">
-                  <a href="withdrawals-history.html"><ion-icon name="card-outline"></ion-icon><span>Withdrawals</span>
-                  </a>
-              </li>
-              <li class="unactive-item">
-                  <a href="upload-product.html"><ion-icon name="cart-outline"></ion-icon><span>Upload Product</span></a>
-              </li>
-              <li class="unactive-item">
-                  <a href="#"><ion-icon name="pricetags-outline"></ion-icon><span>Purchased Courses</span></a>
-              </li>
-              <li class="unactive-item">
-                  <a href="p2p-registration.html"><ion-icon name="person-add-outline"></ion-icon><span>P2P Registration</span></a>
-              </li>
-              <li class="unactive-item">
-                  <a href="VTU-history.html"><ion-icon name="phone-portrait-outline"></ion-icon><span>VTU Purchase History</span>
-                  </a>
-              </li>
-              <li class="unactive-item">
-                  <a href="downlines.html"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
-              </li>
-              <li class="unactive-item">
-                <a href="vendor-dashboard.html"><ion-icon name="people-outline"></ion-icon><span>Vendor Dashboard</span></a>
-              </li>
-              <li class="logout unactive-item">
-                  <a href="#"><ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a>
-              </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <!-- </div> -->
-
     <!-- Main content -->
     <div id="main" class="bottom-space" style="overflow-y: scroll;">
-      <div class="trydiv2"></div>
+      <!-- <div class="trydiv2"></div> -->
 
       <!-- Navbar Start -->
       <nav class="navbar navbar-expand px-2 py-2 pt-3" id="navbar">
@@ -117,13 +112,13 @@
           </button>
           
           <div class="ms-4">
-            <h4 class="fw-bold greeting">Hello, Joe-Hansen</h4>
+            <h4 class="fw-bold greeting text-white">Hello, Joe-Hansen</h4>
           </div>
           <div class="navbar-nav align-items-center ms-auto dashboard-nav">
               <div class="nav-item dropdown">
                   <a href="#" class="nav-link" data-bs-toggle="dropdown">
-                      <img class="rounded-circle border me-lg-2" src="img/dax.jpeg" alt="" style="width: 47px; height: 45px;">
-                      <span class="d-none d-lg-inline-flex color-one">Joe-Hansen Emeka</span>
+                    <img class="rounded-circle border me-lg-2" src="img/dax.jpeg" alt="" style="width: 47px; height: 45px;">
+                    <span class="d-none d-lg-inline-fle">Joe-Hansen Emeka</span>
                   </a>
                   <div class="dropdown-menu dropdown-menu-end bg-white border-0 rounded-0 rounded-bottom m-0">
                     <a href="update-profile.html" class="dropdown-item">My Profile</a>
@@ -139,170 +134,140 @@
         <h4 class="fw-bold text-white">Hello, Joe-Hansen</h4>
       </div>
 
-      <div class="container-fluid pt-2 progress-large">
-        <div class="row g-3">
-          <div class="col-lg-4">
-            <div class="p-6 bg- radius-three">
-              <div class="bg-five px-4 radius-three progress-div">
-                <h5 class="text-white">Total Balance</h5>
-                <strong class="fs-5 text-white">$11,000</strong>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="col-lg-3">
-            <div class="p-6 bg- radius-three">
-              <div class="bg-two px-4 radius-three progress-div">
-                <h5 class="text-white">Referrals</h5>
-                <strong class="fs-5 text-white">15</strong>
-              </div>
-            </div>
-          </div> -->
-          <div class="col-lg-4">
-            <div class="p-6 bg-four radius-three">
-              <div class="bg-three px-4 radius-three progress-div">
-                <h5 class="text-white">Total Withdrawal</h5>
-                <strong class="fs-5 text-white">$20,000</strong>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="p-6 bg- radius-three">
-              <div class="bg-six px-4 radius-three progress-div">
-                <h5 class="text-white">Zee Points</h5>
-                <strong class="fs-5 text-white">5000ZP</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div><br><br>
-
-
-      <div class="pt-3 progress-mobile action-mobile">
-        <div class="d-flex" style="overflow-x: scroll;">
-          <div class="slide first">
-            <div class="">
-              <div class="px-4 pt-3 pb-0 radius-three progress-div">
-                <h5 class="text-white mb-3">Total Balance</h5><br>
-                <p class="fs-1 text-white"><strong>$11,000</strong></p>
-                <span class="d-flex justify-content-between mt-4">
-                  <p class="text-white text-end">Affiliate</p>
-                  <p class="text-white text-end">convert to dollar</p>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="radius-three">
-              <div class="bg-three px-4 pt-3 pb-0 radius-three progress-div">
-                <h5 class="text-white mb-3">Sales</h5><br>
-                <p class="fs-1 text-white"><strong>15</strong></p>
-                <span class="d-flex justify-content-between mt-4">
-                  <p class="text-white text-end">Affiliate</p>
-                  <p class="text-white text-end">view downlines</p>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="radius-three">
-              <div class="bg-three px-4 pt-3 pb-0 radius-three progress-div">
-                <h5 class="text-white mb-3">Total Withdrawal</h5><br>
-                <p class="fs-1 text-white"><strong>$20,000</strong></p>
-                <span class="d-flex justify-content-between mt-4">
-                  <p class="text-white text-end">Affiliate</p>
-                  <p class="text-white text-end">convert to dollar</p>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="radius-three me-3">
-              <div class="bg-three px-4 pt-3 pb-0 radius-three progress-div">
-                <h5 class="text-white mb-3">Zee Points</h5><br>
-                <p class="fs-1 text-white"><strong>5000ZP</strong></p>
-                <p class="text-white text-end mt-4">Non-affiliate</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container-fluid sm mb-2 mt-4">
-        <div class="">
-          <div class="d-flex gap-4 align-items-center justify-content-center">
-            <div class="text-center">
-              <a href="submit-withdrawal.html">
-                <div class="icon-div d-flex align-items-center justify-content-center mb-2">
-                  <ion-icon name="cash-outline" class="fs-3 text-white"></ion-icon>
-                </div>
-                <p class="text-white fs-6">Withdraw</p>
-              </a>
-            </div>
-            <div class="text-center">
-              <a href="update-bank-details.html">
-                <div class="icon-div d-flex align-items-center justify-content-center mb-2">
-                  <ion-icon name="wallet-outline" class="fs-4 text-white"></ion-icon>
-                </div>
-                <p class="text-white">Bank</p>
-              </a>
-            </div>
-            <div class="text-center">
-              <a href="set-pin.html">
-                <div class="icon-div d-flex align-items-center justify-content-center mb-2">
-                  <ion-icon name="options-outline" class="fs-4 text-white"></ion-icon>
-                </div>
-                <p class="text-white">Set Pin</p>
-              </a>
-            </div>
-            <div class="text-center">
-              <a href="">
-                <div class="icon-div d-flex align-items-center justify-content-center mb-2">
-                  <ion-icon name="pricetags-outline" class="fs-4 text-white"></ion-icon>
-                </div>
-                <p class="text-white">Courses</p>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
       
-      <div class="container-fluid">
-        <div class="row g-3" style="position: relative;">
+      <div class="container-fluid content">
+        <div class="row g-4" style="position: relative;">
+
+          <div class="col-lg-8">
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+              <div class="backdrop radius-three"></div>
+      
+              <!-- Carousel Indicators (dots) -->
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+      
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="px-4 pt-3 pb-0 radius-three progress-div">
+                    <h5 class="text-white mb-3">Total Balance</h5><br>
+                    <p class="fs-1 text-white"><strong>$11,000</strong></p>
+                    <span class="d-flex justify-content-between mt-4">
+                      <p class="text-white text-end">Affiliate</p>
+                      <p class="text-white text-end">convert to dollar</p>
+                    </span>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="px-4 pt-3 pb-0 radius-three progress-div">
+                    <h5 class="text-white mb-3">Sales</h5><br>
+                    <p class="fs-1 text-white"><strong>15</strong></p>
+                    <span class="d-flex justify-content-between mt-4">
+                      <p class="text-white text-end">Affiliate</p>
+                      <a href="downlines.html" class="text-white text-end">view downlines</a>
+                    </span>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="px-4 pt-3 pb-0 radius-three progress-div">
+                    <h5 class="text-white mb-3">Total Withdrawal</h5><br>
+                    <p class="fs-1 text-white"><strong>$20,000</strong></p>
+                    <span class="d-flex justify-content-between mt-4">
+                      <p class="text-white text-end">Affiliate</p>
+                      <p class="text-white text-end">convert to dollar</p>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-fluid sm mt-4">
+            <div class="">
+              <div class="d-flex gap-4 align-items-center justify-content-center">
+                <div class="text-center">
+                  <a href="submit-withdrawal.html">
+                    <div class="icon-div d-flex align-items-center justify-content-center mb-2">
+                      <ion-icon name="cash-outline" class="fs-3 text-white"></ion-icon>
+                    </div>
+                    <p class="text-white fs-6">Withdraw</p>
+                  </a>
+                </div>
+                <div class="text-center">
+                  <a href="update-bank-details.html">
+                    <div class="icon-div d-flex align-items-center justify-content-center mb-2">
+                      <ion-icon name="wallet-outline" class="fs-4 text-white"></ion-icon>
+                    </div>
+                    <p class="text-white">Bank</p>
+                  </a>
+                </div>
+                <div class="text-center">
+                  <a href="set-pin.html">
+                    <div class="icon-div d-flex align-items-center justify-content-center mb-2">
+                      <ion-icon name="options-outline" class="fs-4 text-white"></ion-icon>
+                    </div>
+                    <p class="text-white">Set Pin</p>
+                  </a>
+                </div>
+                <div class="text-center">
+                  <a href="">
+                    <div class="icon-div d-flex align-items-center justify-content-center mb-2">
+                      <ion-icon name="pricetags-outline" class="fs-4 text-white"></ion-icon>
+                    </div>
+                    <p class="text-white">Courses</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
           
-          <div class="col-lg-4">
-            <div class="radius-three bg-overlay px-4 tasks-div" style="padding: 14px 0 14px 0;">
+          <div class="col-lg-4 position-relative">
+            <div class="radius-three bg-overlay px-4" style="padding: 14px 0 14px 0;">
               <h6 class="mt-2 mb-3 text-white">Daily Tasks</h6>
               <div class="pb-3">
                 <div class="progress-container">
                   <div class="progress-bar" id="progress-bar"></div>
                   <div class="progress-text" id="progress-text">0%</div>
                 </div>             
-                <!-- <div class="text-end mt-4"> -->
-                  <button class="btn btn-zen px-4 py-2 w- text-white mt-4">claim task 2</button>
-                <!-- </div> -->
-                <!-- <div>
-                  <div class="d-flex gap-5">
-                    <p class="color-one fw-bold">task 1</p>
-                    <button class="btn btn-zen px-4 py-2 text-white">claim</button>
-                  </div>
-                  <div class="d-flex gap-5 mt-1">
-                    <p class="color-one fw-bold">task 2</p>
-                    <button class="btn btn-zen px-4 py-2 text-white">claim</button>
-                  </div>
-                </div> -->
+                <button class="btn btn-zen px-4 py-2 w- text-white mt-4">claim task 2</button>                
               </div>
             </div>
-            <!-- <div class="radius-three bg-white px-4" style="padding: 10px 0 11px 0; margin-top: 13px;">
-              <div class="d-flex flex-gap2 gap-5">
-                <div id="progress2" style="height: 82px; width: 82px;"></div>
-                <p class="color-one fw-bold mt-4">Total Sales</p>
+
+            <div class="bg-white lg radius-three p-3 progress2 mt-3 position-absolute" style="width: 93%;">
+              <h6 class="mb-3 ms-2 color-one">Earnings</h6>
+              <div class="row g-3">
+                <div class="col-lg-12">
+                  <div class="bg-two-faint state py-2 radius-two">
+                    <p class="text-center color-two light-paste">Total Sales</p>
+                    <p class="text-center blue-paste radius-two">25</p>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="bg-two-faint state py-2 radius-two">
+                    <p class="text-center color-two light-paste">Direct Sales</p>
+                    <p class="text-center blue-paste radius-two">$80,000</p>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="bg-two-faint state py-2 radius-two">
+                      <p class="text-center color-two light-paste">Indirect Sales</p>
+                      <p class="blue-paste radius-two">$20,000</p>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="bg-two-faint state py-2 radius-two">
+                    <p class="text-center color-two light-paste">Game Balance</p>
+                    <p class="blue-paste radius-two">$23,000</p>
+                  </div>
+                </div>
               </div>
-            </div> -->
+            </div>  
           </div>
           
-          <div class="col-lg-4">
-            <div class="radius-three bg-white px-4 action-large" style="padding: 7px 0 7px 0;">
+          <div class="col-lg-8">
+            <div class="lg" style="margin-top: 35px;">
               <div class="d-flex gap-5 align-items-center justify-content-center" style="transform: translateY(8px);">
                 <div class="text-center">
                   <a href="submit-withdrawal.html">
@@ -328,45 +293,36 @@
                     <p class="color-two">Set Pin</p>
                   </a>
                 </div>
-              </div>
-            </div>
-            <div class="radius-three bg-white px-4 action-large" style="padding: 3px 0 3px 0; margin-top: 13px;">
-              <div class="d-flex gap-5 align-items-center justify-content-center" style="transform: translateY(8px);">
-                <div class="text-center">
-                  <div class="bg-green icon-div d-flex align-items-center justify-content-center mb-2">
-                    <i class="fa-solid fa-money-bill-transfer text-white"></i>
-                  </div>
-                  <p class="color-two fs-6">Airtime</p>
-                </div>
-                <div class="text-center">
-                  <div class="bg-two icon-div d-flex align-items-center justify-content-center mb-2">
-                    <i class="fa-solid fa-building-columns text-white"></i>
-                  </div>
-                  <p class="color-two">Data</p>
-                </div>
                 <div class="text-center">
                   <div class="bg-six icon-div d-flex align-items-center justify-content-center mb-2">
                     <i class="fa-solid fa-sliders fs-4 text-secondary text-white"></i>
                   </div>
                   <p class="color-two">Courses</p>
                 </div>
+                <div class="text-center">
+                  <a href="youtube-earning.html">
+                    <div class="bg-five icon-div d-flex align-items-center justify-content-center mb-2">
+                      <i class="fa-solid fa-sliders fs-4 text-secondary text-white"></i>
+                    </div>
+                    <p class="color-two">YT Earning</p>
+                  </a>
+                </div>
               </div>
             </div>
 
-            <div class="bg-white radius-three px-4 py-1 pb-3 sm progress2">
-              <h6 class="mt-3">Referral Link</h6>
-              <div class="link">
-                <p id="referral-link" class="mb-4 color-two">https://zenwealth.net/user/register/?reference=@joemedia</p>
-                <div class="text-end">
-                  <button class="btn btn-zen w- px-4 py-2 text-white">copy</button>
-                </div>
+            <div class=" radius-three px-4 py-1 pb-3 mt-3" style="border: 1px solid #ffffff56;">
+              <h6 class="mt-3 text-white">Referral Link</h6>
+              <div class="link d-flex align-items-center justify-content-between w-100">
+                <p id="referral-link" class="color-two ">https://zenwealth.net/user/register/?reference=@joe-hansenmedia</p>
+                <button class="btn btn-zen px-4 py-2 text-white">copy</button>
               </div>
             </div>
 
           </div>
 
           <div class="col-lg-4">
-            <div class="bg-white radius-three p-3 progress2">
+            <div class="bg-white sm radius-three p-3 mt-2">
+              <h6 class="mb-3 ms-2 color-one">Earnings</h6>
               <div class="row g-3">
                 <div class="col-lg-12">
                   <div class="bg-two-faint state py-2 radius-two">
@@ -383,7 +339,7 @@
                 <div class="col-lg-12">
                   <div class="bg-two-faint state py-2 radius-two">
                       <p class="text-center color-two light-paste">Indirect Sales</p>
-                      <p class="blue-paste radius-three">$20,000</p>
+                      <p class="blue-paste radius-two">$20,000</p>
                   </div>
                 </div>
                 <div class="col-lg-12">
@@ -395,53 +351,42 @@
               </div>
             </div>  
           </div>
-          <div class="col-lg-8 link-div">
-            <div class="bg-white radius-three px-4 py-1 lg">
-              <h6 class="mt-3">Referral Link</h6>
-              <div class="link" style="display: flex; justify-content: space-between; gap: 6px;">
-                <p id="referral-link" class="mb-4 color-two">https://zenwealth.net/user/register/?reference=@joemedia</p>
-                <div class="text-end">
-                  <button class="button radius-three px-3 py-2 color-one">copy</button>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
-      
-      <footer class="shadow dashboard-footer bg-">
-        <div class="row px-4">
-          <div class="col-3">
+
+      <footer class="dashboard-footer shadow">
+        <div class="bg- h-100 w-25 d-flex align-items-center justify-content-center">
+          <div class="h-100 w-50 active position-relative">
             <a href="user-dashboard.html">
-              <div class="d-flex align-items-center justify-content-center active">
-                <ion-icon name="home" style="font-size: 25px !important;"></ion-icon>
-              </div>
+              <ion-icon name="home" style="font-size: 25px !important;"></ion-icon>
             </a>
-          </div>
-          <div class="col-3">
+          </div>          
+        </div>
+        <div class="bg- h-100 w-25 d-flex align-items-center justify-content-center">
+          <div class="h-100 w-50 position-relative">
             <a href="update-profile.html">
-              <div class="d-flex align-items-center justify-content-center">
-                <ion-icon name="person-outline" style="font-size: 25px !important;"></ion-icon>
-              </div>
+              <ion-icon name="person-outline" style="font-size: 25px !important;"></ion-icon>
             </a>
-          </div>
-          <div class="col-3">
+          </div>          
+        </div>
+        <div class="bg- h-100 w-25 d-flex align-items-center justify-content-center">
+          <div class="h-100 w-50 position-relative">
             <a href="mining.html">
-              <div class="d-flex align-items-center justify-content-center">
-                <ion-icon name="diamond-outline" style="font-size: 25px !important;"></ion-icon>              
-              </div>
+              <ion-icon name="diamond-outline" style="font-size: 25px !important;"></ion-icon>
             </a>
-          </div>
-          <div class="col-3">
+          </div>          
+        </div>
+        <div class="bg- h-100 w-25 d-flex align-items-center justify-content-center">
+          <div class="h-100 w-50 position-relative">
             <a href="#">
-              <div class="d-flex align-items-center justify-content-center">
-                <ion-icon name="cart-outline" style="font-size: 25px !important;"></ion-icon>          
-              </div>
+              <ion-icon name="cart-outline" style="font-size: 25px !important;"></ion-icon>
             </a>
-          </div>
+          </div>          
         </div>
       </footer>
+    </div>
+
     </div>
 
 

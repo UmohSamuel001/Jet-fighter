@@ -8,47 +8,7 @@
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/a207e207d8.js" crossorigin="anonymous"></script>
 </head>
-<body class="bg-one">
-
-    <!-- Sidebar -->
-    <div class="d-flex justify-content-center bg-one" id="mySidebar">
-      <div class="sidenav-wrapper p-3">
-        <span class="text-center">
-          <h3 class="fw-bolder text-white mt-1">Zenwealth</h3>
-          <p class="color-three motto text-center mb-5">...the zenith of wealth</p>
-        </span>
-        <ul class="sidenav-nav ps-0 h-100">
-            <li class="unactive-item">
-                <a href="user-dashboard.html"><ion-icon name="home-outline"></ion-icon><span>Dashboard</span></a>
-            </li>
-            <li class="unactive-item">
-                <a href="withdrawals-history.html"><ion-icon name="card-outline"></ion-icon><span>Withdrawals</span>
-                </a>
-            </li>
-            <li class="unactive-item">
-                <a href="upload-product.html"><ion-icon name="cart-outline"></ion-icon><span>Upload Product</span></a>
-            </li>
-            <li class="unactive-item">
-                <a href="#"><ion-icon name="pricetags-outline"></ion-icon><span>Purchased Courses</span></a>
-            </li>
-            <li class="unactive-item">
-              <a href="youtube-earning.html"><ion-icon name="phone-portrait-outline"></ion-icon><span>Youtube Earning</span>
-              </a>
-            </li>
-            <li class="unactive-item">
-                <a href="downlines.html"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
-            </li>
-            <li class="active-item">
-              <a href="vendor-dashboard.html"><ion-icon name="people"></ion-icon><span>Vendor Dashboard</span></a>
-            </li>
-            <li class="logout unactive-item">
-                <a href="#"><ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a>
-            </li>
-        </ul>
-      </div>
-    </div>
-    <!-- Sidebar ends -->
-
+<body class="">
 
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
       <div class="offcanvas-cover"></div>
@@ -58,9 +18,9 @@
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <div class="offcanvas-body bg- d-flex justify-content-center">
-        <div class="sidenav-wrapper p-4">
-          <ul class="mobile-sidenav-nav px-5 h-100">
+      <div class="offcanvas-body d-flex align-items-center justify-content-center">
+        <div class="sidenav-wrapper">
+          <ul class="mobile-sidenav-nav h-100">
               <li class="unactive-item">
                   <a href="user-dashboard.html"><ion-icon name="home-outline"></ion-icon><span>Dashboard</span></a>
               </li>
@@ -75,11 +35,8 @@
                   <a href="#"><ion-icon name="pricetags-outline"></ion-icon><span>Purchased Courses</span></a>
               </li>
               <li class="unactive-item">
-                  <a href="p2p-registration.html"><ion-icon name="person-add-outline"></ion-icon><span>P2P Registration</span></a>
-              </li>
-              <li class="unactive-item">
-                  <a href="VTU-history.html"><ion-icon name="phone-portrait-outline"></ion-icon><span>VTU Purchase History</span>
-                  </a>
+                <a href="youtube-earning.html"><ion-icon name="phone-portrait-outline"></ion-icon><span>Youtube Earning</span>
+                </a>
               </li>
               <li class="unactive-item">
                   <a href="downlines.html"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
@@ -95,6 +52,44 @@
       </div>
     </div>
 
+    <div class="page-wrapper">
+      <!-- Sidebar -->
+      <div class="d-flex align-items-center justify-content-center" id="mySidebar">
+        <div class="sidenav-wrapper p-3 bg-white radius-three">
+          <div class="w-100 text-center mt-2" style=" z-index: 5;">
+            <img src="img/Zenwealth Logo Alone-02.png" class="img-fluid" style="width: 50px; height: 50px;">
+          </div>
+          <ul class="sidenav-nav ps-0 h-100" style="margin-top: 40px;">
+              <li class="unactive-item">
+                  <a href="user-dashboard.html"><ion-icon name="home-outline"></ion-icon><span>Dashboard</span></a>
+              </li>
+              <li class="unactive-item">
+                  <a href="withdrawals-history.html"><ion-icon name="card-outline"></ion-icon><span>Withdrawals</span>
+                  </a>
+              </li>
+              <li class="unactive-item">
+                  <a href="upload-product.html"><ion-icon name="cart-outline"></ion-icon><span>Upload Product</span></a>
+              </li>
+              <li class="unactive-item">
+                  <a href="#"><ion-icon name="pricetags-outline"></ion-icon><span>Purchased Courses</span></a>
+              </li>
+              <li class="unactive-item">
+                <a href="youtube-earning.html"><ion-icon name="phone-portrait-outline"></ion-icon><span>Youtube Earning</span>
+                </a>
+              </li>
+              <li class="unactive-item">
+                  <a href="downlines.html"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
+              </li>
+              <li class="active-item">
+                <a href="vendor-dashboard.html"><ion-icon name="people"></ion-icon><span>Vendor Dashboard</span></a>
+              </li>
+              <li class="logout unactive-item">
+                <a href="#"><ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a>
+              </li>
+          </ul>
+        </div>
+      </div>
+   <!-- Sidebar ends -->
 
     <!-- Main content -->
     <div id="main" class="bottom-space" style="overflow-y: scroll;">
@@ -113,9 +108,11 @@
               </svg>
             </label>
           </button>
-          <div class="ms-4">
-            <h4 class="fw-bold greeting">Hello, Joe-Hansen </h4>
+          <div class="ms-4 align-items-center lg" style="display: flex;">
+            <h4 class="fw-bold text-white">Hello, Joe-Hansen</h4>
+            <img src="img/icon1.png" class="img-fluid" style="width: 35px; height: 35px; transform: translateY(-0.2rem);">
           </div>
+
           <div class="navbar-nav align-items-center ms-auto dashboard-nav">
               <div class="nav-item dropdown">
                   <a href="#" class="nav-link postion-relative" data-bs-toggle="dropdown">
@@ -123,7 +120,7 @@
                       <img class="rounded-circle img-fluid profile-img" src="img/dax.jpeg">
                       <img src="img/icon1.png" class="img-fluid rounded-circle profile-icon" style="width: 25px; height: 25px;">
                     </div>
-                    <span class="d-none d-lg-inline-flex color-one">Joe-Hansen Emeka</span>
+                    <span class="d-none">Joe-Hansen Emeka</span>
                   </a>
                   <div class="dropdown-menu dropdown-menu-end bg-white border-0 rounded-0 rounded-bottom m-0">
                     <a href="update-profile.html" class="dropdown-item">My Profile</a>
@@ -135,197 +132,200 @@
       </nav>
       <!-- Navbar End -->
 
-      <div class="ms-4 greeting-mobile d-flex align-items-center">
+      <div class="ms-4 sm vendor-name">
         <h4 class="fw-bold text-white">Hello, Joe-Hansen</h4>
         <img src="img/icon1.png" class="img-fluid" style="width: 35px; height: 35px; transform: translateY(-0.2rem);">
       </div>
 
-      <div class="container-fluid pt-2 progress-large">
-        <div class="row g-3">
-          <div class="col-lg-4">
-            <div class="p-6 radius-three">
-              <div class="bg-two px-4 radius-three progress-div">
-                <h5 class="text-white mb-3">Active Codes</h5><br>
-                <p class="fs-1 text-white"><strong>300</strong></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="p-6 radius-three">
-              <div class="bg-six px-4 radius-three progress-div">
-                <h5 class="text-white mb-3">Used Codes</h5><br>
-                <p class="fs-1 text-white"><strong>120</strong></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="p-6 radius-three">
-              <div class="bg-six px-4 radius-three progress-div">
-                <h5 class="text-white mb-3">Used Codes</h5><br>
-                <p class="fs-1 text-white"><strong>120</strong></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div><br><br>
 
-      <div class="pt-3 action-mobile">
-        <div class="" style="overflow-x: scroll;">
-          <div class="container first">
-            <div class="">
-              <div class="px-4 pb-0 radius-three progress-div">
+      <div class="container-fluid d-flex align-items-center content" style="height: 85%;">
+        <div class="w-100">
+        <div class="row g-4" style="position: relative;">
+          <div class="col-lg-12 sm">
+            <div class="" style="overflow-x: scroll;">
+              <div class="px-4 pb-0 radius-three progress-div" style="margin-bottom: 0px !important;">
                 <h5 class="text-white mb-3">Total Sales</h5><br>
                 <p class="fs-1 text-white"><strong>$23,000</strong></p>
                 <span class="d-flex justify-content-between mt-4">
                   <p class="text-white text-end">Affiliate</p>
-                  <p class="text-white text-end">view downlines</p>
+                  <a href="downlines.html" class="text-white text-end">view downlines</a>
                 </span>
               </div>
             </div>
           </div>
-        </div>
-      </div><br>
-
-      <div class="container d-flex align-items-center justify-content-center content mt-2 mb-5">
-        <div class="bg-overlay fixed-width radius-three p-3 mb-5">
-          <h6 class="mt-2 ms-2 mb-3 text-white">Coupon Codes</h6>
-
-          <div class="standard-tab">
-            <ul class="nav rounded-lg mb-2 p-2 shadow-sm radius-three" id="affanTabs1" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button class="btn text-white active" id="bootstrap-tab" data-bs-toggle="tab" data-bs-target="#bootstrap" type="button" role="tab" aria-controls="bootstrap" aria-selected="true">Active (<strong>300</strong>)</button>
-              </li>
-              <li class="nav-item tab-pill" role="presentation">
-                <button class="btn text-white" id="dark-tab" data-bs-toggle="tab" data-bs-target="#dark" type="button" role="tab" aria-controls="dark" aria-selected="false" tabindex="-1">Used (<strong>120</strong>)</button>
-              </li>
-            </ul>
-            <div class="tab-content rounded-lg p-3 shadow-sm radius-three" id="affanTabs1Content">
-              <!-- Active Codes Tab -->
-              <div class="tab-pane fade show active" id="bootstrap" role="tabpanel" aria-labelledby="bootstrap-tab">
-                <div class="d-flex justify-content-between">
-                  <div class="">
-                    <label>
-                      <select class="form-select">
-                        <option value="10" selected>10</option>
-                        <option value="20">20</option>
-                        <option value="30">30</option>
-                        <option value="40">40</option>
-                        <option value="50">50</option>
-                      </select>
-                    </label>
+          <div class="col-lg-8">
+            <div class="bg-overlay radius-three p-3">
+              <h6 class="mt-2 ms-2 mb-3 text-white">Coupon Codes</h6>
+            
+              <div class="standard-tab">
+                <ul class="nav rounded-lg mb-2 p-2 shadow-sm radius-three" id="affanTabs1" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="btn text-white active" id="bootstrap-tab" data-bs-toggle="tab" data-bs-target="#bootstrap" type="button" role="tab" aria-controls="bootstrap" aria-selected="true">Active (<strong>300</strong>)</button>
+                  </li>
+                  <li class="nav-item tab-pill" role="presentation">
+                    <button class="btn text-white" id="dark-tab" data-bs-toggle="tab" data-bs-target="#dark" type="button" role="tab" aria-controls="dark" aria-selected="false" tabindex="-1">Used (<strong>120</strong>)</button>
+                  </li>
+                </ul>
+                <div class="tab-content rounded-lg p-3 shadow-sm radius-three" id="affanTabs1Content">
+                  <!-- Active Codes Tab -->
+                  <div class="tab-pane fade show active" id="bootstrap" role="tabpanel" aria-labelledby="bootstrap-tab">
+                    <div class="d-flex justify-content-between">
+                      <div class="">
+                        <label>
+                          <select class="form-select">
+                            <option value="10" selected>10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="40">40</option>
+                            <option value="50">50</option>
+                          </select>
+                        </label>
+                      </div>
+                      <div class="">
+                        <input type="search" class="form-control search" placeholder="search username" id="search-active">
+                      </div>
+                    </div>
+                    <div class="dataTable-container mt-3">
+                      <table class="w-100 dataTable-table table text-white" id="dataTable-active">
+                        <thead>
+                          <tr>
+                            <th data-sortable="" style="width: 12.2727%;">SN</th>
+                            <th data-sortable="" style="width: 67.5%;">Code</th>
+                            <th data-sortable="" style="width: 20.2841%;">Value</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>activecode123456789</td>
+                            <td>4,500</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>activecode123456789</td>
+                            <td>4,500</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
-                  <div class="">
-                    <input type="search" class="form-control search" placeholder="search username" id="search-active">
+
+                  <!-- Used Codes Tab -->
+                  <div class="tab-pane fade" id="dark" role="tabpanel" aria-labelledby="dark-tab">
+                    <div class="d-flex justify-content-between">
+                      <div class="">
+                        <label>
+                          <select class="form-select">
+                            <option value="10" selected>10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="40">40</option>
+                            <option value="50">50</option>
+                          </select>
+                        </label>
+                      </div>
+                      <div class="">
+                        <input type="search" class="form-control" placeholder="search username" id="search-used">
+                      </div>
+                    </div>
+                    <div class="dataTable-container mt-3">
+                      <table class="w-100 dataTable-table table text-white" id="dataTable-used">
+                        <thead>
+                          <tr>
+                            <th data-sortable="" style="width: 12.2727%;">SN</th>
+                            <th data-sortable="" style="width: 67.5%;">Code</th>
+                            <th data-sortable="" style="width: 20.2841%;">Value</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>usedcode123456789</td>
+                            <td>3,000</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>usedcode987654321</td>
+                            <td>5,000</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
-                </div>
-                <div class="dataTable-container mt-3">
-                  <table class="w-100 dataTable-table table text-white" id="dataTable-active">
-                    <thead>
-                      <tr>
-                        <th data-sortable="" style="width: 12.2727%;">SN</th>
-                        <th data-sortable="" style="width: 67.5%;">Code</th>
-                        <th data-sortable="" style="width: 20.2841%;">Value</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>activecode123456789</td>
-                        <td>4,500</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>activecode123456789</td>
-                        <td>4,500</td>
-                      </tr>
-                    </tbody>
-                  </table>
                 </div>
               </div>
-              
-              <!-- Used Codes Tab -->
-              <div class="tab-pane fade" id="dark" role="tabpanel" aria-labelledby="dark-tab">
-                <div class="d-flex justify-content-between">
-                  <div class="">
-                    <label>
-                      <select class="form-select">
-                        <option value="10" selected>10</option>
-                        <option value="20">20</option>
-                        <option value="30">30</option>
-                        <option value="40">40</option>
-                        <option value="50">50</option>
-                      </select>
-                    </label>
-                  </div>
-                  <div class="">
-                    <input type="search" class="form-control" placeholder="search username" id="search-used">
-                  </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="bg-white radius-three p-3">
+            <h6 class="mb-3 ms-2 color-one">Earnings</h6>
+            <div class="row g-3">
+              <div class="col-lg-12">
+                <div class="bg-two-faint state py-2 radius-two">
+                  <p class="text-center color-two light-paste">Total Sales</p>
+                  <p class="text-center blue-paste radius-two">125</p>
                 </div>
-                <div class="dataTable-container mt-3">
-                  <table class="w-100 dataTable-table table text-white" id="dataTable-used">
-                    <thead>
-                      <tr>
-                        <th data-sortable="" style="width: 12.2727%;">SN</th>
-                        <th data-sortable="" style="width: 67.5%;">Code</th>
-                        <th data-sortable="" style="width: 20.2841%;">Value</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>usedcode123456789</td>
-                        <td>3,000</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>usedcode987654321</td>
-                        <td>5,000</td>
-                      </tr>
-                    </tbody>
-                  </table>
+              </div>
+              <div class="col-lg-12 lg">
+                <div class="bg-two-faint state py-2 radius-two">
+                  <p class="text-center color-two light-paste">Sales Balance</p>
+                  <p class="text-center blue-paste radius-two">$23,000</p>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="bg-two-faint state py-2 radius-two">
+                  <p class="text-center color-two light-paste">Direct Sales</p>
+                  <p class="text-center blue-paste radius-two">$80,000</p>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="bg-two-faint state py-2 radius-two">
+                    <p class="text-center color-two light-paste">Indirect Sales</p>
+                    <p class="blue-paste radius-two">$20,000</p>
                 </div>
               </div>
             </div>
-          </div>
+          </div>  
+        </div>
+      </div>
       </div>
       </div>
       
       </div>
 
       
-      <footer class="shadow dashboard-footer bg-">
-        <div class="row px-4">
-          <div class="col-3">
+      <footer class="dashboard-footer shadow">
+        <div class="bg- h-100 w-25 d-flex align-items-center justify-content-center">
+          <div class="h-100 w-50 active position-relative">
             <a href="user-dashboard.html">
-              <div class="d-flex align-items-center justify-content-center active">
-                <ion-icon name="home" style="font-size: 25px !important;"></ion-icon>
-              </div>
+              <ion-icon name="home" style="font-size: 25px !important;"></ion-icon>
             </a>
-          </div>
-          <div class="col-3">
+          </div>          
+        </div>
+        <div class="bg- h-100 w-25 d-flex align-items-center justify-content-center">
+          <div class="h-100 w-50 position-relative">
             <a href="update-profile.html">
-              <div class="d-flex align-items-center justify-content-center">
-                <ion-icon name="person-outline" style="font-size: 25px !important;"></ion-icon>
-              </div>
+              <ion-icon name="person-outline" style="font-size: 25px !important;"></ion-icon>
             </a>
-          </div>
-          <div class="col-3">
+          </div>          
+        </div>
+        <div class="bg- h-100 w-25 d-flex align-items-center justify-content-center">
+          <div class="h-100 w-50 position-relative">
             <a href="mining.html">
-              <div class="d-flex align-items-center justify-content-center">
-                <ion-icon name="diamond-outline" style="font-size: 25px !important;"></ion-icon>              
-              </div>
+              <ion-icon name="diamond-outline" style="font-size: 25px !important;"></ion-icon>
             </a>
-          </div>
-          <div class="col-3">
+          </div>          
+        </div>
+        <div class="bg- h-100 w-25 d-flex align-items-center justify-content-center">
+          <div class="h-100 w-50 position-relative">
             <a href="#">
-              <div class="d-flex align-items-center justify-content-center">
-                <ion-icon name="cart-outline" style="font-size: 25px !important;"></ion-icon>          
-              </div>
+              <ion-icon name="cart-outline" style="font-size: 25px !important;"></ion-icon>
             </a>
-          </div>
+          </div>          
         </div>
       </footer>
     </div>
+  </div>
 
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

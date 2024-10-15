@@ -50,7 +50,7 @@
     </div>
   
   
-    <div id="main" class="bottom-space" style="overflow-y: scroll;">
+    <div id="main bg-transparent" class="bottom-space" style="overflow-y: scroll;">
         <div class="trydiv2"></div>
 
         <!-- Navbar Start -->
@@ -126,10 +126,10 @@
           <div class="d-flex align-items-center justify-content-between">
             <span class="text-white fs-1 d-flex align-items-center justify-content-center" style="width: fit-content;">
               <img src="img/lfg.png" class="img-fluid lfg" alt="lfg">
-              <p id="barLife" class="align-middle" style="font-weight: 500; transform: translateY(5px);">600/600</p>
+              <p  class="align-middle fs-3" style="font-weight: 500; transform: translateY(5px);">Boost</p>
             </span>
   
-            <div class="d-flex gap-2 me-2">
+            <div class="d- gap-2 me-2">
               <div class="battery-container position-relative" style="width: fit-content;">
                 <div class="battery-lid"></div>
                 <div class="battery-body">
@@ -137,7 +137,7 @@
                   <ion-icon name="flash" class="text-white battery-sign fs-6"></ion-icon>
                 </div>
               </div>
-              <p class="text-white fs-4" style="transform: translateY(10px);">BH</p>
+              <p class="text-white fs-4" id="barLife">600</p>
             </div>
           </div>
 
@@ -145,36 +145,34 @@
 
 
 
-        <footer class="shadow dashboard-footer bg-">
-          <div class="row px-4">
-            <div class="col-3">
+        <footer class="dashboard-footer shadow bg- d-flex">
+          <div class="bg- h-100 w-25 d-flex align-items-center justify-content-center">
+            <div class="h-100 w-50 position-relative">
               <a href="user-dashboard.html">
-                <div class="d-flex align-items-center justify-content-center">
-                  <ion-icon name="home-outline" style="font-size: 25px !important;"></ion-icon>
-                </div>
+                <ion-icon name="home-outline" style="font-size: 25px !important;"></ion-icon>
               </a>
-            </div>
-            <div class="col-3">
+            </div>          
+          </div>
+          <div class="bg- h-100 w-25 d-flex align-items-center justify-content-center">
+            <div class="h-100 w-50 position-relative">
               <a href="update-profile.html">
-                <div class="d-flex align-items-center justify-content-center">
-                  <ion-icon name="person-outline" style="font-size: 25px !important;"></ion-icon>
-                </div>
+                <ion-icon name="person-outline" style="font-size: 25px !important;"></ion-icon>
               </a>
-            </div>
-            <div class="col-3">
+            </div>          
+          </div>
+          <div class="bg- h-100 w-25 d-flex align-items-center justify-content-center">
+            <div class="h-100 w-50 position-relative active">
               <a href="mining.html">
-                <div class="d-flex align-items-center justify-content-center active">
-                  <ion-icon name="diamond" style="font-size: 25px !important;"></ion-icon>              
-                </div>
+                <ion-icon name="diamond" style="font-size: 25px !important;"></ion-icon>
               </a>
-            </div>
-            <div class="col-3">
+            </div>          
+          </div>
+          <div class="bg- h-100 w-25 d-flex align-items-center justify-content-center">
+            <div class="h-100 w-50 position-relative">
               <a href="#">
-                <div class="d-flex align-items-center justify-content-center">
-                  <ion-icon name="cart-outline" style="font-size: 25px !important;"></ion-icon>          
-                </div>
+                <ion-icon name="cart-outline" style="font-size: 25px !important;"></ion-icon>
               </a>
-            </div>
+            </div>          
           </div>
         </footer>
     </div>
@@ -190,7 +188,9 @@
 
         
 
-        document.getElementById('coin').addEventListener('click', () => {
+        document.getElementById('coin').addEventListener('touchstart', () => {
+          const touchCount = event.touches.length;
+
           // Possible starting positions
           const positions = ['left', 'center', 'right'];
 
@@ -198,7 +198,8 @@
           const randomPosition = positions[Math.floor(Math.random() * positions.length)];
 
           if(life > 0){
-            // Create the "+2" element
+            for(let i = 0; i < touchCount; i++){
+              // Create the "+2" element
             const plusTwo = document.createElement('div');
             plusTwo.classList.add('float-text');
             plusTwo.textContent = '+2';
@@ -216,7 +217,7 @@
             // Add the element to the container
             document.querySelector('.addon').appendChild(plusTwo);
             life -= 2;
-            bar.innerText = life + '/600';
+            bar.textContent = life;
             count += 2;
             document.getElementById('total').innerText = count;
 
@@ -239,6 +240,7 @@
             setTimeout(() => {
               plusTwo.remove();
             }, 2000);
+            }
 
           } else {
             document.getElementById('coin').style.transform = 'scale(1)';

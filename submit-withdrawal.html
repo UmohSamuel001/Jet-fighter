@@ -10,14 +10,58 @@
 </head>
 <body class="bg-one">
 
-    <!-- Sidebar -->
-    <div class="d-flex justify-content-center bg-one" id="mySidebar">
-      <div class="sidenav-wrapper p-3">
-        <span class="text-center">
-          <h3 class="fw-bolder text-white mt-3">Zenwealth</h3>
-          <p class="color-three motto text-center mb-4">...the zenith of wealth</p>
-        </span>
-        <ul class="sidenav-nav ps-0 h-100">
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-cover"></div>
+
+      <div class="offcanvas-header d-flex">
+        <div class="w-100 text-center" style=" z-index: 5;">
+          <img src="img/ZEN logo.png" class="img-fluid" style="width: 90%; height: 80px;">
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body d-flex align-items-center justify-content-center">
+        <div class="sidenav-wrapper">
+          <ul class="mobile-sidenav-nav h-100">
+              <li class="active-item">
+                  <a href="user-dashboard.html"><ion-icon name="home"></ion-icon><span>Dashboard</span></a>
+              </li>
+              <li class="unactive-item">
+                  <a href="withdrawals-history.html"><ion-icon name="card-outline"></ion-icon><span>Withdrawals</span>
+                  </a>
+              </li>
+              <li class="unactive-item">
+                  <a href="upload-product.html"><ion-icon name="cart-outline"></ion-icon><span>Upload Product</span></a>
+              </li>
+              <li class="unactive-item">
+                  <a href="#"><ion-icon name="pricetags-outline"></ion-icon><span>Purchased Courses</span></a>
+              </li>
+              <li class="unactive-item">
+                <a href="youtube-earning.html"><ion-icon name="phone-portrait-outline"></ion-icon><span>Youtube Earning</span>
+                </a>
+              </li>
+              <li class="unactive-item">
+                  <a href="downlines.html"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
+              </li>
+              <li class="unactive-item">
+                <a href="vendor-dashboard.html"><ion-icon name="people-outline"></ion-icon><span>Vendor Dashboard</span></a>
+              </li>
+              <li class="logout unactive-item">
+                  <a href="#"><ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="page-wrapper">
+      <!-- Sidebar -->
+    <div class="d-flex align-items-center justify-content-center" id="mySidebar">
+      <div class="sidenav-wrapper p-3 bg-white radius-three">
+        <div class="w-100 text-center mt-2" style=" z-index: 5;">
+          <img src="img/Zenwealth Logo Alone-02.png" class="img-fluid" style="width: 50px; height: 50px;">
+        </div>
+        <ul class="sidenav-nav ps-0 h-100" style="margin-top: 40px;">
             <li class="active-item">
                 <a href="user-dashboard.html"><ion-icon name="home"></ion-icon><span>Dashboard</span></a>
             </li>
@@ -49,55 +93,6 @@
     </div>
     <!-- Sidebar ends -->
 
-
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-      <div class="offcanvas-cover"></div>
-
-      <div class="offcanvas-header d-flex">
-        <div class="w-100 text-center" style=" z-index: 5;">
-          <img src="img/ZEN logo.png" class="img-fluid" style="width: 90%; height: 80px;">
-        </div>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body d-flex justify-content-center">
-        <div class="sidenav-wrapper p-4">
-          <ul class="mobile-sidenav-nav px-5 h-100">
-              <li class="active-item">
-                  <a href="user-dashboard.html"><ion-icon name="home"></ion-icon><span>Dashboard</span></a>
-              </li>
-              <li class="unactive-item">
-                  <a href="withdrawals-history.html"><ion-icon name="card-outline"></ion-icon><span>Withdrawals</span>
-                  </a>
-              </li>
-              <li class="unactive-item">
-                  <a href="upload-product.html"><ion-icon name="cart-outline"></ion-icon><span>Upload Product</span></a>
-              </li>
-              <li class="unactive-item">
-                  <a href="#"><ion-icon name="pricetags-outline"></ion-icon><span>Purchased Courses</span></a>
-              </li>
-              <li class="unactive-item">
-                  <a href="p2p-registration.html"><ion-icon name="person-add-outline"></ion-icon><span>P2P Registration</span></a>
-              </li>
-              <li class="unactive-item">
-                  <a href="VTU-history.html"><ion-icon name="phone-portrait-outline"></ion-icon><span>VTU Purchase History</span>
-                  </a>
-              </li>
-              <li class="unactive-item">
-                  <a href="downlines.html"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
-              </li>
-              <li class="unactive-item">
-                <a href="vendor-dashboard.html"><ion-icon name="people-outline"></ion-icon><span>Vendor Dashboard</span></a>
-              </li>
-              <li class="logout unactive-item">
-                  <a href="#"><ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a>
-              </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-
-
     <!-- Main content -->
     <div id="main" class="bottom-space" style="overflow-y: scroll;">
       <div class="trydiv2"></div>
@@ -116,13 +111,13 @@
             </label>
           </button>
           <div class="ms-4">
-            <h4 class="fw-bold greeting">Hello, Joe-Hansen</h4>
+            <h4 class="fw-bold greeting text-white">Hello, Joe-Hansen</h4>
           </div>
           <div class="navbar-nav align-items-center ms-auto dashboard-nav">
               <div class="nav-item dropdown">
                   <a href="#" class="nav-link" data-bs-toggle="dropdown">
                       <img class="rounded-circle border me-lg-2" src="img/dax.jpeg" alt="" style="width: 47px; height: 45px;">
-                      <span class="d-none d-lg-inline-flex color-one">Joe-Hansen Emeka</span>
+                      <span class="d-none d-lg-inline-flex text-white">Joe-Hansen Emeka</span>
                   </a>
                   <div class="dropdown-menu dropdown-menu-end bg-white border-0 rounded-0 rounded-bottom m-0">
                     <a href="update-profile.html" class="dropdown-item">My Profile</a>
@@ -138,87 +133,19 @@
         <h4 class="fw-bold text-white">Hello, Joe-Hansen</h4>
       </div>
 
-      <!-- <div class="container-fluid pt-2 progress-large">
-        <div class="row g-3">
-          <div class="col-lg-4">
-            <div class="p-6 bg- radius-three">
-              <div class="bg-five px-4 radius-three progress-div">
-                <h5 class="text-white">Affiliate Balance</h5>
-                <strong class="fs-5 text-white">$21,000</strong>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="p-6 bg- radius-three">
-              <div class="bg-two px-4 radius-three progress-div">
-                <h5 class="text-white">Game Balance</h5>
-                <strong class="fs-5 text-white">$100</strong>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="p-6 bg- radius-three">
-              <div class="bg-three px-4 radius-three progress-div">
-                <h5 class="text-white">Activities Balance</h5>
-                <strong class="fs-5 text-white">7000ZP</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-      <br><br>
-
       
-      <div class="container-fluid">
-        <div class="row g-3" style="position: relative;">
-            <div class="col-lg-4">
-                <div class="radius-three card-div">
-                  <div class="atm">
-                    <p class="fs-4 fw-bold color-four" style="position: absolute; right: 25px; top: 10px;">UBA</p>
-                    <div class="chip"><img src="https://raw.githubusercontent.com/dasShounak/freeUseImages/main/chip.png" alt="chip"></div>
-                    <div class="number ms-4 color-four">908 8160 053</div><br>
-                    <div class="name ms-4 color-four" style="position: absolute; bottom: 20px;">JOE-HANSEN EMEKA</div><br>
-                    <div class="from" style="position: absolute; bottom: 20px; right: 25px;"><a href="update-bank-details.html" class="text- color-two">edit</a></div><br>
-                    <!-- <div class="ring"></div>
-                    <div class="atm-content radius-two"></div> -->
-                  </div>
-                  <!-- <div class="col-md-12 mt-4 mb-4 container">
-                    <a href="update-bank-details.html">
-                      <button class="btn btn-zen px-4 py-2 w-100 text-white" type="submit">Edit Details</button>
-                    </a>
-                  </div> -->
-                </div>
-            </div>
+      <div class="container-fluid d-flex align-items-center justify-content-center content" style="height: 85%;">
+        <div class="row g-4" style="position: relative;">
 
-
-            <!-- <div class="pt-3 progress-mobile">
-              <div class="d-flex gap-3" style="overflow: scroll;">
-                <div class="col-9">
-                  <div class="radius-three">
-                    <div class="bg-five px-4 py-4 pt-3 radius-three progress-div">
-                      <h5 class="text-white">Affiliate Balance</h5>
-                      <strong class="fs-5 text-white">$21,000</strong>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="radius-three">
-                    <div class="bg-two px-4 py-4 pt-3 radius-three progress-div">
-                      <h5 class="text-white">Game Balance</h5>
-                      <strong class="fs-5 text-white">$100</strong>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-8">
-                  <div class="bg-four radius-three">
-                    <div class="bg-three px-4 pt-3 radius-three progress-div">
-                      <h5 class="text-white">Activities Balance</h5>
-                      <strong class="fs-5 text-white">7000ZP</strong>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> -->
+      <div class="col-lg-4">
+        <div class="atm">
+          <p class="fs-4 fw-bold color-four" style="position: absolute; right: 25px; top: 10px;">UBA</p>
+          <div class="chip"><img src="https://raw.githubusercontent.com/dasShounak/freeUseImages/main/chip.png" alt="chip"></div>
+          <div class="number ms-4 color-four">908 8160 053</div><br>
+          <div class="name ms-4 color-four" style="position: absolute; bottom: 20px;">JOE-HANSEN EMEKA</div><br>
+          <div class="from" style="position: absolute; bottom: 20px; right: 25px;"><a href="update-bank-details.html" class="text- color-two">edit</a></div><br>
+        </div>
+      </div>
 
       <div class="col-lg-8">
         <div class="bg-overlay radius-three p-4 pb-5">
@@ -241,16 +168,20 @@
               </div>
 
               <div class="col-md-12">
-                <div class="form-floating">
-                  <input class="form-control" placeholder="amount" type="text" name="amount" required="">
-                  <label class="form-label">Withdrawal Amount</label>
-                </div>
-              </div>
-
-              <div class="col-md-12">
-                <div class="form-floating">
-                  <input class="form-control" placeholder="pin" type="text" name="amount" required="">
-                  <label class="form-label">Withdrawal Pin</label>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input class="form-control" placeholder="amount" type="text" name="amount" required="">
+                      <label class="form-label">Withdrawal Amount</label>
+                    </div>
+                  </div>
+    
+                  <div class="col-md-6">
+                    <div class="form-floating mtop">
+                      <input class="form-control" placeholder="pin" type="text" name="amount" required="">
+                      <label class="form-label">Withdrawal Pin</label>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -260,46 +191,45 @@
           </div>
           </form>
         </div>
-      </div>
-
     </div>
     </div>
+    </div>
 
-
+    
       
-    <footer class="shadow dashboard-footer bg-">
-      <div class="row px-4">
-        <div class="col-3">
+    <footer class="dashboard-footer shadow">
+      <div class="h-100 w-25 d-flex align-items-center justify-content-center">
+        <div class="h-100 w-50 active position-relative">
           <a href="user-dashboard.html">
-            <div class="d-flex align-items-center justify-content-center active">
-              <ion-icon name="home" style="font-size: 25px !important;"></ion-icon>
-            </div>
+            <ion-icon name="home" style="font-size: 25px !important;"></ion-icon>
           </a>
-        </div>
-        <div class="col-3">
+        </div>          
+      </div>
+      <div class="h-100 w-25 d-flex align-items-center justify-content-center">
+        <div class="h-100 w-50 position-relative">
           <a href="update-profile.html">
-            <div class="d-flex align-items-center justify-content-center">
-              <ion-icon name="person-outline" style="font-size: 25px !important;"></ion-icon>
-            </div>
+            <ion-icon name="person-outline" style="font-size: 25px !important;"></ion-icon>
           </a>
-        </div>
-        <div class="col-3">
+        </div>          
+      </div>
+      <div class="h-100 w-25 d-flex align-items-center justify-content-center">
+        <div class="h-100 w-50 position-relative">
           <a href="mining.html">
-            <div class="d-flex align-items-center justify-content-center">
-              <ion-icon name="diamond-outline" style="font-size: 25px !important;"></ion-icon>              
-            </div>
+            <ion-icon name="diamond-outline" style="font-size: 25px !important;"></ion-icon>
           </a>
-        </div>
-        <div class="col-3">
+        </div>          
+      </div>
+      <div class="h-100 w-25 d-flex align-items-center justify-content-center">
+        <div class="h-100 w-50 position-relative">
           <a href="#">
-            <div class="d-flex align-items-center justify-content-center">
-              <ion-icon name="cart-outline" style="font-size: 25px !important;"></ion-icon>          
-            </div>
+            <ion-icon name="cart-outline" style="font-size: 25px !important;"></ion-icon>
           </a>
-        </div>
+        </div>          
       </div>
     </footer>
     </div>
+  </div>
+
 
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

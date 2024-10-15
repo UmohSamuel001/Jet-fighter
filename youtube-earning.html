@@ -17,11 +17,11 @@
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <div class="offcanvas-body d-flex justify-content-center">
-        <div class="sidenav-wrapper p-4">
-          <ul class="mobile-sidenav-nav px-5 h-100">
-              <li class="active-item">
-                  <a href="user-dashboard.html"><ion-icon name="home"></ion-icon><span>Dashboard</span></a>
+      <div class="offcanvas-body d-flex align-items-center justify-content-center">
+        <div class="sidenav-wrapper">
+          <ul class="mobile-sidenav-nav h-100">
+              <li class="unactive-item">
+                  <a href="user-dashboard.html"><ion-icon name="home-outline"></ion-icon><span>Dashboard</span></a>
               </li>
               <li class="unactive-item">
                   <a href="withdrawals-history.html"><ion-icon name="card-outline"></ion-icon><span>Withdrawals</span>
@@ -33,8 +33,8 @@
               <li class="unactive-item">
                   <a href="#"><ion-icon name="pricetags-outline"></ion-icon><span>Purchased Courses</span></a>
               </li>
-              <li class="unactive-item">
-                <a href="youtube-earning.html"><ion-icon name="phone-portrait-outline"></ion-icon><span>Youtube Earning</span>
+              <li class="active-item">
+                <a href="youtube-earning.html"><ion-icon name="phone-portrait"></ion-icon><span>Youtube Earning</span>
                 </a>
               </li>
               <li class="unactive-item">
@@ -51,6 +51,44 @@
       </div>
     </div>
 
+    <div class="page-wrapper">
+        <!-- Sidebar -->
+     <div class="d-flex align-items-center justify-content-center" id="mySidebar">
+       <div class="sidenav-wrapper p-3 bg-white radius-three">
+         <div class="w-100 text-center mt-2" style=" z-index: 5;">
+           <img src="img/Zenwealth Logo Alone-02.png" class="img-fluid" style="width: 50px; height: 50px;">
+         </div>
+         <ul class="sidenav-nav ps-0 h-100" style="margin-top: 40px;">
+             <li class="unactive-item">
+                 <a href="user-dashboard.html"><ion-icon name="home-outline"></ion-icon><span>Dashboard</span></a>
+             </li>
+             <li class="unactive-item">
+                 <a href="withdrawals-history.html"><ion-icon name="card-outline"></ion-icon><span>Withdrawals</span>
+                 </a>
+             </li>
+             <li class="unactive-item">
+                 <a href="upload-product.html"><ion-icon name="cart-outline"></ion-icon><span>Upload Product</span></a>
+             </li>
+             <li class="unactive-item">
+                 <a href="#"><ion-icon name="pricetags-outline"></ion-icon><span>Purchased Courses</span></a>
+             </li>
+             <li class="active-item">
+               <a href="youtube-earning.html"><ion-icon name="phone-portrait"></ion-icon><span>Youtube Earning</span>
+               </a>
+             </li>
+             <li class="unactive-item">
+                 <a href="downlines.html"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
+             </li>
+             <li class="unactive-item">
+               <a href="vendor-dashboard.html"><ion-icon name="people-outline"></ion-icon><span>Vendor Dashboard</span></a>
+             </li>
+             <li class="logout unactive-item">
+                 <a href="#"><ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a>
+             </li>
+         </ul>
+       </div>
+     </div>
+     <!-- Sidebar ends -->
 
     <div id="main" class="bottom-space" style="overflow-y: scroll;">
         <div class="trydiv2"></div>
@@ -70,13 +108,13 @@
             </button>
             
             <div class="ms-4">
-              <h4 class="fw-bold greeting">Hello, Joe-Hansen</h4>
+              <h4 class="fw-bold greeting text-white">Hello, Joe-Hansen</h4>
             </div>
             <div class="navbar-nav align-items-center ms-auto dashboard-nav">
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link" data-bs-toggle="dropdown">
                         <img class="rounded-circle border me-lg-2" src="img/dax.jpeg" alt="" style="width: 47px; height: 45px;">
-                        <span class="d-none d-lg-inline-flex color-one">Joe-Hansen Emeka</span>
+                        <span class="d-none">Joe-Hansen Emeka</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end bg-white border-0 rounded-0 rounded-bottom m-0">
                       <a href="update-profile.html" class="dropdown-item">My Profile</a>
@@ -88,24 +126,34 @@
         </nav>
         <!-- Navbar End -->
 
-        <div class="container" style="overflow-wrap: break-word;">
-            <h5 class="text-white fw-bold mb-1">Link to video</h5>
-            <p class="text-white">https://youtube.com/JHKGU89IU7yhVU7gv76f237FGTYFNM</p>
-        </div>
+        <div class="container-fluid position-relative">
+            <div class="progress-div" style="padding: 10px !important;">
+                <p class="fs-3 mb-0">How to Brush your Teeth</p>
+                <span class="d-flex gap-2 justify-content-center">
+                    <p class="fw-bold" style="transform: translateY(4px);">link:</p>
+                    <a href="#" class="text-white" id="referral-link" style="width: 75%;">https://youtube.com/JHKGU89IU7yhVU7gv76f237FGTYFNM</a>
+                </span>    
+            </div>                
 
-        <div class="mt-5">
-            <h2 class="color-three fw-bold text-center mb-4">Verify Code</h2>
-            <div class="number-boxes">
-                <div class="box" id="box1"></div>
-                <div class="box" id="box2"></div>
-                <div class="box" id="box3"></div>
-                <div class="box" id="box4"></div>
+            <div class="mt-4">
+                <h2 class="color-three fw-bold text-center mb-4">Verify Code</h2>
+                <div class="number-boxes">
+                    <div class="box" id="box1"></div>
+                    <div class="box" id="box2"></div>
+                    <div class="box" id="box3"></div>
+                    <div class="box" id="box4"></div>
+                </div>
             </div>
+    
+            <div class="container w-100 text-center">
+                <input type="hidden" id="hiddenInput" class="input-field bg-transparent text-white" readonly />
+            </div>
+
+            <!-- <div class="yt-div sm">
+                <img src="img/yt-icon.png" class="img-fluid yt-icon" alt="youtube icon">
+            </div> -->
         </div>
 
-        <div class="container w-100 text-center">
-            <input type="hidden" id="hiddenInput" class="input-field bg-transparent text-white" readonly />
-        </div>
     
         <div class="keyboard w-100 bg-overlay py-4 px-2">
             <div class="keys-wrapper w-100 bg-">
@@ -123,6 +171,7 @@
                 <div class="bg-transparent" id="backspace"><ion-icon name="backspace-outline"></ion-icon></div>
             </div>
         </div>
+    </div>
     </div>
 
 
@@ -150,6 +199,27 @@
         // Function to handle backspace
         backspace.addEventListener('click', () => {
             if (currentIndex > 0) {
+                currentIndex--; // Move back one box
+                boxes[currentIndex].innerText = ''; // Clear the last box
+                updateHiddenInput(); // Update hidden input field after deletion
+            }
+        });
+
+        // Function to handle key presses from the physical keyboard
+        document.addEventListener('keydown', (e) => {
+            const key = e.key;
+        
+            // Check if the pressed key is a number between 0-9
+            if (!isNaN(key) && key !== ' ') {
+                if (currentIndex < 4) { // Ensure only 4 digits are added
+                    boxes[currentIndex].innerText = key;
+                    currentIndex++;
+                    updateHiddenInput(); // Update hidden input field for submission
+                }
+            }
+        
+            // Handle backspace key press
+            if (key === 'Backspace' && currentIndex > 0) {
                 currentIndex--; // Move back one box
                 boxes[currentIndex].innerText = ''; // Clear the last box
                 updateHiddenInput(); // Update hidden input field after deletion

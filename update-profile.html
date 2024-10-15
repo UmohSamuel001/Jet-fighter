@@ -10,46 +10,6 @@
 </head>
 <body class="bg-one">
 
-    <!-- Sidebar -->
-    <div class="d-flex justify-content-center bg-one" id="mySidebar">
-      <div class="sidenav-wrapper p-3">
-        <span class="text-center">
-          <h3 class="fw-bolder text-white mt-3">Zenwealth</h3>
-          <p class="color-three motto text-center mb-4">...the zenith of wealth</p>
-        </span>
-        <ul class="sidenav-nav ps-0 h-100">
-            <li class="active-item">
-                <a href="user-dashboard.html"><ion-icon name="home"></ion-icon><span>Dashboard</span></a>
-            </li>
-            <li class="unactive-item">
-                <a href="withdrawals-history.html"><ion-icon name="card-outline"></ion-icon><span>Withdrawals</span>
-                </a>
-            </li>
-            <li class="unactive-item">
-                <a href="upload-product.html"><ion-icon name="cart-outline"></ion-icon><span>Upload Product</span></a>
-            </li>
-            <li class="unactive-item">
-                <a href="#"><ion-icon name="pricetags-outline"></ion-icon><span>Purchased Courses</span></a>
-            </li>
-            <li class="unactive-item">
-              <a href="youtube-earning.html"><ion-icon name="phone-portrait-outline"></ion-icon><span>Youtube Earning</span>
-              </a>
-            </li>
-            <li class="unactive-item">
-                <a href="downlines.html"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
-            </li>
-            <li class="unactive-item">
-              <a href="vendor-dashboard.html"><ion-icon name="people-outline"></ion-icon><span>Vendor Dashboard</span></a>
-            </li>
-            <li class="logout unactive-item">
-                <a href="#"><ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a>
-            </li>
-        </ul>
-      </div>
-    </div>
-    <!-- Sidebar ends -->
-
-
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
       <div class="offcanvas-cover"></div>
       <div class="offcanvas-header d-flex">
@@ -58,9 +18,9 @@
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <div class="offcanvas-body d-flex justify-content-center">
-        <div class="sidenav-wrapper p-4">
-          <ul class="mobile-sidenav-nav px-5 h-100">
+      <div class="offcanvas-body d-flex align-items-center justify-content-center">
+        <div class="sidenav-wrapper">
+          <ul class="mobile-sidenav-nav h-100">
               <li class="active-item">
                   <a href="user-dashboard.html"><ion-icon name="home"></ion-icon><span>Dashboard</span></a>
               </li>
@@ -75,11 +35,8 @@
                   <a href="#"><ion-icon name="pricetags-outline"></ion-icon><span>Purchased Courses</span></a>
               </li>
               <li class="unactive-item">
-                  <a href="p2p-registration.html"><ion-icon name="person-add-outline"></ion-icon><span>P2P Registration</span></a>
-              </li>
-              <li class="unactive-item">
-                  <a href="VTU-history.html"><ion-icon name="phone-portrait-outline"></ion-icon><span>VTU Purchase History</span>
-                  </a>
+                <a href="youtube-earning.html"><ion-icon name="phone-portrait-outline"></ion-icon><span>Youtube Earning</span>
+                </a>
               </li>
               <li class="unactive-item">
                   <a href="downlines.html"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
@@ -101,138 +58,138 @@
     <div id="main" class="bottom-space" style="overflow-y: scroll;">
       <div class="trydiv2"></div>
 
-      <!-- Navbar Start -->
+      <div class="content-wrapper">
+        <!-- Navbar Start -->
       <nav class="navbar navbar-expand px-2 py-2 pt-3">
-          <a href="#" class="sidebar-toggler flex-shrink-0" onclick="togglenav()">
-              <i class="fa fa-bars color-one" style="transform: translateY(-3px);"></i>
-          </a>
-          <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-            <label class="hamburger" id="hamburger">
-              <svg viewBox="0 0 32 32">
-                <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
-                <path class="line" d="M7 16 27 16"></path>
-              </svg>
-            </label>
-          </button>
-          <div class="ms-4">
-            <h4 class="fw-bold greeting">Hello, Joe-Hansen</h4>
-          </div>
-          <div class="navbar-nav align-items-center ms-auto dashboard-nav">
-              <div class="nav-item dropdown">
-                  <a href="#" class="nav-link" data-bs-toggle="dropdown">
-                      <img class="rounded-circle border me-lg-2" src="img/dax.jpeg" alt="" style="width: 47px; height: 45px;">
-                      <span class="d-none d-lg-inline-flex color-one">Joe-Hansen Emeka</span>
-                  </a>
-                  <div class="dropdown-menu dropdown-menu-end bg-white border-0 rounded-0 rounded-bottom m-0">
-                    <a href="update-profile.html" class="dropdown-item">My Profile</a>
-                    <a href="#" class="dropdown-item">Settings</a>
-                      <a href="#" class="dropdown-item">Log Out</a>
+        <a href="#" class="sidebar-toggler flex-shrink-0" onclick="togglenav()">
+            <i class="fa fa-bars color-one" style="transform: translateY(-3px);"></i>
+        </a>
+        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+          <label class="hamburger" id="hamburger">
+            <svg viewBox="0 0 32 32">
+              <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+              <path class="line" d="M7 16 27 16"></path>
+            </svg>
+          </label>
+        </button>
+        <div class="ms-4">
+          <h4 class="fw-bold greeting">Hello, Joe-Hansen</h4>
+        </div>
+        <div class="navbar-nav align-items-center ms-auto dashboard-nav">
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                    <img class="rounded-circle border me-lg-2" src="img/dax.jpeg" alt="" style="width: 47px; height: 45px;">
+                    <span class="d-none d-lg-inline-flex color-one">Joe-Hansen Emeka</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end bg-white border-0 rounded-0 rounded-bottom m-0">
+                  <a href="update-profile.html" class="dropdown-item">My Profile</a>
+                  <a href="#" class="dropdown-item">Settings</a>
+                    <a href="#" class="dropdown-item">Log Out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <div class="ms-4 greeting-mobile">
+      <h4 class="fw-bold text-white">Hello, Joe-Hansen</h4>
+    </div>
+
+
+    <div class="container-fluid d-flex align-items-center justify-content-center content mb-5">
+      <div class="bg-overlay fixed-width radius-three p-4 pb-5 mt-4 mb-5">
+        <h6 class="mt-2 mb-3 text-white">Profile</h6>
+
+          <form action="#" method="post">
+              <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" name="username" placeholder="Name" autocomplete="off">
+                      <label>First Name</label>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" name="username" placeholder="Name" autocomplete="off">
+                      <label>Last Name</label>
+                    </div>
+                  </div>
+              
+                  <div class="col-md-12">
+                    <div class="form-floating">
+                      <input type="email" class="form-control" name="email" placeholder="Email Address" autocomplete="off">
+                      <label>Email</label>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" name="location" placeholder="Location" autocomplete="off">
+                      <label>Country</label>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" name="username" placeholder="Name" autocomplete="off">
+                      <label>Old Password</label>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="email" class="form-control" name="email" placeholder="Email Address" autocomplete="off">
+                      <label>New Password</label>
+                    </div>
+                  </div>
+              
+                  <div class="col-md-12">
+                    <div class="form-floating date" id="date3" data-target-input="nearest">
+                      <input type="text" class="form-control datatimepicker-input" name="order" placeholder="date and time" data-target="#date3" data-toggle="datetimepicker" autocomplete="off">
+                      <label>Confirm Password</label>
+                    </div>
+                  </div>
+              
+                  <div class="col-md-12 mt-4">
+                      <button class="btn btn-zen px-4 py-2 w-100 text-white" type="submit">Update Now</button>
                   </div>
               </div>
-          </div>
-      </nav>
-      <!-- Navbar End -->
-
-      <div class="ms-4 greeting-mobile">
-        <h4 class="fw-bold text-white">Hello, Joe-Hansen</h4>
+          </form>
       </div>
-
-
-      <div class="container-fluid d-flex align-items-center justify-content-center content mb-5">
-        <div class="bg-overlay fixed-width radius-three p-4 pb-5 mt-4 mb-5">
-          <h6 class="mt-2 mb-3 text-white">Profile</h6>
-
-            <form action="#" method="post">
-                <div class="row g-3">
-                    <div class="col-md-6">
-                      <div class="form-floating">
-                        <input type="text" class="form-control" name="username" placeholder="Name" autocomplete="off">
-                        <label>First Name</label>
-                      </div>
-                    </div>
-
-                    <div class="col-md-6">
-                      <div class="form-floating">
-                        <input type="text" class="form-control" name="username" placeholder="Name" autocomplete="off">
-                        <label>Last Name</label>
-                      </div>
-                    </div>
-                
-                    <div class="col-md-12">
-                      <div class="form-floating">
-                        <input type="email" class="form-control" name="email" placeholder="Email Address" autocomplete="off">
-                        <label>Email</label>
-                      </div>
-                    </div>
-
-                    <div class="col-12">
-                      <div class="form-floating">
-                        <input type="text" class="form-control" name="location" placeholder="Location" autocomplete="off">
-                        <label>Country</label>
-                      </div>
-                    </div>
-
-                    <div class="col-md-6">
-                      <div class="form-floating">
-                        <input type="text" class="form-control" name="username" placeholder="Name" autocomplete="off">
-                        <label>Old Password</label>
-                      </div>
-                    </div>
-
-                    <div class="col-md-6">
-                      <div class="form-floating">
-                        <input type="email" class="form-control" name="email" placeholder="Email Address" autocomplete="off">
-                        <label>New Password</label>
-                      </div>
-                    </div>
-                
-                    <div class="col-md-12">
-                      <div class="form-floating date" id="date3" data-target-input="nearest">
-                        <input type="text" class="form-control datatimepicker-input" name="order" placeholder="date and time" data-target="#date3" data-toggle="datetimepicker" autocomplete="off">
-                        <label>Confirm Password</label>
-                      </div>
-                    </div>
-                
-                    <div class="col-md-12 mt-4">
-                        <button class="btn btn-zen px-4 py-2 w-100 text-white" type="submit">Update Now</button>
-                    </div>
-                </div>
-            </form>
-        </div>
+    </div>
       </div>
 
 
       
-      <footer class="shadow dashboard-footer bg-">
-        <div class="row px-4">
-          <div class="col-3">
+      <footer class="dashboard-footer shadow bg- d-flex">
+        <div class="bg- h-100 w-25 d-flex align-items-center justify-content-center">
+          <div class="h-100 w-50 position-relative">
             <a href="user-dashboard.html">
-              <div class="d-flex align-items-center justify-content-center">
-                <ion-icon name="home-outline" style="font-size: 25px !important;"></ion-icon>
-              </div>
+              <ion-icon name="home-outline" style="font-size: 25px !important;"></ion-icon>
             </a>
-          </div>
-          <div class="col-3">
+          </div>          
+        </div>
+        <div class="bg- h-100 w-25 d-flex align-items-center justify-content-center">
+          <div class="h-100 w-50 active position-relative">
             <a href="update-profile.html">
-              <div class="d-flex align-items-center justify-content-center active">
-                <ion-icon name="person" style="font-size: 25px !important;"></ion-icon>
-              </div>
+              <ion-icon name="person" style="font-size: 25px !important;"></ion-icon>
             </a>
-          </div>
-          <div class="col-3">
+          </div>          
+        </div>
+        <div class="bg- h-100 w-25 d-flex align-items-center justify-content-center">
+          <div class="h-100 w-50 position-relative">
             <a href="mining.html">
-              <div class="d-flex align-items-center justify-content-center">
-                <ion-icon name="diamond-outline" style="font-size: 25px !important;"></ion-icon>              
-              </div>
+              <ion-icon name="diamond-outline" style="font-size: 25px !important;"></ion-icon>
             </a>
-          </div>
-          <div class="col-3">
+          </div>          
+        </div>
+        <div class="bg- h-100 w-25 d-flex align-items-center justify-content-center">
+          <div class="h-100 w-50 position-relative">
             <a href="#">
-              <div class="d-flex align-items-center justify-content-center">
-                <ion-icon name="cart-outline" style="font-size: 25px !important;"></ion-icon>          
-              </div>
+              <ion-icon name="cart-outline" style="font-size: 25px !important;"></ion-icon>
             </a>
-          </div>
+          </div>          
         </div>
       </footer>
     </div>
