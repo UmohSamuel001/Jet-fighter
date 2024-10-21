@@ -1147,7 +1147,7 @@ footer .footer-links p {
 .signup-div {
     position: relative;
     width: 500px;
-    height: 500px;
+    height: 460px;
     overflow-y: scroll;
     z-index: 5;
     padding: 25px;
