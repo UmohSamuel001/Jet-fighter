@@ -459,6 +459,11 @@ footer .footer-links p {
     margin: 0;
     /* padding: 20px; */
   }
+  .bg-two-faint {
+    background-color: #8095e834;
+    border: 1px solid #606fac;
+}
+
   .profile {
     width: 47px !important; 
     height: 45px !important;
