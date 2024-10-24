@@ -5,15 +5,12 @@
     padding: 0px;
 }
 body {
-    /* background-color: #f9ede7; */
-    /* background: linear-gradient(to right, #211e5b3f, #f9ede7, #606fac48); */
     overflow-x: hidden !important;
 }
 .menu-icon {
     position: relative;
     width: 45px;
     height: 35px;
-    /* background: rgb(0, 0, 0); */
     padding: 5px;
     cursor: pointer;
 }
@@ -609,7 +606,6 @@ footer .footer-links p {
     position: absolute;
     top: 0;
     left: 0;
-    /* background-color: #211e5bf1; */
     background-image: url(img/aesthetics8.avif);
     background-position: center center;
     background-size: cover;
