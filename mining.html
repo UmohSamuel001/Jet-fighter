@@ -185,23 +185,27 @@
       const battery = document.getElementById('battery');
       var life = 600;
       var count = 0;
-          
-      // Function to increase life every 2 seconds
-      function autoIncreaseLife() {
-        const interval = setInterval(() => {
-          if (life < 600) {
-            life += 2;
-            bar.textContent = life;
-          
-            // Update battery visuals
-            updateBatteryVisual();
-          
-            if (life >= 600) {
-              clearInterval(interval); // Stop the interval when life reaches 600
-            }
-          }
-        }, 2000); // 2000ms = 2 seconds
+      let autoIncreaseInterval = null; // Store the interval ID for auto-increasing
+
+// Function to increase life every 2 seconds
+function startAutoIncreaseLife() {
+  if (!autoIncreaseInterval) {
+    autoIncreaseInterval = setInterval(() => {
+      if (life < 600) {
+        life += 2; // Increase life by 2
+        if (life > 600) life = 600; // Cap at 600 if it exceeds
+        
+        bar.textContent = life;
+        updateBatteryVisual();
       }
+
+      if (life >= 600) {
+        clearInterval(autoIncreaseInterval);
+        autoIncreaseInterval = null; // Clear interval when full life is reached
+      }
+    }, 2000); // 2 seconds
+  }
+}
       
       // Update battery height and color based on life
       function updateBatteryVisual() {
