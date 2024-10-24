@@ -557,6 +557,10 @@ footer .footer-links p {
   .topic {
     width: fit-content;
   }
+  .hero-img {
+    transform: translateX(-50px);
+  }
+
 @media screen and (max-width: 767px) {
     .page-wrapper::after {
         background-image: url(img/aesthetics8.avif);
@@ -583,6 +587,12 @@ footer .footer-links p {
     }
     .motto {
         font-size: 10px;
+    }
+    .hero-img {
+        transform: translateX(0px);
+    }
+    .hero-img img {
+        scale: 1 !important;
     }
     .g-button-mobile {
         display: block;

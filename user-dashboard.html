@@ -54,6 +54,23 @@
     </div>
     <!-- </div> -->
 
+
+    <!-- Mystery Box Modal -->
+    <div class="modal fade" id="mysteryBoxModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-bg"></div>
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="img/mystery-box.png" class="img-fluid mystery-box-main" alt="">
+          </div>
+          <div class="modal-footer d-flex align-items-center justify-content-center">
+            <button type="button" class="btn-close border rounded-circle p-0" style="transform: translateY(40px);" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <div class="page-wrapper">
       <!-- Sidebar -->
     <div class="d-flex align-items-center justify-content-center" id="mySidebar">
@@ -93,6 +110,7 @@
     </div>
     <!-- Sidebar ends -->
 
+
     <!-- Main content -->
     <div id="main" class="bottom-space" style="overflow-y: scroll;">
       <!-- <div class="trydiv2"></div> -->
@@ -114,18 +132,23 @@
           <div class="ms-4">
             <h4 class="fw-bold greeting text-white">Hello, Joe-Hansen</h4>
           </div>
+
           <div class="navbar-nav align-items-center ms-auto dashboard-nav">
-              <div class="nav-item dropdown">
-                  <a href="#" class="nav-link" data-bs-toggle="dropdown">
-                    <img class="rounded-circle border me-lg-2" src="img/dax.jpeg" alt="" style="width: 47px; height: 45px;">
-                    <span class="d-none d-lg-inline-fle">Joe-Hansen Emeka</span>
-                  </a>
-                  <div class="dropdown-menu dropdown-menu-end bg-white border-0 rounded-0 rounded-bottom m-0">
-                    <a href="update-profile.html" class="dropdown-item">My Profile</a>
-                    <a href="#" class="dropdown-item">Settings</a>
-                      <a href="#" class="dropdown-item">Log Out</a>
-                  </div>
-              </div>
+
+            <!-- image trigger modal for mystery box -->
+            <img src="img/mystery-box.png" class="img-fluid mystery-box-icon" width="40px" alt="mystery box"  data-bs-toggle="modal" data-bs-target="#mysteryBoxModal">
+
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                  <img class="rounded-circle border me-lg-2" src="img/dax.jpeg" alt="" style="width: 47px; height: 45px;">
+                  <span class="d-none d-lg-inline-fle">Joe-Hansen Emeka</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end bg-white border-0 rounded-0 rounded-bottom m-0">
+                  <a href="update-profile.html" class="dropdown-item">My Profile</a>
+                  <a href="#" class="dropdown-item">Settings</a>
+                    <a href="#" class="dropdown-item">Log Out</a>
+                </div>
+            </div>
           </div>
       </nav>
       <!-- Navbar End -->
@@ -134,7 +157,6 @@
         <h4 class="fw-bold text-white">Hello, Joe-Hansen</h4>
       </div>
 
-      
       <div class="container-fluid content">
         <div class="row g-4" style="position: relative;">
 
