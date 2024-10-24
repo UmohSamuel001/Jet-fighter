@@ -1293,9 +1293,9 @@ footer .footer-links p {
 .key, #backspace {
     width: 29%;
     height: 50px;
-    text-align: center;
-    display: grid;
-    place-items: center;
+    text-align: center !important;
+    display: grid !important;
+    place-items: center !important;
     font-size: 30px;
     cursor: pointer;
     color: white;
