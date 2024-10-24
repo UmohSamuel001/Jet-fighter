@@ -616,7 +616,7 @@ footer .footer-links p {
     background-repeat: no-repeat;
     z-index: -1;
     inset: 0;
-    opacity: .95;
+    opacity: .9;
   }
   .modal-bg {
     position: absolute;

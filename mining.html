@@ -181,35 +181,37 @@
 
 
     <script>
-       const bar = document.getElementById('barLife');
+      const bar = document.getElementById('barLife');
       const battery = document.getElementById('battery');
       var life = 600;
       var count = 0;
       let autoIncreaseInterval = null; // Store the interval ID for auto-increasing
 
-// Function to increase life every 2 seconds
-function startAutoIncreaseLife() {
-  if (!autoIncreaseInterval) {
-    autoIncreaseInterval = setInterval(() => {
-      if (life < 600) {
-        life += 2; // Increase life by 2
-        if (life > 600) life = 600; // Cap at 600 if it exceeds
-        
-        bar.textContent = life;
-        updateBatteryVisual();
+      // Function to increase life every 2 seconds
+      function startAutoIncreaseLife() {
+        // Prevent multiple intervals from being created
+        if (!autoIncreaseInterval) {
+          autoIncreaseInterval = setInterval(() => {
+            if (life < 600) {
+              life += 2; // Increase life by 2
+              if (life > 600) life = 600; // Cap at 600 if it exceeds
+
+              console.log("Increasing life to: ", life); // Debug log
+              bar.textContent = life;
+              updateBatteryVisual();
+            }
+          
+            if (life >= 600) {
+              clearInterval(autoIncreaseInterval);
+              autoIncreaseInterval = null; // Clear interval when full life is reached
+            }
+          }, 2000); // 2 seconds
+        }
       }
 
-      if (life >= 600) {
-        clearInterval(autoIncreaseInterval);
-        autoIncreaseInterval = null; // Clear interval when full life is reached
-      }
-    }, 2000); // 2 seconds
-  }
-}
-      
       // Update battery height and color based on life
       function updateBatteryVisual() {
-        const maxLife = 600; // The maximum battery life
+        const maxLife = 600; // Maximum battery life
         const batteryHeight = (life / maxLife) * 85; // Calculate battery height percentage
         battery.style.height = `${batteryHeight}%`;
       
@@ -223,10 +225,11 @@ function startAutoIncreaseLife() {
           battery.style.backgroundColor = '#09ff09'; // Full level
         }
       }
-      
-      // Touch event listener for coin click
-      document.getElementById('coin').addEventListener('touchstart', (event) => {
-        const touchCount = event.touches.length;
+
+      // Handle both touch and click events
+      function handleCoinTap(event) {
+        event.preventDefault(); // Prevent default touch behavior
+        const touchCount = event.touches?.length; // Handle touch and click
       
         if (life > 0) {
           for (let i = 0; i < touchCount; i++) {
@@ -237,8 +240,6 @@ function startAutoIncreaseLife() {
           
             // Possible starting positions
             const positions = ['left', 'center', 'right'];
-          
-            // Randomly select one of the positions
             const randomPosition = positions[Math.floor(Math.random() * positions.length)];
           
             // Set the position based on the random value
@@ -254,8 +255,11 @@ function startAutoIncreaseLife() {
             // Add the element to the container
             document.querySelector('.addon').appendChild(plusTwo);
           
-            // Update life and total count
+            // Decrease life by 2, but ensure it doesn't drop below 0
             life -= 2;
+            if (life < 0) life = 0;
+
+            // console.log("Decreasing life to: ", life);
             bar.textContent = life;
             count += 2;
             document.getElementById('total').innerText = count;
@@ -263,19 +267,22 @@ function startAutoIncreaseLife() {
             // Update battery visuals
             updateBatteryVisual();
           
-            // Remove the element after the animation finishes (2s)
+            // Remove the "+2" element after the animation finishes (2s)
             setTimeout(() => {
               plusTwo.remove();
             }, 2000);
+          
+            // Start the auto-increase if life drops below 600
+            startAutoIncreaseLife();
           }
         }
-      
-        // Start auto-increase of life if life is less than 600
-        if (life < 600) {
-          autoIncreaseLife();
-        }
-      });
+      }
 
+      // Attach both touchstart and click event listeners
+      document.getElementById('coin').addEventListener('touchstart', handleCoinTap);
+
+      // Start auto-increasing life if it's less than 600 when the page loads
+      startAutoIncreaseLife();
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
