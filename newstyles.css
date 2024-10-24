@@ -586,16 +586,19 @@ footer .footer-links p {
 
   .mystery-box-icon {
     margin-right: 10px;
-    animation: oscillate1 2s infinite ease-in-out; /* Define animation duration */
+    animation: oscillate1 2s infinite ease-in-out;
   }
   .mystery-box-main {
-    animation: oscillate2 2s infinite ease-in-out; /* Define animation duration */
+    animation: oscillate2 2s infinite ease-in-out;
+    margin-top: 100px !important;
   }
 
   .modal {
     position: relative;
     height: 100% !important;
-    background-image: url(img/Untitled_Project_V1.gif);
+    /* background-image: url(img/mystery-bg.gif); */
+    background-image: linear-gradient(black, black), url('img/mystery-bg.gif');
+    background-blend-mode: saturation;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -606,13 +609,13 @@ footer .footer-links p {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(img/aesthetics8.avif);
+    background-image: url(img/aesthetics8\ -\ Copy.avif);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
     inset: 0;
-    opacity: .9;
+    opacity: .89;
   }
   .modal-bg {
     position: absolute;
@@ -624,7 +627,7 @@ footer .footer-links p {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: .2;
+    opacity: .4;
   }
   .modal-content {
     background-color: transparent !important;
@@ -731,7 +734,15 @@ footer .footer-links p {
         border-top-right-radius: 15px !important;
         border-bottom-right-radius: 15px !important;
     }
-
+    .modal::after {
+        background-image: url(img/aesthetics8.avif);
+    }
+    .modal-footer .btn-close {
+        transform: translateY(20px);
+    }
+    .mystery-box-main {
+        margin-top: 0px !important;
+    }
     #main {
         width: 100% !important;
     }
@@ -1283,6 +1294,8 @@ footer .footer-links p {
     width: 29%;
     height: 50px;
     text-align: center;
+    display: grid;
+    place-items: center;
     font-size: 30px;
     cursor: pointer;
     color: white;
@@ -1390,20 +1403,22 @@ footer .footer-links p {
         transform: translateY(-100px); /* Moves up */
     }
 }
-.zen-coin {
-    width: 55px;
-    height: 55px;
-}
-.lfg {
+/* .zen-coin {
     width: 45px;
     height: 45px;
+} */
+.lfg {
+    width: 40px;
+    height: 40px;
 }
-.zen-coin {
+/* .zen-coin {
     width: 60px;
     height: 60px;
-}
+} */
 #coin {
     transition: transform 0.2s ease-in-out;
+    scale: .8;
+    margin-top: -20px;
 }
 #coin:active {
     transform: scale(1.1);
@@ -1412,12 +1427,13 @@ footer .footer-links p {
     text-shadow: 2px 4px 2px #606fac;
 }
 .progress-div .zen-coin {
-    width: 30px;
-    height: 30px;
+    width: 22px;
+    height: 22px;
 }
 .mining {
-    border-radius: 8px;
+    border-radius: 15px;
     padding: 0;
+    margin: 0;
     position: relative;
 }
 .addon {
