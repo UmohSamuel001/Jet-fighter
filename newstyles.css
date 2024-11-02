@@ -590,14 +590,94 @@ footer .footer-links p {
   }
   .mystery-box-main {
     animation: oscillate2 2s infinite ease-in-out;
-    margin-top: 100px !important;
+    transition: transform 1s ease-in;
+  }
+  #mysteryGif {
+    display: none;
+    transition: transform 1s ease-in;
+  }
+  #mysteryGiftValue {
+    display: none;
+  }
+  .move-down {
+    transform: translateY(100vh) !important;
+  }
+
+
+  .mystery-gift {
+    text-shadow: 2px 4px 2px #606fac;
+    animation: reveal 1s forwards linear;
+    display: none;
+    position: absolute;
+  }
+  #closeBtn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    display: none;
+    animation: zoom 2s infinite ease-in-out;
+    bottom: 15px;
+  }
+
+  @keyframes zoom {
+    0% { scale: 1; }
+    50% { scale: 1.06; }
+    100% { scale: 1; }
+  }
+
+  @keyframes reveal {
+    0% {
+      width: 20px;
+      transform: rotate(0deg);
+    }
+    100% {
+      width: 200px;
+      transform: rotate(720deg);
+    }
+  }
+
+  @keyframes oscillate1 {
+    0%   { transform: translateY(2px); }
+    50%  { transform: translateY(-8px); } /* Move up */
+    100% { transform: translateY(2px); }   /* Move back to original position */
+  }
+
+  @keyframes oscillate2 {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-35px); } /* Move up */
+    100% { transform: translateY(0px); }   /* Move back to original position */
+  }
+
+  /* Define swelling and shaking keyframe */
+  @keyframes swellAndShake {
+    0% { transform: rotate(0deg); }
+    5% { transform: rotate(-5deg); }   /* Tilt left */
+    10% { transform: rotate(5deg); }    /* Tilt right */
+    15% { transform: rotate(-5deg); }   /* Tilt left */
+    20% { transform: rotate(5deg); }    /* Tilt right */
+    25% { transform: rotate(-5deg); }   /* Tilt left */
+    30% { transform: rotate(5deg); }    /* Tilt right */
+    35% { transform: rotate(-5deg); }   /* Tilt left */
+    40% { transform: rotate(5deg); }    /* Tilt right */
+    45% { transform: rotate(-5deg); }   /* Tilt left */
+    50% { transform: rotate(0deg); }   /* Return to center */
+    55% { transform: rotate(-5deg); }   /* Tilt left */
+    60% { transform: rotate(5deg); }    /* Tilt right */
+    65% { transform: rotate(-5deg); }   /* Tilt left */
+    70% { transform: rotate(5deg); }    /* Tilt right */
+    75% { transform: rotate(-5deg); }   /* Tilt left */
+    80% { transform: rotate(5deg); }    /* Tilt right */
+    85% { transform: rotate(-5deg); }   /* Tilt left */
+    90% { transform: rotate(5deg); }    /* Tilt right */
+    95% { transform: rotate(-5deg); }   /* Tilt left */
+    100% { transform: rotate(0deg); }   /* Return to center */
   }
 
   .modal {
     position: relative;
     height: 100% !important;
     /* background-image: url(img/mystery-bg.gif); */
-    background-image: linear-gradient(black, black), url('img/mystery-bg.gif');
+    background-image: linear-gradient(black, black), url('img/output-onlinegiftools.gif');
     background-blend-mode: saturation;
     background-repeat: no-repeat;
     background-size: cover;
@@ -615,7 +695,7 @@ footer .footer-links p {
     background-repeat: no-repeat;
     z-index: -1;
     inset: 0;
-    opacity: .89;
+    opacity: .9;
   }
   .modal-bg {
     position: absolute;
@@ -627,7 +707,7 @@ footer .footer-links p {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: .4;
+    opacity: .6;
   }
   .modal-content {
     background-color: transparent !important;
@@ -637,16 +717,7 @@ footer .footer-links p {
     border: none !important;
   }
 
-  @keyframes oscillate1 {
-    0%   { transform: translateY(2px); }
-    50%  { transform: translateY(-10px); } /* Move up */
-    100% { transform: translateY(2px); }   /* Move back to original position */
-  }
-  @keyframes oscillate2 {
-    0%   { transform: translateY(0px); }
-    50%  { transform: translateY(-20px); } /* Move up */
-    100% { transform: translateY(0px); }   /* Move back to original position */
-  }
+  
 
 @media screen and (max-width: 550px) {
     .motto {
@@ -740,9 +811,9 @@ footer .footer-links p {
     .modal-footer .btn-close {
         transform: translateY(20px);
     }
-    .mystery-box-main {
-        margin-top: 0px !important;
-    }
+    /* .mystery-box-main {
+        margin-top: -40px !important;
+    } */
     #main {
         width: 100% !important;
     }
@@ -1423,7 +1494,7 @@ footer .footer-links p {
 #coin:active {
     transform: scale(1.1);
 }
-#total {
+#total, #mysteryGiftValue {
     text-shadow: 2px 4px 2px #606fac;
 }
 .progress-div .zen-coin {
