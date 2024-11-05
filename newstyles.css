@@ -673,6 +673,14 @@ footer .footer-links p {
     100% { transform: rotate(0deg); }   /* Return to center */
   }
 
+  .video-div {
+    height: 380px;
+  }
+  .video-div video {
+    height: 100%;
+    object-fit: cover;
+  }
+
   .modal {
     position: relative;
     height: 100% !important;
@@ -709,14 +717,29 @@ footer .footer-links p {
     background-repeat: no-repeat;
     opacity: .6;
   }
-  .modal-content {
+  #mysteryBoxModal .modal-content {
     background-color: transparent !important;
     border: none !important;
   }
-  .modal-header, .modal-footer {
+  #mysteryBoxModal .modal-header, .modal-footer {
     border: none !important;
   }
 
+  #popUpModal #skip {
+    bottom: 0;
+    right: 0;
+  }
+  #popUpModal {
+    background: transparent !important;
+  }
+  #popUpModal::after {
+    /* background: transparent !important; */
+    background: black !important;
+    opacity: .7;
+  }
+  #skip {
+    display: none;
+  }
   
 
 @media screen and (max-width: 550px) {

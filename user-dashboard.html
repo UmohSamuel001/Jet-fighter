@@ -54,6 +54,23 @@
     </div>
     <!-- </div> -->
 
+        <!-- Pop-up Modal -->
+    <div class="modal fade" id="popUpModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-transparent">
+          <div class="modal-body">
+            <!-- <img src="img/zen-flier.jpeg" class="img-fluid" alt=""> -->
+             <div class="video-div">
+              <video src="img/Zen-video.mp4" controls autoplay loop width="100%" id="adVideo"></video>
+             </div>
+          </div>
+          <button type="button" class="bg-dark py-1 px-2 border-0 d-flex gap-1 position-absolute text-white" id="skip" data-bs-dismiss="modal" aria-label="Close"> 
+            skip <ion-icon name="play-skip-forward-circle-outline" class="fs-1 text-white"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+
 
     <!-- Mystery Box Modal -->
     <div class="modal fade" id="mysteryBoxModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -431,6 +448,30 @@
       const gift = document.querySelector('.mystery-gift');
       const giftValue = document.getElementById('mysteryGiftValue');
       const closeBtn = document.getElementById('closeBtn');
+      const videoModal = document.getElementById('popUpModal');
+      const modalVideo = document.getElementById('adVideo');
+      const skipBtn = document.getElementById('skip');
+
+
+
+      document.addEventListener('DOMContentLoaded', function () {
+        // Initialize the modal
+        const adModal = new bootstrap.Modal(document.getElementById('popUpModal'));
+        // Show the modal on page load after 3 seconds
+        setTimeout(() => {
+          adModal.show();
+        }, 2000);
+
+        setTimeout(() => {
+          // adModal.show();
+          skipBtn.style.display = 'block';
+        }, 13000);
+      });
+          
+      videoModal.addEventListener('hidden.bs.modal', () => {
+        modalVideo.pause();   // Pause the video
+        modalVideo.currentTime = 0; // Optional: Reset video to the beginning
+      });
 
 
       mysteryImg.addEventListener('click', () => {
