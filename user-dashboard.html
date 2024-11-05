@@ -64,7 +64,7 @@
               <video src="img/Zen-video.mp4" controls autoplay loop width="100%" id="adVideo"></video>
              </div>
           </div>
-          <button type="button" class="bg-dark py-1 px-2 border-0 d-flex gap-1 position-absolute text-white" id="skip" data-bs-dismiss="modal" aria-label="Close"> 
+          <button type="button" class="bg-dark py-1 px-2 border-0 gap-1 position-absolute text-white" id="skip" data-bs-dismiss="modal" aria-label="Close"> 
             skip <ion-icon name="play-skip-forward-circle-outline" class="fs-1 text-white"></ion-icon>
           </button>
         </div>
@@ -453,7 +453,6 @@
       const skipBtn = document.getElementById('skip');
 
 
-
       document.addEventListener('DOMContentLoaded', function () {
         // Initialize the modal
         const adModal = new bootstrap.Modal(document.getElementById('popUpModal'));
@@ -463,9 +462,8 @@
         }, 2000);
 
         setTimeout(() => {
-          // adModal.show();
-          skipBtn.style.display = 'block';
-        }, 13000);
+          skipBtn.style.display = 'flex';
+        }, 7000);
       });
           
       videoModal.addEventListener('hidden.bs.modal', () => {
