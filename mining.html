@@ -48,44 +48,48 @@
       </div>
     </div>
   </div>
-  
-  
+
+  <div class="modal fade" id="boostModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content progress-div bg-lfg-modal">
+        <div class="modal-header p-0">
+          <p class="fs-4 fw-bold">Tap Earnings Upgrade</p>
+          <button type="button" class="btn-close" style="transform: translateY(-3px);" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="lfg-modal">
+            <img src="img/lfg.png" class="img-fluid lfg-lg" alt="lfg">
+            <p class="fs-5">Boost your tap earnings to unlimited taps per day</p>
+          </div>
+          <button class="btn btn-zen px-4 py-2 w-100 text-white mt-4" data-bs-target="#dailogBoxModal" data-bs-toggle="modal" data-bs-dismiss="modal">Boost</button>                
+        </div>
+      </div>
+    </div>
+</div>
+<div class="modal fade" id="dailogBoxModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content progress-div bg-lfg-modal">
+            <div class="modal-header p-0">
+              <p class="fs-4 fw-bold">Confirm Upgrade</p>
+            </div>
+            <div class="modal-body">
+              <div class="lfg-modal">
+                <!-- <img src="img/lfg.png" class="img-fluid lfg-lg" alt="lfg"> -->
+                <p class="fs-5">Are you sure you want to boost your tap earnings?</p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="d-flex gap-2 w-100">
+                <button class="btn border radius-three px- py-2 text-white w-50" data-bs-target="#boostModal" data-bs-toggle="modal" data-bs-dismiss="modal">No</button>
+                <button class="btn btn-zen px- py-2 text-white w-50" data-bs-target="#dailogBoxModal" data-bs-dismiss="modal">Yes</button>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
     <div class="page-wrapper" style="overflow-y: scroll;">
-        <!-- <div class="trydiv2"></div> -->
-
-        <!-- Navbar Start -->
-        <!-- <nav class="navbar navbar-expand px-2 py-2 pt-3" id="navbar">
-            <a href="#" class="sidebar-toggler flex-shrink-0" onclick="togglenav()">
-              <i class="fa fa-bars color-one" style="transform: translateY(-3px);"></i>
-            </a>
-            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-              <label class="hamburger" id="hamburger">
-                <svg viewBox="0 0 32 32">
-                  <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
-                  <path class="line" d="M7 16 27 16"></path>
-                </svg>
-              </label>
-            </button>
-            
-            <div class="ms-4">
-              <h4 class="fw-bold greeting">Hello, Joe-Hansen</h4>
-            </div>
-            <div class="navbar-nav align-items-center ms-auto dashboard-nav">
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link" data-bs-toggle="dropdown">
-                        <img class="rounded-circle border me-lg-2" src="img/dax.jpeg" alt="" style="width: 47px; height: 45px;">
-                        <span class="d-none d-lg-inline-flex color-one">Joe-Hansen Emeka</span>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end bg-white border-0 rounded-0 rounded-bottom m-0">
-                      <a href="update-profile.html" class="dropdown-item">My Profile</a>
-                      <a href="#" class="dropdown-item">Settings</a>
-                        <a href="#" class="dropdown-item">Log Out</a>
-                    </div>
-                </div>
-            </div>
-        </nav> -->
-        <!-- Navbar End -->
-
         <div class="container">
           <div class="d-flex align-items-center gap-1">
             <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
@@ -140,9 +144,9 @@
 
 
           <div class="d-flex align-items-center justify-content-between">
-            <span class="text-white progress-div py-1 px-3 d-flex align-items-center justify-content-center" style="width: fit-content;">
+            <span class="text-white progress-div radius-three py-1 px-3 d-flex align-items-center justify-content-center" style="width: fit-content;" data-bs-target="#boostModal" data-bs-toggle="modal">
               <img src="img/lfg.png" class="img-fluid lfg" alt="lfg">
-              <p  class="align-middle fs-5" style="font-weight: 500; transform: translateY(5px);">Boost</p>
+              <p class="align-middle fs-5" style="font-weight: 500; transform: translateY(5px);">Boost</p>
             </span>
   
             <div class="d- gap-2 me-2">
@@ -199,6 +203,7 @@
     <script>
       const bar = document.getElementById('barLife');
       const battery = document.getElementById('battery');
+      const coin = document.getElementById('coin');
       var life = 600;
       var count = 0;
       let autoIncreaseInterval = null; // Store the interval ID for auto-increasing
@@ -246,7 +251,13 @@
       function handleCoinTap(event) {
         event.preventDefault(); // Prevent default touch behavior
         const touchCount = event.touches?.length; // Handle touch and click
-      
+
+        coin.classList.add('heartbeat');
+
+        setTimeout(() => {
+          coin.classList.remove('heartbeat');
+        }, 100);
+
         if (life > 0) {
           for (let i = 0; i < touchCount; i++) {
             // Create the "+2" element
@@ -295,7 +306,7 @@
       }
 
       // Attach both touchstart and click event listeners
-      document.getElementById('coin').addEventListener('touchstart', handleCoinTap);
+      coin.addEventListener('touchstart', handleCoinTap);
 
       // Start auto-increasing life if it's less than 600 when the page loads
       startAutoIncreaseLife();

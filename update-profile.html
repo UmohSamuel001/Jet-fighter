@@ -8,61 +8,99 @@
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/a207e207d8.js" crossorigin="anonymous"></script>
 </head>
-<body class="bg-one">
+<body class="">
 
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-      <div class="offcanvas-cover"></div>
-      <div class="offcanvas-header d-flex">
-        <div class="w-100 text-center" style=" z-index: 5;">
-          <img src="img/ZEN logo.png" class="img-fluid" style="width: 90%; height: 80px;">
-        </div>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-cover "></div>
+    <div class="offcanvas-header d-flex bg-">
+      <div class="w-100 text-center" style=" z-index: 5;">
+        <img src="img/ZEN logo.png" class="img-fluid" style="width: 90%; height: 80px;">
       </div>
-      <div class="offcanvas-body d-flex align-items-center justify-content-center">
-        <div class="sidenav-wrapper">
-          <ul class="mobile-sidenav-nav h-100">
-              <li class="active-item">
-                  <a href="user-dashboard.html"><ion-icon name="home"></ion-icon><span>Dashboard</span></a>
-              </li>
-              <li class="unactive-item">
-                  <a href="withdrawals-history.html"><ion-icon name="card-outline"></ion-icon><span>Withdrawals</span>
-                  </a>
-              </li>
-              <li class="unactive-item">
-                  <a href="upload-product.html"><ion-icon name="cart-outline"></ion-icon><span>Upload Product</span></a>
-              </li>
-              <li class="unactive-item">
-                  <a href="#"><ion-icon name="pricetags-outline"></ion-icon><span>Purchased Courses</span></a>
-              </li>
-              <li class="unactive-item">
-                <a href="youtube-earning.html"><ion-icon name="phone-portrait-outline"></ion-icon><span>Youtube Earning</span>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex align-items-center justify-content-center">
+      <div class="sidenav-wrapper">
+        <ul class="mobile-sidenav-nav h-100">
+            <li class="active-item">
+                <a href="user-dashboard.html"><ion-icon name="home"></ion-icon><span>Dashboard</span></a>
+            </li>
+            <li class="unactive-item">
+                <a href="withdrawals-history.html"><ion-icon name="card-outline"></ion-icon><span>Withdrawals</span>
                 </a>
-              </li>
-              <li class="unactive-item">
-                  <a href="downlines.html"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
-              </li>
-              <li class="unactive-item">
-                <a href="vendor-dashboard.html"><ion-icon name="people-outline"></ion-icon><span>Vendor Dashboard</span></a>
-              </li>
-              <li class="logout unactive-item">
-                  <a href="#"><ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a>
-              </li>
-          </ul>
-        </div>
+            </li>
+            <li class="unactive-item">
+                <a href="upload-product.html"><ion-icon name="cart-outline"></ion-icon><span>Upload Product</span></a>
+            </li>
+            <li class="unactive-item">
+                <a href="#"><ion-icon name="pricetags-outline"></ion-icon><span>Purchase Courses</span></a>
+            </li>
+            <li class="unactive-item">
+              <a href="youtube-earning.html"><ion-icon name="phone-portrait-outline"></ion-icon><span>Youtube Earning</span>
+              </a>
+            </li>
+            <li class="unactive-item">
+                <a href="downlines.html"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
+            </li>
+            <li class="unactive-item">
+              <a href="vendor-dashboard.html"><ion-icon name="people-outline"></ion-icon><span>Vendor Dashboard</span></a>
+            </li>
+            <li class="logout unactive-item">
+                <a href="#"><ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a>
+            </li>
+        </ul>
       </div>
     </div>
+  </div>
 
 
+  <div class="page-wrapper">
+    <!-- Sidebar -->
+  <div class="d-flex align-items-center justify-content-center" id="mySidebar">
+    <div class="sidenav-wrapper p-3 bg-white radius-three">
+      <div class="w-100 text-center mt-2" style=" z-index: 5;">
+        <img src="img/Zenwealth Logo Alone-02.png" class="img-fluid" style="width: 50px; height: 50px;">
+      </div>
+      <ul class="sidenav-nav ps-0 h-100" style="margin-top: 40px;">
+          <li class="active-item">
+              <a href="user-dashboard.html"><ion-icon name="home"></ion-icon><span>Dashboard</span></a>
+          </li>
+          <li class="unactive-item">
+              <a href="withdrawals-history.html"><ion-icon name="card-outline"></ion-icon><span>Withdrawals</span>
+              </a>
+          </li>
+          <li class="unactive-item">
+              <a href="upload-product.html"><ion-icon name="cart-outline"></ion-icon><span>Upload Product</span></a>
+          </li>
+          <li class="unactive-item">
+              <a href="#"><ion-icon name="pricetags-outline"></ion-icon><span>Purchase Courses</span></a>
+          </li>
+          <li class="unactive-item">
+            <a href="youtube-earning.html"><ion-icon name="phone-portrait-outline"></ion-icon><span>Youtube Earning</span>
+            </a>
+          </li>
+          <li class="unactive-item">
+              <a href="downlines.html"><ion-icon name="people-outline"></ion-icon><span>Downlines</span></a>
+          </li>
+          <li class="unactive-item">
+            <a href="vendor-dashboard.html"><ion-icon name="people-outline"></ion-icon><span>Vendor Dashboard</span></a>
+          </li>
+          <li class="logout unactive-item">
+            <a href="#"><ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a>
+          </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Sidebar ends -->
 
-    <!-- Main content -->
-    <div id="main" class="bottom-space" style="overflow-y: scroll;">
-      <div class="trydiv2"></div>
 
-      <div class="content-wrapper">
-        <!-- Navbar Start -->
-      <nav class="navbar navbar-expand px-2 py-2 pt-3">
+  <!-- Main content -->
+  <div id="main" class="bottom-space" style="overflow-y: scroll;">
+    <!-- <div class="trydiv2"></div> -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand px-2 py-2 pt-3" id="navbar">
         <a href="#" class="sidebar-toggler flex-shrink-0" onclick="togglenav()">
-            <i class="fa fa-bars color-one" style="transform: translateY(-3px);"></i>
+          <i class="fa fa-bars color-one" style="transform: translateY(-3px);"></i>
         </a>
         <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
           <label class="hamburger" id="hamburger">
@@ -72,21 +110,23 @@
             </svg>
           </label>
         </button>
+        
         <div class="ms-4">
-          <h4 class="fw-bold greeting">Hello, Joe-Hansen</h4>
+          <h4 class="fw-bold greeting text-white">Hello, Joe-Hansen</h4>
         </div>
+
         <div class="navbar-nav align-items-center ms-auto dashboard-nav">
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link" data-bs-toggle="dropdown">
-                    <img class="rounded-circle border me-lg-2" src="img/dax.jpeg" alt="" style="width: 47px; height: 45px;">
-                    <span class="d-none d-lg-inline-flex color-one">Joe-Hansen Emeka</span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-end bg-white border-0 rounded-0 rounded-bottom m-0">
-                  <a href="update-profile.html" class="dropdown-item">My Profile</a>
-                  <a href="#" class="dropdown-item">Settings</a>
-                    <a href="#" class="dropdown-item">Log Out</a>
-                </div>
-            </div>
+          <div class="nav-item dropdown">
+              <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                <img class="rounded-circle border me-lg-2" src="img/dax.jpeg" alt="" style="width: 47px; height: 45px;">
+                <span class="d-none d-lg-inline-fle">Joe-Hansen Emeka</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-end bg-white border-0 rounded-0 rounded-bottom m-0">
+                <a href="update-profile.html" class="dropdown-item">My Profile</a>
+                <a href="#" class="dropdown-item">Settings</a>
+                  <a href="#" class="dropdown-item">Log Out</a>
+              </div>
+          </div>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -94,7 +134,6 @@
     <div class="ms-4 greeting-mobile">
       <h4 class="fw-bold text-white">Hello, Joe-Hansen</h4>
     </div>
-
 
     <div class="container-fluid d-flex align-items-center justify-content-center content mb-5">
       <div class="bg-overlay fixed-width radius-three p-4 pb-5 mt-4 mb-5">
@@ -158,22 +197,23 @@
           </form>
       </div>
     </div>
-      </div>
 
+    </div>
+  </div>
 
       
-      <footer class="dashboard-footer shadow bg- d-flex">
+      <footer class="dashboard-footer shadow">
         <div class="bg- h-100 w-25 d-flex align-items-center justify-content-center">
-          <div class="h-100 w-50 position-relative">
+          <div class="h-100 w-50 active position-relative">
             <a href="user-dashboard.html">
-              <ion-icon name="home-outline" style="font-size: 25px !important;"></ion-icon>
+              <ion-icon name="home" style="font-size: 25px !important;"></ion-icon>
             </a>
           </div>          
         </div>
         <div class="bg- h-100 w-25 d-flex align-items-center justify-content-center">
-          <div class="h-100 w-50 active position-relative">
+          <div class="h-100 w-50 position-relative">
             <a href="update-profile.html">
-              <ion-icon name="person" style="font-size: 25px !important;"></ion-icon>
+              <ion-icon name="person-outline" style="font-size: 25px !important;"></ion-icon>
             </a>
           </div>          
         </div>
