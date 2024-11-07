@@ -932,6 +932,12 @@ footer .footer-links p {
         padding: 0 12px 0 12px !important;
         height: auto !important;
     }
+    .fixed-width {
+        width: auto !important;
+    }
+    .buttons {
+        width: 100% !important;
+    }
     .greeting, .fa-bars, .dropdown-toggle {
         color: white !important;
     }
