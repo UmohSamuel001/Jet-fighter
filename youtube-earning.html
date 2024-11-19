@@ -11,6 +11,9 @@
             width: 100%;
             cursor: pointer;
         }
+        /* #previewCOntainer {
+            scale: .8 !important;
+        } */
       </style>
   </head>
   <body>
@@ -298,7 +301,7 @@
           const thumbnailURL = `https://img.youtube.com/vi/${videoID}/maxresdefault.jpg`;
           preview.innerHTML = `
           <img id="thumbnail" src="${thumbnailURL}" class="rounded" alt="Video Thumbnail" />
-          <p class="fs-6 pt-2 px-2">${url}</p>
+          <p class="link-text pt-2 px-2">${url}</p>
         `;
         console.log('video id found: ', videoID);
         } else {
